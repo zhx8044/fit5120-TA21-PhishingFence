@@ -25,7 +25,9 @@ import com.example.phishingfence.ui.fragments.AwarnessFragment;
 import com.example.phishingfence.ui.fragments.EducationFragment;
 import com.example.phishingfence.ui.fragments.EmergencyFragment;
 import com.example.phishingfence.ui.fragments.HomeFragment;
+import com.example.phishingfence.ui.fragments.NewsFeedFragment;
 import com.example.phishingfence.ui.fragments.ScamScenairoFragment;
+import com.example.phishingfence.ui.fragments.StatisticalTrendFragment;
 import com.example.phishingfence.ui.fragments.TranslationFragment;
 import com.example.phishingfence.ui.fragments.VerifyScamFragment;
 import com.google.android.material.navigation.NavigationView;
@@ -40,6 +42,8 @@ public class MainActivity extends AppCompatActivity
     private EducationFragment mEducationFragment;
     private ScamScenairoFragment mScamScenairoFragment;
     private VerifyScamFragment mVerifyScamFragment;
+    private NewsFeedFragment mNewsFeedFragment;
+    private StatisticalTrendFragment mStatisticalTrendFragment;
     private DrawerLayout mDrawerLayout;
     private NavigationView mNavigationView;
     private Toolbar mToolbar;
@@ -74,9 +78,6 @@ public class MainActivity extends AppCompatActivity
         setupCloseButtonListener();
         setupHamMenuButtonListener();
         setupHomeButtonListener();
-
-        //设置home页面的点击监听器
-        setupHomeFragmentListener();
     }
 
     private void setupNavigationButtonListener()
@@ -171,6 +172,8 @@ public class MainActivity extends AppCompatActivity
             {
                 mHomeFragment = new HomeFragment();
                 fragmentTransaction.add(R.id.content,mHomeFragment);
+                //设置home页面的点击监听器
+                setupHomeFragmentListener();
             }
             else
             {
@@ -231,6 +234,8 @@ public class MainActivity extends AppCompatActivity
             {
                 mScamScenairoFragment = new ScamScenairoFragment();
                 fragmentTransaction.add(R.id.content,mScamScenairoFragment);
+                //设置scam scenairo页面的点击监听器
+                setupScamScenairoFragmentListener();
             }
             else
             {
@@ -247,6 +252,31 @@ public class MainActivity extends AppCompatActivity
             else
             {
                 fragmentTransaction.show(mVerifyScamFragment);
+            }
+        }
+        else if(position == 7)
+        {
+            if(mNewsFeedFragment == null)
+            {
+                mNewsFeedFragment = new NewsFeedFragment();
+                fragmentTransaction.add(R.id.content,mNewsFeedFragment);
+                setupNewsFeedFragmentListener();
+            }
+            else
+            {
+                fragmentTransaction.show(mNewsFeedFragment);
+            }
+        }
+        else if(position == 8)
+        {
+            if(mStatisticalTrendFragment == null)
+            {
+                mStatisticalTrendFragment = new StatisticalTrendFragment();
+                fragmentTransaction.add(R.id.content,mStatisticalTrendFragment);
+            }
+            else
+            {
+                fragmentTransaction.show(mStatisticalTrendFragment);
             }
         }
 
@@ -291,6 +321,16 @@ public class MainActivity extends AppCompatActivity
         {
             fragmentTransaction.hide(mVerifyScamFragment);
         }
+
+        if(mNewsFeedFragment!=null)
+        {
+            fragmentTransaction.hide(mNewsFeedFragment);
+        }
+
+        if(mStatisticalTrendFragment!=null)
+        {
+            fragmentTransaction.hide(mStatisticalTrendFragment);
+        }
     }
 
     public void setupHomeFragmentListener()
@@ -304,6 +344,31 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onVerifyScamClick() {
                 selectedFragment(6);
+            }
+        });
+    }
+
+    public void setupScamScenairoFragmentListener()
+    {
+        mScamScenairoFragment.setOnScamScenairoFragmentInteractionListener(new ScamScenairoFragment.OnScamScenairoFragmentInteractionListener() {
+            @Override
+            public void onNewsFeedClick() {
+                selectedFragment(7);
+            }
+
+            @Override
+            public void onViewStatisticsClick() {
+                selectedFragment(8);
+            }
+        });
+    }
+
+    public void setupNewsFeedFragmentListener()
+    {
+        mNewsFeedFragment.setOnNewsFeedFragmentInteractionListener(new NewsFeedFragment.OnNewsFeedFragmentInteractionListener() {
+            @Override
+            public void onBackClick() {
+                selectedFragment(5);
             }
         });
     }

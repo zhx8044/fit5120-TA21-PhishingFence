@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="CustomButtonStyle" parent="Widget.AppCompat.Button">
-        <item name="android:background">@color/darkBlue</item> <!-- 引用上面定义的背景 -->
-        <item name="android:radius">16dp</item>
+        <item name="android:background">@drawable/rounded_corners</item>
         <item name="android:textColor">@color/orange</item> <!-- 文字颜色 -->
-        <!-- 可以在这里添加其他样式属性，如字体大小等 -->
-    </style>
-
-    <style name="CustomButtonStyle2" parent="Widget.AppCompat.Button">
-        <item name="android:background">@color/orange</item> <!-- 引用上面定义的背景 -->
-        <item name="android:radius">16dp</item>
-        <item name="android:textColor">@color/white</item> <!-- 文字颜色 -->
         <!-- 可以在这里添加其他样式属性，如字体大小等 -->
     </style>
 </resources>

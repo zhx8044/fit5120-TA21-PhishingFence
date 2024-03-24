@@ -46,6 +46,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
         style="@style/CustomButtonStyle"
+
         android:text="Scam Scenario"/>
 
     <Button

@@ -24,8 +24,7 @@
         <FrameLayout
             android:id="@+id/content"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@+id/img_home"/>
+            android:layout_height="match_parent" />
 
         <!-- Home Button at the bottom center -->
         <ImageView

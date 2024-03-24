@@ -11,18 +11,27 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.phishingfence.R;
-import com.example.phishingfence.ui.activities.NewsFeedActivity;
-import com.example.phishingfence.ui.activities.StatisticalTrendActivity;
 
 
 public class ScamScenairoFragment extends Fragment
 {
     private Button btnNewsFeed;
     private Button btnViewStatistics;
+    private OnScamScenairoFragmentInteractionListener mOnScamScenairoFragmentInteractionListener;
 
     public ScamScenairoFragment()
     {
         // Required empty public constructor
+    }
+
+    public interface OnScamScenairoFragmentInteractionListener
+    {
+        void onNewsFeedClick();
+        void onViewStatisticsClick();
+    }
+
+    public void setOnScamScenairoFragmentInteractionListener(OnScamScenairoFragmentInteractionListener onScamScenairoFragmentInteractionListener) {
+        this.mOnScamScenairoFragmentInteractionListener = onScamScenairoFragmentInteractionListener;
     }
 
     @Override
@@ -59,8 +68,10 @@ public class ScamScenairoFragment extends Fragment
         btnNewsFeed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), NewsFeedActivity.class);
-                startActivity(intent);
+                if(mOnScamScenairoFragmentInteractionListener!=null)
+                {
+                    mOnScamScenairoFragmentInteractionListener.onNewsFeedClick();
+                }
             }
         });
     }
@@ -70,8 +81,10 @@ public class ScamScenairoFragment extends Fragment
         btnViewStatistics.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), StatisticalTrendActivity.class);
-                startActivity(intent);
+                if(mOnScamScenairoFragmentInteractionListener!=null)
+                {
+                    mOnScamScenairoFragmentInteractionListener.onViewStatisticsClick();
+                }
             }
         });
     }

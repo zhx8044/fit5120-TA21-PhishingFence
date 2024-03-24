@@ -2,19 +2,16 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
-    tools:context=".ui.activities.NewsFeedActivity">
+    android:orientation="vertical"
+    tools:context=".ui.fragments.NewsFeedFragment">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_above="@+id/img_back">
+        android:layout_marginBottom="70dp">
 
         <ImageView
             android:layout_width="80dp"
@@ -33,13 +30,15 @@
             android:layout_gravity="center"/>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
+            android:id="@+id/newsRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="20dp"
             android:background="@color/darkBlue"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/news_item"/>
+            tools:listitem="@layout/news_item"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -49,7 +48,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:layout_margin="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="10dp"
         android:src="@drawable/baseline_arrow_back_ios_24" />
 
 </RelativeLayout>
