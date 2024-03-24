@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.TranslationFragment">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Translate scam messages into\nNative Language"
+        android:textSize="20sp"
+        android:textColor="@color/darkBlue"
+        android:layout_gravity="center"
+        android:gravity="center"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/rounded_layout"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:hint=" choose language"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_edittext"/>
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:text="to"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:background="@drawable/rounded_edittext"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:hint=" choose language"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_edittext"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:hint=" Enter the message"
+        android:layout_margin="10dp"
+        android:background="@drawable/rounded_edittext"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:hint=" Here is your result"
+        android:layout_margin="10dp"
+        android:background="@drawable/rounded_edittext"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
