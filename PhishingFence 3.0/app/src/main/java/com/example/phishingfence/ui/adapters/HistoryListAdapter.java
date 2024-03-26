@@ -24,6 +24,7 @@ public class HistoryListAdapter extends RecyclerView.Adapter<HistoryListAdapter.
     public interface OnItemClickListener
     {
         void onItemClick(HistoryInfo historyInfo);
+        void delOnCLick(HistoryInfo historyInfo);
     }
 
     public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
@@ -63,6 +64,18 @@ public class HistoryListAdapter extends RecyclerView.Adapter<HistoryListAdapter.
                 {
                     mOnItemClickListener.onItemClick(historyInfo);
                 }
+            }
+        });
+
+        //长按删除
+        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                if(mOnItemClickListener!=null)
+                {
+                    mOnItemClickListener.delOnCLick(historyInfo);
+                }
+                return true;
             }
         });
     }

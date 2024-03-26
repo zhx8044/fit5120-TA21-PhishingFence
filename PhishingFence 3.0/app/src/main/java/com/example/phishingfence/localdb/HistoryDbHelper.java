@@ -21,7 +21,7 @@ import java.util.Locale;
 
 public class HistoryDbHelper extends SQLiteOpenHelper {
     private static HistoryDbHelper sHelper;
-    private static final String DB_NAME = "user_info.db";   //数据库名
+    private static final String DB_NAME = "news_history.db";   //数据库名
     private static final int VERSION = 1;    //版本号
 
     //必须实现其中一个构方法
@@ -71,17 +71,17 @@ public class HistoryDbHelper extends SQLiteOpenHelper {
         String nullColumnHack = "values(null,?,?,?,?,?)";
         //执行
         int insert = (int) db.insert("news_history", nullColumnHack, values);
-        //db.close();
+        db.close();
         return insert;
     }
 
-    public int delete(int history_id) {
+    public int delete(String history_id) {
         //获取SQLiteDatabase实例
         SQLiteDatabase db = getWritableDatabase();
         // 执行SQL
         int delete = db.delete("news_history", " history_id=?", new String[]{String.valueOf(history_id)});
         // 关闭数据库连接
-        //db.close();
+        db.close();
         return delete;
     }
 
@@ -111,7 +111,7 @@ public class HistoryDbHelper extends SQLiteOpenHelper {
 
         // 关闭游标和数据库连接
         cursor.close();
-        //db.close();
+        db.close();
 
         return exists;
     }
@@ -167,7 +167,7 @@ public class HistoryDbHelper extends SQLiteOpenHelper {
         }
 
         // 关闭数据库连接
-        //db.close();
+        db.close();
 
         return histories;
     }

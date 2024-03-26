@@ -32,13 +32,23 @@
         android:orientation="horizontal"
         android:gravity="center_vertical">
 
-        <Spinner
-            android:id="@+id/spinner_source_language"
+        <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:background="@drawable/rounded_edittext"/>
+            android:layout_margin="5dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_edittext"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp" />
+
+        </RelativeLayout>
 
         <TextView
             android:layout_width="30dp"
@@ -50,13 +60,23 @@
             android:gravity="center"
             android:background="@drawable/rounded_edittext"/>
 
-        <Spinner
-            android:id="@+id/spinner_target_language"
+        <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:background="@drawable/rounded_edittext"/>
+            android:layout_margin="5dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_edittext"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp" />
+
+        </RelativeLayout>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

@@ -1,5 +1,7 @@
 package com.example.phishingfence.ui.fragments;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -108,6 +110,29 @@ public class HistoryFragment extends Fragment
                 NewsInfo newsInfo = new NewsInfo(0,historyInfo.getTitle(),"","",historyInfo.getDetailUrl(),historyInfo.getNewsImage());
                 intent.putExtra("newsInfo",newsInfo);
                 startActivity(intent);
+            }
+
+            @Override
+            public void delOnCLick(HistoryInfo historyInfo) {
+                new AlertDialog.Builder(getActivity())
+                        .setTitle("tips")
+                        .setMessage("Confirm whether to delete the record")
+                        .setPositiveButton("sure",new DialogInterface.OnClickListener(){
+                            @Override
+                            public void onClick(DialogInterface dialog,int which)
+                            {
+                                HistoryDbHelper.getInstance(getActivity()).delete(historyInfo.getHistory_id()+"");
+                                updateList();
+                            }
+                        })
+                        .setNegativeButton("cancel",new DialogInterface.OnClickListener(){
+                            @Override
+                            public void onClick(DialogInterface dialog,int which)
+                            {
+
+                            }
+                        })
+                        .show();
             }
         });
     }
