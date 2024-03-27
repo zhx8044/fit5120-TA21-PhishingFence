@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/rounded_corners</item>
+        <item name="android:textColor">@color/orange</item> <!-- 文字颜色 -->
+        <!-- 可以在这里添加其他样式属性，如字体大小等 -->
+    </style>
+</resources>

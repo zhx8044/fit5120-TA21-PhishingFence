@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="source_languages">
+        <item>Detect Language</item>
+        <item>Chinese</item>
+        <item>English (British)</item>
+        <item>English (American)</item>
+        <item>Russian</item>
+        <item>French</item>
+    </string-array>
+    <string-array name="target_languages">
+        <item>Chinese</item>
+        <item>English (British)</item>
+        <item>English (American)</item>
+        <item>Russian</item>
+        <item>French</item>
+    </string-array>
+</resources>
