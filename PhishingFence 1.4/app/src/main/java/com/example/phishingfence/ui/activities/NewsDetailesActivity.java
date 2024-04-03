@@ -1,9 +1,11 @@
 package com.example.phishingfence.ui.activities;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
@@ -41,8 +43,11 @@ public class NewsDetailesActivity extends AppCompatActivity
         mToolbar = findViewById(R.id.toolbar);
         mWebView = findViewById(R.id.webView);
 
-        displayWeb();
-        setupClickListeners();
+//        displayWeb();
+//        setupClickListeners();
+
+        setupWebView();
+        setupToolbar();
         addHistoryRecord();
     }
 
@@ -82,6 +87,29 @@ public class NewsDetailesActivity extends AppCompatActivity
         {
             mWebView.loadUrl(newsInfo.getDetailUrl());
         }
+    }
+
+    // 修复部分网页无法访问
+    @SuppressLint("SetJavaScriptEnabled")
+    private void setupWebView() {
+        WebSettings settings = mWebView.getSettings();
+        settings.setJavaScriptEnabled(true);
+        settings.setDomStorageEnabled(true); // 启用DOM存储API
+
+        mWebView.setWebViewClient(new WebViewClient() {
+            @Override
+            public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
+//                Toast.makeText(NewsDetailesActivity.this, "页面加载出错", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        if (newsInfo != null) {
+            mWebView.loadUrl(newsInfo.getDetailUrl());
+        }
+    }
+
+    private void setupToolbar() {
+        mToolbar.setNavigationOnClickListener(v -> finish());
     }
 
     //在Activity销毁时，如果WebView还在加载数据，建议停止加载，避免内存泄露
