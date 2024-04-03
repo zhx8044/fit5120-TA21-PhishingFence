@@ -161,7 +161,7 @@ public class StatisticalTrendFragment extends Fragment
             barChart.setVisibility(View.VISIBLE);
             drawPieChart(labelsPieChart, valuesPieChart);
             pieChart.setVisibility(View.VISIBLE);
-            description.setText("这是柱状图的描述。");
+            description.setText("Here is the despription of charts.");
         } else if (position == 2) {//2005
             List<Float> valuesBarChart = Arrays.asList(0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f); // 柱状图数据
             List<Float> valuesPieChart = Arrays.asList(0f,0f,0f,0f,0f,0f,0f,0f,0f,0f); // 饼图数据
@@ -169,7 +169,7 @@ public class StatisticalTrendFragment extends Fragment
             barChart.setVisibility(View.VISIBLE);
             drawPieChart(labelsPieChart, valuesPieChart);
             pieChart.setVisibility(View.VISIBLE);
-            description.setText("这是柱状图的描述。");
+            description.setText("Here is the despription of charts.");
         } else if (position == 3) {//2006
             List<Float> valuesBarChart = Arrays.asList(0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f); // 柱状图数据
             List<Float> valuesPieChart = Arrays.asList(0f,0f,0f,0f,0f,0f,0f,0f,0f,0f); // 饼图数据
@@ -177,7 +177,7 @@ public class StatisticalTrendFragment extends Fragment
             barChart.setVisibility(View.VISIBLE);
             drawPieChart(labelsPieChart, valuesPieChart);
             pieChart.setVisibility(View.VISIBLE);
-            description.setText("这是柱状图的描述。");
+            description.setText("Here is the despription of charts.");
         } else if (position == 4) {//2007
             List<Float> valuesBarChart = Arrays.asList(0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f); // 柱状图数据
             List<Float> valuesPieChart = Arrays.asList(0f,0f,0f,0f,0f,0f,0f,0f,0f,0f); // 饼图数据
@@ -185,7 +185,7 @@ public class StatisticalTrendFragment extends Fragment
             barChart.setVisibility(View.VISIBLE);
             drawPieChart(labelsPieChart, valuesPieChart);
             pieChart.setVisibility(View.VISIBLE);
-            description.setText("这是柱状图的描述。");
+            description.setText("Here is the despription of charts.");
         } else if (position == 5) {//2008
             List<Float> valuesBarChart = Arrays.asList(0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f); // 柱状图数据
             List<Float> valuesPieChart = Arrays.asList(0f,0f,0f,0f,0f,0f,0f,0f,0f,0f); // 饼图数据
@@ -193,7 +193,7 @@ public class StatisticalTrendFragment extends Fragment
             barChart.setVisibility(View.VISIBLE);
             drawPieChart(labelsPieChart, valuesPieChart);
             pieChart.setVisibility(View.VISIBLE);
-            description.setText("这是柱状图的描述。");
+            description.setText("Here is the despription of charts.");
         } else if (position == 6) {//2009
             List<Float> valuesBarChart = Arrays.asList(0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f); // 柱状图数据
             List<Float> valuesPieChart = Arrays.asList(0f,0f,0f,0f,0f,0f,0f,0f,0f,0f); // 饼图数据
@@ -201,7 +201,7 @@ public class StatisticalTrendFragment extends Fragment
             barChart.setVisibility(View.VISIBLE);
             drawPieChart(labelsPieChart, valuesPieChart);
             pieChart.setVisibility(View.VISIBLE);
-            description.setText("这是柱状图的描述。");
+            description.setText("Here is the despription of charts.");
         } else if (position == 7) {//2010
             List<Float> valuesBarChart = Arrays.asList(0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f); // 柱状图数据
             List<Float> valuesPieChart = Arrays.asList(0f,0f,0f,0f,0f,0f,0f,0f,0f,0f); // 饼图数据
@@ -209,7 +209,7 @@ public class StatisticalTrendFragment extends Fragment
             barChart.setVisibility(View.VISIBLE);
             drawPieChart(labelsPieChart, valuesPieChart);
             pieChart.setVisibility(View.VISIBLE);
-            description.setText("这是柱状图的描述。");
+            description.setText("Here is the despription of charts.");
         } else if (position == 8) {//2011
             List<Float> valuesBarChart = Arrays.asList(0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f); // 柱状图数据
             List<Float> valuesPieChart = Arrays.asList(0f,0f,0f,0f,0f,0f,0f,0f,0f,0f); // 饼图数据
@@ -217,7 +217,7 @@ public class StatisticalTrendFragment extends Fragment
             barChart.setVisibility(View.VISIBLE);
             drawPieChart(labelsPieChart, valuesPieChart);
             pieChart.setVisibility(View.VISIBLE);
-            description.setText("这是柱状图的描述。");
+            description.setText("Here is the despription of charts.");
         } else if (position == 9) {//2012
             List<Float> valuesBarChart = Arrays.asList(0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f); // 柱状图数据
             List<Float> valuesPieChart = Arrays.asList(0f,0f,0f,0f,0f,0f,0f,0f,0f,0f); // 饼图数据
@@ -225,7 +225,7 @@ public class StatisticalTrendFragment extends Fragment
             barChart.setVisibility(View.VISIBLE);
             drawPieChart(labelsPieChart, valuesPieChart);
             pieChart.setVisibility(View.VISIBLE);
-            description.setText("这是柱状图的描述。");
+            description.setText("Here is the despription of charts.");
         } else if (position == 10) {//2013
             List<Float> valuesBarChart = Arrays.asList(0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f); // 柱状图数据
             List<Float> valuesPieChart = Arrays.asList(0f,0f,0f,0f,0f,0f,0f,0f,0f,0f); // 饼图数据
@@ -233,7 +233,7 @@ public class StatisticalTrendFragment extends Fragment
             barChart.setVisibility(View.VISIBLE);
             drawPieChart(labelsPieChart, valuesPieChart);
             pieChart.setVisibility(View.VISIBLE);
-            description.setText("这是柱状图的描述。");
+            description.setText("Here is the despription of charts.");
         } else if (position == 11) {//2014
             List<Float> valuesBarChart = Arrays.asList(0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f); // 柱状图数据
             List<Float> valuesPieChart = Arrays.asList(0f,0f,0f,0f,0f,0f,0f,0f,0f,0f); // 饼图数据
@@ -241,7 +241,7 @@ public class StatisticalTrendFragment extends Fragment
             barChart.setVisibility(View.VISIBLE);
             drawPieChart(labelsPieChart, valuesPieChart);
             pieChart.setVisibility(View.VISIBLE);
-            description.setText("这是柱状图的描述。");
+            description.setText("Here is the despription of charts.");
         } else if (position == 12) {//2015
             List<Float> valuesBarChart = Arrays.asList(0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f); // 柱状图数据
             List<Float> valuesPieChart = Arrays.asList(0f,0f,0f,0f,0f,0f,0f,0f,0f,0f); // 饼图数据
@@ -249,7 +249,7 @@ public class StatisticalTrendFragment extends Fragment
             barChart.setVisibility(View.VISIBLE);
             drawPieChart(labelsPieChart, valuesPieChart);
             pieChart.setVisibility(View.VISIBLE);
-            description.setText("这是柱状图的描述。");
+            description.setText("Here is the despription of charts.");
         } else if (position == 13) {//2016
             List<Float> valuesBarChart = Arrays.asList(0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f); // 柱状图数据
             List<Float> valuesPieChart = Arrays.asList(0f,0f,0f,0f,0f,0f,0f,0f,0f,0f); // 饼图数据
@@ -257,7 +257,7 @@ public class StatisticalTrendFragment extends Fragment
             barChart.setVisibility(View.VISIBLE);
             drawPieChart(labelsPieChart, valuesPieChart);
             pieChart.setVisibility(View.VISIBLE);
-            description.setText("这是柱状图的描述。");
+            description.setText("Here is the despription of charts.");
         } else if (position == 14) {//2017
             List<Float> valuesBarChart = Arrays.asList(0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f); // 柱状图数据
             List<Float> valuesPieChart = Arrays.asList(0f,0f,0f,0f,0f,0f,0f,0f,0f,0f); // 饼图数据
@@ -265,7 +265,7 @@ public class StatisticalTrendFragment extends Fragment
             barChart.setVisibility(View.VISIBLE);
             drawPieChart(labelsPieChart, valuesPieChart);
             pieChart.setVisibility(View.VISIBLE);
-            description.setText("这是柱状图的描述。");
+            description.setText("Here is the despription of charts.");
         } else if (position == 15) {//2018
             List<Float> valuesBarChart = Arrays.asList(0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f); // 柱状图数据
             List<Float> valuesPieChart = Arrays.asList(0f,0f,0f,0f,0f,0f,0f,0f,0f,0f); // 饼图数据
@@ -273,7 +273,7 @@ public class StatisticalTrendFragment extends Fragment
             barChart.setVisibility(View.VISIBLE);
             drawPieChart(labelsPieChart, valuesPieChart);
             pieChart.setVisibility(View.VISIBLE);
-            description.setText("这是柱状图的描述。");
+            description.setText("Here is the despription of charts.");
         } else if (position == 16) {//2019
             List<Float> valuesBarChart = Arrays.asList(90260f,0183900f,72150f,44500f,34260f,46040f,143840f,54960f,45300f,50830f,38260f,38690f); // 柱状图数据
             List<Float> valuesPieChart = Arrays.asList(0f,0f,0f,0f,0f,0f,0f,0f,0f,0f); // 饼图数据
@@ -289,7 +289,7 @@ public class StatisticalTrendFragment extends Fragment
             barChart.setVisibility(View.VISIBLE);
             drawPieChart(labelsPieChart, valuesPieChart);
             pieChart.setVisibility(View.VISIBLE);
-            description.setText("这是柱状图的描述。");
+            description.setText("Here is the despription of charts.");
         } else if (position == 18) {//2021
             List<Float> valuesBarChart = Arrays.asList(0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f); // 柱状图数据
             List<Float> valuesPieChart = Arrays.asList(0f,0f,0f,0f,0f,0f,0f,0f,0f,0f); // 饼图数据
@@ -297,7 +297,7 @@ public class StatisticalTrendFragment extends Fragment
             barChart.setVisibility(View.VISIBLE);
             drawPieChart(labelsPieChart, valuesPieChart);
             pieChart.setVisibility(View.VISIBLE);
-            description.setText("这是柱状图的描述。");
+            description.setText("Here is the despription of charts.");
         } else {//2022
             List<Float> valuesBarChart = Arrays.asList(28030f,49310f,28180f,21130f,24750f,29480f,71220f,40650f,35560f,28690f,33060f,35840f); // 柱状图数据
             List<Float> valuesPieChart = Arrays.asList(88963f,50125f,2162f,6164f,9554f,30716f,6450f,2779f,9316f,10507f); // 饼图数据
