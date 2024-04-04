@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">PhishingFence</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- 抽屉导航的打开和关闭描述 -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+<!--    选择要展示的chart-->
+    <string-array name="chart_options">
+        <item>Total Population by Nationality"</item>
+        <item>Data Trends Over Months</item>
+        <item>Scam exposure rate(a), by mode of exposure(b), 2020-21 to 2021-22(c)</item>
+        <item>Scams, Authorities most serious incident was reported to(a)(b)(c), 2020-21 to 2021-22</item>
+    </string-array>
+</resources>
