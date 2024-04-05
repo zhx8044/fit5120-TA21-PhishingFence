@@ -215,7 +215,32 @@ public class StatisticalTrendFragment extends Fragment
         }
 
         PieDataSet dataSet = new PieDataSet(entries, "Label"); // Label为整个饼图的描述
-        dataSet.setColors(ColorTemplate.COLORFUL_COLORS); // 设置数据集的颜色方案
+
+
+        //dataSet.setColors(ColorTemplate.COLORFUL_COLORS); // 设置数据集的颜色方案
+
+        // 自定义颜色--开始
+        ArrayList<Integer> vibrantColors = new ArrayList<>();
+        // 添加鲜艳的颜色
+        vibrantColors.add(Color.parseColor("#F44336")); // 鲜红色
+        vibrantColors.add(Color.parseColor("#E91E63")); // 鲜粉色
+        vibrantColors.add(Color.parseColor("#9C27B0")); // 鲜紫色
+        vibrantColors.add(Color.parseColor("#673AB7")); // 深紫色
+        vibrantColors.add(Color.parseColor("#3F51B5")); // 鲜蓝色
+        vibrantColors.add(Color.parseColor("#2196F3")); // 亮蓝色
+        vibrantColors.add(Color.parseColor("#03A9F4")); // 天蓝色
+        vibrantColors.add(Color.parseColor("#00BCD4")); // 青色
+        vibrantColors.add(Color.parseColor("#009688")); // 青绿色
+        vibrantColors.add(Color.parseColor("#4CAF50")); // 鲜绿色
+        vibrantColors.add(Color.parseColor("#8BC34A")); // 酸橙绿
+        vibrantColors.add(Color.parseColor("#CDDC39")); // 柠檬黄
+        vibrantColors.add(Color.parseColor("#FFEB3B")); // 鲜黄色
+        vibrantColors.add(Color.parseColor("#FFC107")); // 琥珀色
+        vibrantColors.add(Color.parseColor("#FF9800")); // 橙色
+        vibrantColors.add(Color.parseColor("#FF5722")); // 深橙色
+        dataSet.setColors(vibrantColors); // 应用自定义颜色
+
+
         dataSet.setValueTextSize(6f); // 设置扇形上值的文本大小
         dataSet.setValueTextColor(Color.WHITE); // 设置扇形上值的文本颜色
 
@@ -226,8 +251,10 @@ public class StatisticalTrendFragment extends Fragment
         pieChart.getDescription().setEnabled(false); // 不显示描述文本
         pieChart.setEntryLabelTextSize(6f); // 设置扇形标签的文本大小
         pieChart.setEntryLabelColor(Color.BLACK); // 设置扇形标签的文本颜色
-        pieChart.setCenterText("Pie Chart"); // 设置饼图中心的文本
-        pieChart.setCenterTextSize(8f); // 设置饼图中心文本的大小
+
+        //饼图中心文本-不需要
+//        pieChart.setCenterText("Pie Chart"); // 设置饼图中心的文本
+//        pieChart.setCenterTextSize(8f); // 设置饼图中心文本的大小
 
         pieChart.animateY(1400, Easing.EaseInOutQuad); // 设置饼图的加载动画
 
@@ -291,6 +318,11 @@ public class StatisticalTrendFragment extends Fragment
         lineChart.getXAxis().setDrawGridLines(false);
         lineChart.getDescription().setEnabled(false);
         lineChart.getLegend().setWordWrapEnabled(true);
+
+        for (ILineDataSet set : lineChart.getData().getDataSets()) {
+            ((LineDataSet) set).setDrawValues(false); // 隐藏点上的数值
+            ((LineDataSet) set).setCircleRadius(5f); // 设置点的大小
+        }
     }
 
     // 柱状图
@@ -356,6 +388,9 @@ public class StatisticalTrendFragment extends Fragment
         barChart.groupBars(0, groupSpace, barSpace);
         barChart.getDescription().setEnabled(false);
         barChart.getAxisRight().setEnabled(false); // 不显示右侧Y轴
+        xAxis.setLabelRotationAngle(-15); // -25 degrees
+        xAxis.setDrawGridLines(false); // Removes grid lines 删除网格线
+
 
         // 刷新图表
         barChart.invalidate();
@@ -418,7 +453,9 @@ public class StatisticalTrendFragment extends Fragment
         barChart.getAxisRight().setEnabled(false);
         barChart.getAxisLeft().setAxisMinimum(0);
 
-        xAxis.setLabelRotationAngle(-25); // -25 degrees
+        xAxis.setLabelRotationAngle(-15); // -25 degrees
+        xAxis.setDrawGridLines(false); // Removes grid lines 删除网格线
+
         barChart.getAxisLeft().setAxisMinimum(0);
 
         barChart.invalidate();
