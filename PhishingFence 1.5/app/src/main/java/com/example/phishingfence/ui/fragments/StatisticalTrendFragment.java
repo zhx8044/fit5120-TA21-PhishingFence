@@ -255,6 +255,9 @@ public class StatisticalTrendFragment extends Fragment
         //饼图中心文本-不需要
 //        pieChart.setCenterText("Pie Chart"); // 设置饼图中心的文本
 //        pieChart.setCenterTextSize(8f); // 设置饼图中心文本的大小
+        pieChart.setDrawHoleEnabled(false);//删除饼图中心空白
+        setupPieChartLegend();//启用自动换行图例
+
 
         pieChart.animateY(1400, Easing.EaseInOutQuad); // 设置饼图的加载动画
 
@@ -459,6 +462,18 @@ public class StatisticalTrendFragment extends Fragment
         barChart.getAxisLeft().setAxisMinimum(0);
 
         barChart.invalidate();
+    }
+
+
+    //自定义图例，以便当条目过多而无法容纳在一行中时，它会显示在多行中
+    private void setupPieChartLegend() {
+        Legend legend = pieChart.getLegend();
+        legend.setVerticalAlignment(Legend.LegendVerticalAlignment.BOTTOM);
+        legend.setHorizontalAlignment(Legend.LegendHorizontalAlignment.CENTER);
+        legend.setOrientation(Legend.LegendOrientation.HORIZONTAL);
+        legend.setDrawInside(false);
+        legend.setWordWrapEnabled(true); // Enable word wrapping
+        pieChart.invalidate(); // Refresh the chart to apply changes
     }
 
 }
