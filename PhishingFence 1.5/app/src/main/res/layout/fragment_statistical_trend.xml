@@ -33,11 +33,28 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <androidx.appcompat.widget.AppCompatSpinner
-                android:id="@+id/sp_option"
-                android:layout_width="360dp"
-                android:layout_height="48dp"
-                android:layout_margin="10dp"/>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sp_option"
+                    android:layout_width="250dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"/>
+
+                <TextView
+                    android:id="@+id/tv_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="10dp"
+                    android:text="description"
+                    android:textSize="20sp"
+                    android:textColor="@color/darkBlue"
+                    android:textStyle="italic"
+                    android:gravity="center" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
             <TextView
                 android:id="@+id/text_description"

@@ -1,5 +1,7 @@
 package com.example.phishingfence.ui.fragments;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -52,12 +54,91 @@ public class StatisticalTrendFragment extends Fragment
     private TextView description;
     private BarChart barChart;
     private PieChart pieChart;
-
     private LineChart lineChart;
+    private TextView tv_des;
 
     public StatisticalTrendFragment()
     {
         // Required empty public constructor
+    }
+
+    public void description() {
+        this.tv_des.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int position = StatisticalTrendFragment.this.yearsSpinner.getSelectedItemPosition();
+
+                new AlertDialog.Builder(getActivity())
+                        .setMessage(setMessage(position))
+                        .setPositiveButton("close", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                            }
+                        })
+                        .show();
+            }
+        });
+    }
+
+    private String setMessage(int position) {
+        String des = new String();
+        switch (position) {
+            case 0 :
+                des = "Welcome to our snapshot of international student diversity in 2022! \n" +
+                        " \n" +
+                        "Take a look at the pie chart below to see where our international students call home. It's like a colorful mosaic of cultures right here in Australia! \n" +
+                        " \n" +
+                        "China: Can you believe it? More than half of our international students are from China, making up a huge 58.51%! That's some serious representation! \n" +
+                        "India: Coming in strong at around 26.22%, students from India bring their own spice to our campuses. They're a big part of our vibrant community. \n" +
+                        "United States of America: Even though they're fewer in number, students from the USA still shine, making up 1.34% of our international student mix. \n" +
+                        " \n" +
+                        "But wait, there's more! We've got students from South Korea, Malaysia, Nepal, Brazil, Japan, Thailand, and Indonesia, each adding their own unique flavor to our community. \n" +
+                        " \n" +
+                        "This breakdown really showcases the incredible diversity that makes our universities so special. It's like taking a trip around the world without leaving campus! \n" +
+                        " \n" +
+                        "The pie chart visually represents the percentage distribution of international students from different nations in Australia for Cohort 2 (2022). Enjoy exploring the vibrant tapestry of our student community!";
+                break;
+            case 1:
+                des = "Welcome to our Visa Arrivals Timeline! Take a peek at how visa arrivals to Australia have changed over the months and years. It's like flipping through a travel diary! \n" +
+                        " \n" +
+                        "In January 2019, we saw 90,260 visa arrivals. Fast forward to January 2024, and that number remains strong at 82,890! February is another busy month, with numbers steadily climbing over the years. But March and April can be a bit unpredictable! \n" +
+                        " \n" +
+                        "July 2023 was a peak month, with a staggering 131,640 arrivals – that's a lot of incoming traffic! Each month tells its own story, reflecting the dynamic nature of travel trends. \n" +
+                        " \n" +
+                        "So, grab your virtual passport and join us on this journey through time and across the globe. Let's explore the fascinating world of visa arrivals together! \n" +
+                        " \n" +
+                        "Tap or click to see the colorful journey of visa arrivals across the months and years! ";
+                break;
+            case 2:
+                des = "Ever wondered how scammers are reaching out to their victims? Our bar chart below reveals the exposure rates to different scam modes over the past two years. It's like peeking behind the curtain of cybercrime! \n" +
+                        " \n" +
+                        "Over the Phone: Whoa! The exposure rate through phone calls spiked from 38.3% to 48.2% in just a year. Scammers are dialing up their game! \n" +
+                        "Text Message: Watch out for your texts! Scam exposure via SMS jumped from 23.4% to a whopping 46.5%. That's a big increase in just one year! \n" +
+                        "Email: Emails aren't safe either! Although exposure rates dipped slightly from 32.2% to 37.1%, scammers are still lurking in your inbox. \n" +
+                        "Online: Surprisingly, exposure rates through online platforms remained relatively stable, hovering around 20-22.8%. Stay vigilant while surfing the web! \n" +
+                        "Letter and Other: While exposure rates through letters and other methods are low, every precaution counts to stay safe from scams! \n" +
+                        "Keep an eye on these trends to protect yourself and others from falling victim to scams. Knowledge is power! \n" +
+                        " \n" +
+                        "The bar chart visually represents the exposure rates to different scam modes in Australia for the years 2020-21 and 2021-22. Stay informed and stay safe!\" ";
+                break;
+            case 3:
+                des = "Curious about where people report scams to seek help? Our chart below lays out the channels through which scam reports are made to various authorities over the past three years. It's like having a roadmap to report scams and protect yourself and others! \n" +
+                        " \n" +
+                        "Bank or Financial Institution: Scam reports to banks or financial institutions have been steadily rising, from 27.30% to 48.90% over three years. It's crucial to alert your bank if you suspect fraudulent activity! \n" +
+                        "Social Media or Selling Site: Reports to social media platforms or selling sites have seen slight fluctuations, hovering around 8.70% to 11.10%. Stay vigilant while interacting online! \n" +
+                        "Government Organization or Department: Scam reports to government bodies have seen some variation, but remained relatively stable, ranging from 8.40% to 11.80%. Don't hesitate to reach out for assistance! \n" +
+                        "Police: Reports to the police have increased notably, from 8.20% to 13.90%. Remember, law enforcement is here to help! \n" +
+                        "Other: Scam reports to other authorities have remained consistent, with percentages ranging from 8.90% to 9.90%. Explore all available avenues for assistance! \n" +
+                        "It's encouraging to see more people reporting scams, with overall reports to any authority increasing from 49.50% to 69.40%. By reporting scams, we empower ourselves and others to combat fraud effectively. \n" +
+                        " \n" +
+                        "The chart visually represents the distribution of scam reports to different authorities in Australia for the years 2020-21, 2021-22, and 2022-23. Let's work together to create a safer online environment for everyone!\" ";
+                break;
+            default:
+                des = "nothing";
+                break;
+        }
+        return des;
     }
 
     public interface OnStatisticalTrendFragmentInteractionListener
@@ -89,7 +170,7 @@ public class StatisticalTrendFragment extends Fragment
         this.description = rootview.findViewById(R.id.text_description);
         this.barChart = (BarChart) rootview.findViewById(R.id.barChart);
         this.pieChart = (PieChart) rootview.findViewById(R.id.pieChart);
-
+        this.tv_des = rootview.findViewById(R.id.tv_des);
 
         this.lineChart = (LineChart) rootview.findViewById(R.id.lineChart); // 确保你的布局文件中有这个ID
 
@@ -104,6 +185,7 @@ public class StatisticalTrendFragment extends Fragment
     private void setupClickListeners()
     {
         setupBackButtonListener();
+        description();
     }
 
     private void setupBackButtonListener()
