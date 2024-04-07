@@ -3,28 +3,55 @@
     <string-array name="source_languages">
         <item>Detect Language</item>
         <item>Chinese 中文</item>
-        <item>Hindi हिंदी</item>
+<!--        <item>Arabic عربي</item>-->
         <item>English</item>
         <item>Korean 한국인</item>
-        <item>Malay Melayu</item>
-        <item>Nepali नेपाली</item>
-        <item>Portuguese (Brazil) Português (Brasil)</item>
+<!--        <item>Malay Melayu</item>-->
+<!--        <item>Nepali नेपाली</item>-->
+<!--        <item>Portuguese (Brazil) Português (Brasil)</item>-->
         <item>Japanese 日本語</item>
-        <item>Thai แบบไทย</item>
-        <item>Indonesian ชาวอินโดนีเซีย</item>
+<!--        <item>Thai แบบไทย</item>-->
+<!--        <item>Indonesian ชาวอินโดนีเซีย</item>-->
+
+        <item>Bulgarian Български</item>
+        <item>Czech Česky</item>
+        <item>Danish Dansk</item>
+        <item>German Deutsch</item>
+        <item>Greek Ελληνικά</item>
+        <item>Estonian Eesti</item>
+        <item>Finnish Suomi</item>
+        <item>French Français</item>
+        <item>Latvian Latviešu</item>
+        <item>Norwegian Bokmål Norsk Bokmål</item>
+        <item>Romanian Română</item>
+        <item>Slovak Slovenčina</item>
 
     </string-array>
     <string-array name="target_languages">
         <item>Chinese 中文</item>
-        <item>Hindi हिंदी</item>
+<!--        <item>Arabic عربي</item>-->
         <item>English</item>
         <item>Korean 한국인</item>
-        <item>Malay Melayu</item>
-        <item>Nepali नेपाली</item>
+<!--        <item>Malay Melayu</item>-->
+<!--        <item>Nepali नेपाली</item>-->
         <item>Portuguese (Brazil) Português (Brasil)</item>
         <item>Japanese 日本語</item>
-        <item>Thai แบบไทย</item>
-        <item>Indonesian ชาวอินโดนีเซีย</item>
+<!--        <item>Thai แบบไทย</item>-->
+<!--        <item>Indonesian ชาวอินโดนีเซีย</item>-->
+
+        <item>Bulgarian Български</item>
+        <item>Czech Česky</item>
+        <item>Danish Dansk</item>
+        <item>German Deutsch</item>
+        <item>Greek Ελληνικά</item>
+        <item>Estonian Eesti</item>
+        <item>Finnish Suomi</item>
+        <item>French Français</item>
+        <item>Latvian Latviešu</item>
+        <item>Norwegian Bokmål Norsk Bokmål</item>
+        <item>Romanian Română</item>
+        <item>Slovak Slovenčina</item>
+
     </string-array>
     <string-array name="years">
         <item>2003</item>

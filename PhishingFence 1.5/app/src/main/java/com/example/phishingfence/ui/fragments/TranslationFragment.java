@@ -188,19 +188,42 @@ public class TranslationFragment extends Fragment
 //        return null;
 
         //参考https://developers.deepl.com/docs/v/zh/api-reference/translate/openapi-spec-for-text-translation
+
+//        switch (option) {
+//            case "Chinese 中文": return "ZH";
+//            case "Arabic عربي": return "AR";
+//            case "English": return "UK";
+//            case "Korean 한국인": return "KO";
+//            case "Malay Melayu": return "EN-GB";
+//            case "Nepali नेपाली": return "NE";
+//            case "Portuguese (Brazil) Português (Brasil)": return "PT-BR";
+//            case "Japanese 日本語": return "JA";
+//            case "Thai แบบไทย": return "TR";
+//            case "Indonesian ชาวอินโดนีเซีย": return "ID";
+//            default: return null;
+//        }
+
         switch (option) {
+            case "Bulgarian Български": return "BG";
+            case "Czech Česky": return "CS";
+            case "Danish Dansk": return "DA";
+            case "German Deutsch": return "DE";
+            case "Greek Ελληνικά": return "EL";
+            case "Estonian Eesti": return "ET";
+            case "Finnish Suomi": return "FI";
+            case "French Français": return "FR";
+            case "Latvian Latviešu": return "LV";
+            case "Norwegian Bokmål Norsk Bokmål": return "NB";
+            case "Romanian Română": return "RO";
+            case "Slovak Slovenčina": return "SK";
             case "Chinese 中文": return "ZH";
-            case "Hindi हिंदी": return "HI";
-            case "English": return "EN";
+            case "English": return "UK"; // Assuming UK English
             case "Korean 한국인": return "KO";
-            case "Malay Melayu": return "MS";
-            case "Nepali नेपाली": return "NE";
-            case "Portuguese (Brazil) Português (Brasil)": return "PT";
+            case "Portuguese (Brazil) Português (Brasil)": return "PT-BR";
             case "Japanese 日本語": return "JA";
-            case "Thai แบบไทย": return "TH";
-            case "Indonesian ชาวอินโดนีเซีย": return "ID";
             default: return null;
         }
+
     }
 
     private void setupEditTextListener()
