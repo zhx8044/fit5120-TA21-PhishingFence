@@ -246,7 +246,7 @@ public class StatisticalTrendFragment extends Fragment
         switch (position) {
             case 0: // 饼图1
                 drawPieChart(labelsPieChart, valuesPieChart);// 调用绘制饼图的方法
-                description.setText("Total Population by Nationality");
+                description.setText("International Students Diversity In Australia(2022)");
                 pieChart.setVisibility(View.VISIBLE);
                 barChart.setVisibility(View.GONE);
                 lineChart.setVisibility(View.GONE);
@@ -255,7 +255,7 @@ public class StatisticalTrendFragment extends Fragment
             case 1: // 线图2
                 drawMultipleLineChart();//多个线的线图
 
-                description.setText("Data Trends Over Months");
+                description.setText("Student Visa Arrivals by Month");
                 lineChart.setVisibility(View.VISIBLE);
                 pieChart.setVisibility(View.GONE);
                 barChart.setVisibility(View.GONE);
@@ -264,7 +264,7 @@ public class StatisticalTrendFragment extends Fragment
             case 2: // 柱状图3
                 drawComparisonBarChart(barChart);
 
-                description.setText("Scam exposure rate(a), by mode of exposure(b), 2020-21 to 2021-22(c)");
+                description.setText("Scam exposure rate, by mode of exposure, 2020-21 to 2021-22");
                 barChart.setVisibility(View.VISIBLE);
                 pieChart.setVisibility(View.GONE);
                 lineChart.setVisibility(View.GONE);
@@ -272,7 +272,7 @@ public class StatisticalTrendFragment extends Fragment
             case 3: // 柱状图4
                 drawAuthoritiesBarChart(barChart);
 
-                description.setText("Scams, Authorities most serious incident was reported to(a)(b)(c), 2020-21 to 2021-22");
+                description.setText("Scams, Authorities most serious incident was reported to, 2020-21 to 2021-22");
                 barChart.setVisibility(View.VISIBLE);
                 pieChart.setVisibility(View.GONE);
                 lineChart.setVisibility(View.GONE);

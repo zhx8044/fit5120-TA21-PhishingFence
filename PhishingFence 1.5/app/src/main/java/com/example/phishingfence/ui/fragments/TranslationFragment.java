@@ -100,10 +100,10 @@ public class TranslationFragment extends Fragment
                 String editText = mEditText.getText().toString();
 
                 //获取并转换用户选择的语言选项
-                //String sourceLang = langOption(sourceLangSpinner.getSelectedItem().toString());
+                String sourceLang = langOption((sourceLangSpinner.getSelectedItem().toString()).substring(0, 2));
 
                 //改成截取前两个
-                String sourceLang = sourceLangSpinner.getSelectedItem().toString().substring(0, 2);
+//                String sourceLang = sourceLangSpinner.getSelectedItem().toString().substring(0, 2);
 
 
                 //获取并转换用户选择的语言选项
