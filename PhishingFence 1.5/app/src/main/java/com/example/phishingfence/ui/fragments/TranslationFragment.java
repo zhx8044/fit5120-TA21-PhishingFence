@@ -98,8 +98,14 @@ public class TranslationFragment extends Fragment
             public void onClick(View v)
             {
                 String editText = mEditText.getText().toString();
+
                 //获取并转换用户选择的语言选项
-                String sourceLang = langOption(sourceLangSpinner.getSelectedItem().toString());
+                //String sourceLang = langOption(sourceLangSpinner.getSelectedItem().toString());
+
+                //改成截取前两个
+                String sourceLang = sourceLangSpinner.getSelectedItem().toString().substring(0, 2);
+
+
                 //获取并转换用户选择的语言选项
                 String targetLang = langOption(targetLangSpinner.getSelectedItem().toString());
 
@@ -217,7 +223,7 @@ public class TranslationFragment extends Fragment
             case "Romanian Română": return "RO";
             case "Slovak Slovenčina": return "SK";
             case "Chinese 中文": return "ZH";
-            case "English": return "UK"; // Assuming UK English
+            case "English": return "EN-GB"; // Assuming UK English
             case "Korean 한국인": return "KO";
             case "Portuguese (Brazil) Português (Brasil)": return "PT-BR";
             case "Japanese 日本語": return "JA";
