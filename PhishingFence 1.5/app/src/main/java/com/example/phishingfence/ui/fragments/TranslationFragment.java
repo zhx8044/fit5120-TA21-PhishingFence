@@ -1,5 +1,6 @@
 package com.example.phishingfence.ui.fragments;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -7,10 +8,12 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -99,7 +102,12 @@ public class TranslationFragment extends Fragment
                 String sourceLang = langOption(sourceLangSpinner.getSelectedItem().toString());
                 //获取并转换用户选择的语言选项
                 String targetLang = langOption(targetLangSpinner.getSelectedItem().toString());
+
+                hideKeyboard();//隐藏键盘
+
+
                 translate(editText,sourceLang,targetLang);//翻译
+
             }
         });
     }
@@ -163,21 +171,36 @@ public class TranslationFragment extends Fragment
     private String langOption(String option)
     {
         //参考https://developers.deepl.com/docs/v/zh/api-reference/translate/openapi-spec-for-text-translation
-        if(Objects.equals(option, "Chinese"))
-        {
-            return "ZH";
-        } else if (Objects.equals(option, "English (British)")) {
-            return "EN-GB";
-        } else if (Objects.equals(option,"English (American)")) {
-            return "EN-US";
-        } else if (Objects.equals(option,"Russian")) {
-            return "RU";
-        }else if(Objects.equals(option,"French"))
-        {
-            return "FR";
+//        if(Objects.equals(option, "Chinese"))
+//        {
+//            return "ZH";
+//        } else if (Objects.equals(option, "English (British)")) {
+//            return "EN";
+//        } else if (Objects.equals(option,"English (American)")) {
+//            return "EN";
+//        } else if (Objects.equals(option,"Russian")) {
+//            return "RU";
+//        }else if(Objects.equals(option,"French"))
+//        {
+//            return "FR";
+//        }
+//        //转换用户选择语言
+//        return null;
+
+        //参考https://developers.deepl.com/docs/v/zh/api-reference/translate/openapi-spec-for-text-translation
+        switch (option) {
+            case "Chinese 中文": return "ZH";
+            case "Hindi हिंदी": return "HI";
+            case "English": return "EN";
+            case "Korean 한국인": return "KO";
+            case "Malay Melayu": return "MS";
+            case "Nepali नेपाली": return "NE";
+            case "Portuguese (Brazil) Português (Brasil)": return "PT";
+            case "Japanese 日本語": return "JA";
+            case "Thai แบบไทย": return "TH";
+            case "Indonesian ชาวอินโดนีเซีย": return "ID";
+            default: return null;
         }
-        //转换用户选择语言
-        return null;
     }
 
     private void setupEditTextListener()
@@ -203,4 +226,13 @@ public class TranslationFragment extends Fragment
             }
         });
     }
+
+    // 糊弄一下，点击翻译后隐藏键盘
+    private void hideKeyboard() {
+        if (getActivity() == null || getActivity().getCurrentFocus() == null) return;
+
+        InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(), 0);
+    }
+
 }

@@ -18,6 +18,15 @@ public class TranslationViewModel extends ViewModel
         void onTranslationError(Exception e);
     }
 
+    //点击翻译后跳转到翻译结果页面
+    // LiveData来存储翻译结果
+    private MutableLiveData<String> liveTranslationResult = new MutableLiveData<>();
+
+    // 获取LiveData的公共方法
+    public LiveData<String> getTranslationResult() {
+        return liveTranslationResult;
+    }
+
     public void translateText(String textToTranslate, String sourceLanguage, String targetLanguage, TranslationCallback callback)
     {
         // 创建指向主线程的Handler

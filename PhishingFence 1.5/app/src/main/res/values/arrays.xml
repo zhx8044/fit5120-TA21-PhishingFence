@@ -2,18 +2,29 @@
 <resources>
     <string-array name="source_languages">
         <item>Detect Language</item>
-        <item>Chinese</item>
-        <item>English (British)</item>
-        <item>English (American)</item>
-        <item>Russian</item>
-        <item>French</item>
+        <item>Chinese 中文</item>
+        <item>Hindi हिंदी</item>
+        <item>English</item>
+        <item>Korean 한국인</item>
+        <item>Malay Melayu</item>
+        <item>Nepali नेपाली</item>
+        <item>Portuguese (Brazil) Português (Brasil)</item>
+        <item>Japanese 日本語</item>
+        <item>Thai แบบไทย</item>
+        <item>Indonesian ชาวอินโดนีเซีย</item>
+
     </string-array>
     <string-array name="target_languages">
-        <item>Chinese</item>
-        <item>English (British)</item>
-        <item>English (American)</item>
-        <item>Russian</item>
-        <item>French</item>
+        <item>Chinese 中文</item>
+        <item>Hindi हिंदी</item>
+        <item>English</item>
+        <item>Korean 한국인</item>
+        <item>Malay Melayu</item>
+        <item>Nepali नेपाली</item>
+        <item>Portuguese (Brazil) Português (Brasil)</item>
+        <item>Japanese 日本語</item>
+        <item>Thai แบบไทย</item>
+        <item>Indonesian ชาวอินโดนีเซีย</item>
     </string-array>
     <string-array name="years">
         <item>2003</item>
