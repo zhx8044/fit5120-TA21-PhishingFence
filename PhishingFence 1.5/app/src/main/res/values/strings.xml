@@ -10,9 +10,9 @@
 
 <!--    选择要展示的chart-->
     <string-array name="chart_options">
-        <item>Total Population by Nationality"</item>
-        <item>Data Trends Over Months</item>
-        <item>Scam exposure rate(a), by mode of exposure(b), 2020-21 to 2021-22(c)</item>
-        <item>Scams, Authorities most serious incident was reported to(a)(b)(c), 2020-21 to 2021-22</item>
+        <item>Cultural Canvas"</item>
+        <item>Visa Voyage</item>
+        <item>Scam Exposure</item>
+        <item>Scam Reporting</item>
     </string-array>
 </resources>
