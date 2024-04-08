@@ -49,7 +49,7 @@ public class HomeFragment extends Fragment
 
         // 初始化控件
         this.btnScamScenario = rootview.findViewById(R.id.btn_scam_scenario);
-        this.btnVerifyScam = rootview.findViewById(R.id.btn_verify_scam);
+//        this.btnVerifyScam = rootview.findViewById(R.id.btn_verify_scam);
 
         setupClickListeners();
 
@@ -59,7 +59,7 @@ public class HomeFragment extends Fragment
     private void setupClickListeners()
     {
         setupScamScenarioButtonListener();
-        setupVerifyScamButtonListener();
+//        setupVerifyScamButtonListener();
     }
 
     private void setupScamScenarioButtonListener()
@@ -75,16 +75,16 @@ public class HomeFragment extends Fragment
         });
     }
 
-    private void setupVerifyScamButtonListener()
-    {
-        btnVerifyScam.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(mOnHomeFragmentInteractionListener!=null)
-                {
-                    mOnHomeFragmentInteractionListener.onVerifyScamClick();
-                }
-            }
-        });
-    }
+//    private void setupVerifyScamButtonListener()
+//    {
+//        btnVerifyScam.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(mOnHomeFragmentInteractionListener!=null)
+//                {
+//                    mOnHomeFragmentInteractionListener.onVerifyScamClick();
+//                }
+//            }
+//        });
+//    }
 }

@@ -49,14 +49,14 @@
 
         android:text="Scam Scenario"/>
 
-    <Button
-        android:id="@+id/btn_verify_scam"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="40dp"
-        style="@style/CustomButtonStyle"
-        android:text="Verify Scam"/>
+<!--    <Button-->
+<!--        android:id="@+id/btn_verify_scam"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        style="@style/CustomButtonStyle"-->
+<!--        android:text="Verify Scam"/>-->
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>
