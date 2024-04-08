@@ -56,7 +56,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="验证结果"
+        android:text="Validation results"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@color/darkBlue"

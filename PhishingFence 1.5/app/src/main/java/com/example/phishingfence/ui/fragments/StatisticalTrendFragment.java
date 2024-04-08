@@ -323,7 +323,7 @@ public class StatisticalTrendFragment extends Fragment
         dataSet.setColors(vibrantColors); // 应用自定义颜色
 
 
-        dataSet.setValueTextSize(6f); // 设置扇形上值的文本大小
+        dataSet.setValueTextSize(14f); // 设置扇形上值的文本大小
         dataSet.setValueTextColor(Color.WHITE); // 设置扇形上值的文本颜色
 
         PieData pieData = new PieData(dataSet);
@@ -331,8 +331,24 @@ public class StatisticalTrendFragment extends Fragment
 
         pieChart.setUsePercentValues(true); // 设置饼图显示百分比
         pieChart.getDescription().setEnabled(false); // 不显示描述文本
-        pieChart.setEntryLabelTextSize(6f); // 设置扇形标签的文本大小
+        pieChart.setEntryLabelTextSize(14f); // 设置扇形标签的文本大小
         pieChart.setEntryLabelColor(Color.BLACK); // 设置扇形标签的文本颜色
+
+        // 设置数值在扇形内部显示
+//        dataSet.setYValuePosition(PieDataSet.ValuePosition.INSIDE_SLICE);
+
+// 显示国家名称在外部
+        dataSet.setXValuePosition(PieDataSet.ValuePosition.OUTSIDE_SLICE);
+        dataSet.setValueLinePart1Length(0.4f); // 标签连接线的第一部分长度，可以自行调整
+        dataSet.setValueLinePart2Length(0.4f); // 标签连接线的第二部分长度，可以自行调整
+        dataSet.setValueLineColor(Color.BLACK); // 标签连接线的颜色
+
+
+
+
+
+
+
 
         //饼图中心文本-不需要
 //        pieChart.setCenterText("Pie Chart"); // 设置饼图中心的文本

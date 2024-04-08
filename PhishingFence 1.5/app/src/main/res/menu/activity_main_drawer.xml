@@ -4,21 +4,37 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+<!--        <item-->
+<!--            android:id="@+id/nav_translation"-->
+<!--            android:icon="@drawable/icon_translation"-->
+<!--            android:title="Translation" />-->
+<!--        <item-->
+<!--            android:id="@+id/nav_emergency"-->
+<!--            android:icon="@drawable/icon_emergency"-->
+<!--            android:title="Emergency Response" />-->
+<!--        <item-->
+<!--            android:id="@+id/nav_awarness"-->
+<!--            android:icon="@drawable/icon_awarness"-->
+<!--            android:title="Awarness" />-->
+<!--        <item-->
+<!--            android:id="@+id/nav_education"-->
+<!--            android:icon="@drawable/icon_education"-->
+<!--            android:title="Education And Training" />-->
+
+
+<!--        隐藏-->
         <item
             android:id="@+id/nav_translation"
             android:icon="@drawable/icon_translation"
             android:title="Translation" />
         <item
             android:id="@+id/nav_emergency"
-            android:icon="@drawable/icon_emergency"
-            android:title="Emergency Response" />
+            android:title="" />
         <item
             android:id="@+id/nav_awarness"
-            android:icon="@drawable/icon_awarness"
-            android:title="Awarness" />
+            android:title="" />
         <item
             android:id="@+id/nav_education"
-            android:icon="@drawable/icon_education"
-            android:title="Education And Training" />
+            android:title="" />
     </group>
 </menu>
