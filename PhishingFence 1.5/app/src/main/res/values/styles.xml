@@ -5,4 +5,13 @@
         <item name="android:textColor">@color/orange</item> <!-- 文字颜色 -->
         <!-- 可以在这里添加其他样式属性，如字体大小等 -->
     </style>
+
+
+    <!-- Spinner Style -->
+    <style name="SpinnerTheme" parent="Widget.AppCompat.Spinner">
+
+        <item name="android:popupBackground">@drawable/background</item>
+<!--        <item name="android:popupBackground">@color/darkBlue</item>-->
+<!--        <item name="android:textColor">@color/spinner_text</item>-->
+    </style>
 </resources>

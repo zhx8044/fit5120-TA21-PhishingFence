@@ -37,13 +37,21 @@
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:gravity="center_horizontal"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_border"
+
+                >
 
                 <androidx.appcompat.widget.AppCompatSpinner
                     android:id="@+id/sp_option"
                     android:layout_width="350dp"
                     android:layout_height="48dp"
-                    android:layout_margin="10dp"/>
+                    android:layout_margin="10dp"
+
+                    style="@style/SpinnerTheme"
+                    />
+
+
 
 
 

@@ -4,4 +4,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="darkBlue">#FF141D56</color>
     <color name="orange">#FFFD6F00</color>
+
+    <color name="spinner_text">#FFFFFF</color> <!-- white -->
+    <color name="spinner_dropdown_background">#2196F3</color> <!-- blue -->
+
 </resources>

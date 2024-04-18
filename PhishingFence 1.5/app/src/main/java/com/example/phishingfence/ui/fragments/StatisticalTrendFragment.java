@@ -89,58 +89,47 @@ public class StatisticalTrendFragment extends Fragment
     private String setMessage(int position) {
         String des = new String();
         switch (position) {
-            case 0 :
-                des = "Welcome to our snapshot of international student diversity in 2022! \n" +
-                        " \n" +
-                        "Take a look at the pie chart below to see where our international students call home. It's like a colorful mosaic of cultures right here in Australia! \n" +
-                        " \n" +
-                        "China: Can you believe it? More than half of our international students are from China, making up a huge 58.51%! That's some serious representation! \n" +
-                        "India: Coming in strong at around 26.22%, students from India bring their own spice to our campuses. They're a big part of our vibrant community. \n" +
-                        "United States of America: Even though they're fewer in number, students from the USA still shine, making up 1.34% of our international student mix. \n" +
-                        " \n" +
-                        "But wait, there's more! We've got students from South Korea, Malaysia, Nepal, Brazil, Japan, Thailand, and Indonesia, each adding their own unique flavor to our community. \n" +
-                        " \n" +
-                        "This breakdown really showcases the incredible diversity that makes our universities so special. It's like taking a trip around the world without leaving campus! \n" +
-                        " \n" +
-                        "The pie chart visually represents the percentage distribution of international students from different nations in Australia for Cohort 2 (2022). Enjoy exploring the vibrant tapestry of our student community!";
+            case 0:
+                des = "Check out our international student diversity snapshot for 2022! 🌍 🎓\n" +
+                        "\n" +
+                        "● China leads the pack with a whopping 58.51% of our students hailing from there.\n" +
+                        "● India isn't far behind making up 26.22% of our vibrant community.\n" +
+                        "● The USA contributes 1.34% to our diverse community.\n" +
+                        "● Additionally, students from South Korea, Malaysia, Nepal, Brazil, Japan, Thailand, and Indonesia enrich our campus life.";
                 break;
             case 1:
-                des = "Welcome to our Visa Arrivals Timeline! Take a peek at how visa arrivals to Australia have changed over the months and years. It's like flipping through a travel diary! \n" +
-                        " \n" +
-                        "In January 2019, we saw 90,260 visa arrivals. Fast forward to January 2024, and that number remains strong at 82,890! February is another busy month, with numbers steadily climbing over the years. But March and April can be a bit unpredictable! \n" +
-                        " \n" +
-                        "July 2023 was a peak month, with a staggering 131,640 arrivals – that's a lot of incoming traffic! Each month tells its own story, reflecting the dynamic nature of travel trends. \n" +
-                        " \n" +
-                        "So, grab your virtual passport and join us on this journey through time and across the globe. Let's explore the fascinating world of visa arrivals together! \n" +
-                        " \n" +
-                        "Tap or click to see the colorful journey of visa arrivals across the months and years! ";
+                des = "Welcome to our Visa Arrivals Timeline! Take a peek at how visa arrivals to Australia have changed over the months and years. It's like flipping through a travel diary!\n" +
+                        "\n" +
+                        "● January 2019: 90,260 visa arrivals\n" +
+                        "● January 2024: Strong at 82,890\n" +
+                        "● February: Continuously increasing\n" +
+                        "● March and April: Unpredictable\n" +
+                        "● July 2023: Peak month with 131,640 arrivals\n" +
+                        "\n" +
+                        "Each month tells a unique story reflecting the dynamic nature of travel trends. Join us on this fascinating journey through time!🛫";
                 break;
             case 2:
-                des = "Ever wondered how scammers are reaching out to their victims? Our bar chart below reveals the exposure rates to different scam modes over the past two years. It's like peeking behind the curtain of cybercrime! \n" +
-                        " \n" +
-                        "Over the Phone: Whoa! The exposure rate through phone calls spiked from 38.3% to 48.2% in just a year. Scammers are dialing up their game! \n" +
-                        "Text Message: Watch out for your texts! Scam exposure via SMS jumped from 23.4% to a whopping 46.5%. That's a big increase in just one year! \n" +
-                        "Email: Emails aren't safe either! Although exposure rates dipped slightly from 32.2% to 37.1%, scammers are still lurking in your inbox. \n" +
-                        "Online: Surprisingly, exposure rates through online platforms remained relatively stable, hovering around 20-22.8%. Stay vigilant while surfing the web! \n" +
-                        "Letter and Other: While exposure rates through letters and other methods are low, every precaution counts to stay safe from scams! \n" +
-                        "Keep an eye on these trends to protect yourself and others from falling victim to scams. Knowledge is power! \n" +
-                        " \n" +
-                        "The bar chart visually represents the exposure rates to different scam modes in Australia for the years 2020-21 and 2021-22. Stay informed and stay safe!\" ";
+                des = "Ever wondered how scammers are reaching out to their victims? Our bar chart below reveals exposure rates to different scam modes over the past two years. It's like peeking behind the curtain of cybercrime!\n" +
+                        "\n" +
+                        "● Over the Phone: Exposure spiked from 38.3% to 48.2% in just a year. Scammers are dialing up their game!\n" +
+                        "● Text Message: Scam exposure via SMS jumped from 23.4% to a whopping 46.5% in one year.\n" +
+                        "● Email: Although exposure rates dipped slightly from 32.2% to 37.1%, scammers are still lurking in your inbox.\n" +
+                        "● Online: Exposure rates through online platforms remained relatively stable around 20-22.8%. Stay vigilant while surfing the web!\n" +
+                        "● Letter and Other: Exposure rates through letters and other methods are low but every precaution counts.\n" +
+                        "\n" +
+                        "Keep an eye on these trends to protect yourself and others from falling victim to scams. Knowledge is power!";
                 break;
             case 3:
-                des = "Curious about where people report scams to seek help? Our chart below lays out the channels through which scam reports are made to various authorities over the past three years. It's like having a roadmap to report scams and protect yourself and others! \n" +
-                        " \n" +
-                        "Bank or Financial Institution: Scam reports to banks or financial institutions have been steadily rising, from 27.30% to 48.90% over three years. It's crucial to alert your bank if you suspect fraudulent activity! \n" +
-                        "Social Media or Selling Site: Reports to social media platforms or selling sites have seen slight fluctuations, hovering around 8.70% to 11.10%. Stay vigilant while interacting online! \n" +
-                        "Government Organization or Department: Scam reports to government bodies have seen some variation, but remained relatively stable, ranging from 8.40% to 11.80%. Don't hesitate to reach out for assistance! \n" +
-                        "Police: Reports to the police have increased notably, from 8.20% to 13.90%. Remember, law enforcement is here to help! \n" +
-                        "Other: Scam reports to other authorities have remained consistent, with percentages ranging from 8.90% to 9.90%. Explore all available avenues for assistance! \n" +
-                        "It's encouraging to see more people reporting scams, with overall reports to any authority increasing from 49.50% to 69.40%. By reporting scams, we empower ourselves and others to combat fraud effectively. \n" +
-                        " \n" +
-                        "The chart visually represents the distribution of scam reports to different authorities in Australia for the years 2020-21, 2021-22, and 2022-23. Let's work together to create a safer online environment for everyone!\" ";
+                des = "Curious about where people report scams to seek help? Our chart below lays out the channels through which scam reports are made to various authorities over the past three years. It's like having a roadmap to report scams and protect yourself and others!\n\n" +
+                        "● Bank or Financial Institution: Reports have steadily risen from 27.30% to 48.90% over three years. Alert your bank if you suspect fraudulent activity!\n" +
+                        "● Social Media or Selling Site: Reports have seen slight fluctuations, hovering around 8.70% to 11.10%. Stay vigilant online!\n" +
+                        "● Government Organization or Department: Some variation observed but remained stable, ranging from 8.40% to 11.80%. Don't hesitate to seek assistance!\n" +
+                        "● Police: Reports have notably increased from 8.20% to 13.90%. Law enforcement is here to help!\n" +
+                        "● Other: Reports to other authorities have remained consistent, ranging from 8.90% to 9.90%.\n\n" +
+                        "It's encouraging to see more people reporting scams, with overall reports to any authority increasing from 49.50% to 69.40%. By reporting scams, we empower ourselves and others to combat fraud effectively.";
                 break;
             default:
-                des = "nothing";
+                des = "No description available.";
                 break;
         }
         return des;
@@ -187,6 +176,9 @@ public class StatisticalTrendFragment extends Fragment
         // Navigation button setup 定义，
         Button btnLeft = rootview.findViewById(R.id.btnLeft);
         Button btnRight = rootview.findViewById(R.id.btnRight);
+
+
+
 
         btnLeft.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -247,6 +239,8 @@ public class StatisticalTrendFragment extends Fragment
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 // 基于选项 position 更新图表和文字说明
                 updateChartsAndDescription(position);
+                updateArrowsVisibility(); // 更新箭头的可见性
+
             }
 
             @Override
@@ -273,6 +267,8 @@ public class StatisticalTrendFragment extends Fragment
         barChart.clear();
         pieChart.clear();
         lineChart.clear();
+        currentPosition = position; // 设置当前位置
+
 
         switch (position) {
             case 0: // 饼图1
@@ -605,5 +601,15 @@ public class StatisticalTrendFragment extends Fragment
         pieChart.invalidate(); // Refresh the chart to apply changes
     }
 
+
+    //更新箭头的可视性
+    private void updateArrowsVisibility() {
+
+        Button btnLeft = getView().findViewById(R.id.btnLeft);
+        Button btnRight = getView().findViewById(R.id.btnRight);
+
+        btnLeft.setVisibility(currentPosition == 0 ? View.INVISIBLE : View.VISIBLE);
+        btnRight.setVisibility(currentPosition == yearsSpinner.getAdapter().getCount() - 1 ? View.INVISIBLE : View.VISIBLE);
+    }
 }
 
