@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.phishingfence.R;
@@ -56,6 +57,10 @@ public class StatisticalTrendFragment extends Fragment
     private PieChart pieChart;
     private LineChart lineChart;
     private TextView tv_des;
+
+    private int currentPosition = 0; // Tracks the current position of the chart being displayed
+    // 左右箭头，图片跳转，设置定位
+
 
     public StatisticalTrendFragment()
     {
@@ -178,6 +183,32 @@ public class StatisticalTrendFragment extends Fragment
         setSpinner();
 
         //setupLineChart(rootview);
+
+        // Navigation button setup 定义，
+        Button btnLeft = rootview.findViewById(R.id.btnLeft);
+        Button btnRight = rootview.findViewById(R.id.btnRight);
+
+        btnLeft.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (currentPosition > 0) {
+                    currentPosition--;
+                    updateChartsAndDescription(currentPosition);
+                    yearsSpinner.setSelection(currentPosition);
+                }
+            }
+        });
+
+        btnRight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (currentPosition < yearsSpinner.getAdapter().getCount() - 1) {
+                    currentPosition++;
+                    updateChartsAndDescription(currentPosition);
+                    yearsSpinner.setSelection(currentPosition);
+                }
+            }
+        });
 
         return rootview;
     }
