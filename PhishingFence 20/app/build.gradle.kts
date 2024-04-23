@@ -83,4 +83,7 @@ dependencies {
 
     implementation(platform("com.google.firebase:firebase-bom:32.8.1"))
     implementation("com.google.firebase:firebase-analytics")
+
+    // AWS Lambda SDK
+    implementation("com.amazonaws:aws-android-sdk-lambda:2.43.0")
 }
