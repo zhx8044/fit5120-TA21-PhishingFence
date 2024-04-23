@@ -72,7 +72,6 @@ public class VerifyScamRepository {
             }
         }
 
-
         @Override
         protected void onPostExecute(String result) {
             try {
@@ -88,6 +87,5 @@ public class VerifyScamRepository {
                 }
             }
         }
-
     }
 }

@@ -69,6 +69,8 @@ public class VerifyScamFragment extends Fragment {
             }
         });
 
+        setEditTextMessageListener();
+
         return view;
     }
 

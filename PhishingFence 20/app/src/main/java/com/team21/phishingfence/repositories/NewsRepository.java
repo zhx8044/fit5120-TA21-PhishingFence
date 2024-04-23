@@ -72,7 +72,6 @@ public class NewsRepository {
                 "September 26, 2023",
                 "https://www.centralwesterndaily.com.au/story/8360308/scammers-posing-as-chinese-police-are-extorting-international-students-in-australia/",
                 "https://www.centralwesterndaily.com.au/images/transform/v1/crop/frm/190143465/34d4cd69-b0f8-4155-9290-68586056e45e.jpg/r0_107_3711_2193_w1200_h678_fmax.webp"));
-
         return newsList;
     }
 }
