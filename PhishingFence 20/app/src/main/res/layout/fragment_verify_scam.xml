@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.VerifyScamFragment">
+
+    <ImageView
+        android:id="@+id/image_logo"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/text_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To begin type or paste your message here..."
+        android:textColor="@color/darkBlue"
+        android:layout_gravity="center"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/rounded_layout"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/edit_text_message"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:hint=" paste here"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_edittext"/>
+
+<!--        <TextView-->
+<!--            android:layout_width="80dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@drawable/rounded_textview"-->
+<!--            android:text="verify"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_marginRight="5dp"-->
+<!--            android:layout_marginBottom="5dp"/>-->
+        <Button
+            android:id="@+id/button_verify"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_textview"
+            android:text="Verify"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Validation results"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/darkBlue"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/text_view_results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="...."
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/darkBlue"
+        android:layout_margin="10dp"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
