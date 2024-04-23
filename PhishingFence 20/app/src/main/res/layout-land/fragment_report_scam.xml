@@ -69,8 +69,9 @@
             android:layout_height="match_parent">
 
             <TextView
+                android:id="@+id/textView1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:padding="15dp"
                 android:text="@string/fragment_report_scam_text3"
                 android:textColor="@color/my_light_primary2"

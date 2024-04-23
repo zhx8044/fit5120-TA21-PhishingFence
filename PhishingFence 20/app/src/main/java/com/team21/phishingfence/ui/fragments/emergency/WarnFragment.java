@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.team21.phishingfence.R;
 
@@ -27,6 +28,8 @@ public class WarnFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_warn, container, false);
 
         this.imageButton = rootView.findViewById(R.id.imageButton);
+        TextView textView1 = rootView.findViewById(R.id.textView1);
+        textView1.setTextIsSelectable(true);
 
         this.imageButton.setOnClickListener(new View.OnClickListener() {
             @Override

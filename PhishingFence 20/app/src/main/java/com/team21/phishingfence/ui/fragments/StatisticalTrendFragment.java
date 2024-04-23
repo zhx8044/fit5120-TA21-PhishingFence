@@ -1,5 +1,6 @@
 package com.team21.phishingfence.ui.fragments;
 
+import android.app.AlertDialog;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -16,6 +17,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -52,6 +54,7 @@ public class StatisticalTrendFragment extends Fragment {
     private TextView description;
     private StatisticalTrendViewModel viewModel;
     private ImageButton imageButtonBack, imageButtonNext;
+    private ImageView imageViewHelp;
 
     public StatisticalTrendFragment() {
         // Required empty public constructor
@@ -72,6 +75,7 @@ public class StatisticalTrendFragment extends Fragment {
         this.description = rootView.findViewById(R.id.description);
         this.imageButtonBack = rootView.findViewById(R.id.imageButton);
         this.imageButtonNext = rootView.findViewById(R.id.imageButton2);
+        this.imageViewHelp = rootView.findViewById(R.id.imageViewHelp);
         this.description.setTextIsSelectable(true);
 
         this.viewModel = new ViewModelProvider(requireActivity()).get(StatisticalTrendViewModel.class);//获取ViewModel
@@ -125,6 +129,17 @@ public class StatisticalTrendFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 StatisticalTrendFragment.this.viewModel.nextChart();
+            }
+        });
+
+        this.imageViewHelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new AlertDialog.Builder(requireActivity())
+                        .setMessage(StatisticalTrendFragment.this.description.getText())
+                        .setPositiveButton(R.string.close,null)
+                        .create()
+                        .show();
             }
         });
     }

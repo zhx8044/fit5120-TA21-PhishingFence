@@ -46,7 +46,8 @@ public class HomeFragment extends Fragment {
         this.buttonVerify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                NavController controller = Navigation.findNavController(v);
+                controller.navigate(R.id.action_homeFragment_to_verifyScamFragment);
             }
         });
     }

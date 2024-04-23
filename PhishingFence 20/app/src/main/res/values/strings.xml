@@ -94,7 +94,7 @@
     <string name="fragment_blockcards_text1">Block debit and credit cards\nimmediately for safeguarding\nyour financial accounts</string>
     <string name="fragments_blockcards_text2">*If you suspect your debit or credit card/s has been compromised, temporarily block them using the bank’s App.\n\n*Contact with your bank through its scam reporting hotline 24/7. \n\n*Here are some of the major Australian banks’ scam reporting hot-lines (24/7):\n     \n         NAB: 132265\n          ANZ Bank: 132273\n          CommBank: 132221\n\n*Apply for new cards online via the App or in person at a nearby outlet.</string>
     <string name="fragment_strong_password_text1">Changing passwords of all\naccounts after a suspicious\nscam attack is crucial</string>
-    <string name="fragment_strong_password_text2">Create strong and unique password based on the following guidelines:\n\n\n\t*Blending uppercase and lowercase letters, numbers, and special characters.\n\t*Making passwords 8-16 characters long.\n\t*Avoiding easy-to-guess patterns.\n\t*Using different passwords for each account.\n\t*Ensuring multi-factor authentication.\n\t*Regularly update passwords.</string>
+    <string name="fragment_strong_password_text2">Create strong and unique password based on the following guidelines:\n\n\n\t*Blending uppercase and lowercase letters, numbers, and special characters.\n\t*Making passwords 8–16 characters long.\n\t*Avoiding easy-to-guess patterns.\n\t*Using different passwords for each account.\n\t*Ensuring multi-factor authentication.\n\t*Regularly update passwords.</string>
     <string name="fragment_warn_text1">Alert family and friends to\nprevent them from falling\nvictim of the same scammers</string>
     <string name="fragment_warn_text2">Encourage family and friends to:\n\n\t*ignore unsolicited phone calls or emails asking for personal/financial information \n\t*avoid urgent  money or threats\n\t*report any suspicious activity with your family to the Australian Competition and Consumer Commission (ACCC), Scamwatch or the Australian Cyber Security Centre (ACSC)\n\t*share the scam information with other family members</string>
     <string name="fragment_IDCARE_text1">IDCARE helps scam victims in\nAustralia to make a plan (for\nfree) to limit further risks.</string>
@@ -108,4 +108,11 @@
     <string name="fragment_scam_scenairo_text1">Scam Scenairo</string>
     <string name="fragment_scam_scenairo_text2">Read the latest scam news</string>
     <string name="fragment_scam_scenairo_text3">Australian Interational Students Statistics</string>
+    <string name="fragment_statical_trend_des">description</string>
+    <string name="help">help</string>
+    <string name="close">close</string>
+    <string name="fragment_verify_text1">To begin type or paste\nyour message here...</string>
+    <string name="fragment_verify_edittext_hint">Paste here</string>
+    <string name="fragment_verify_button">Verify</string>
+    <string name="fragment_verify_text2">Validation results</string>
 </resources>

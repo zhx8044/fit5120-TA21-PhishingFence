@@ -15,6 +15,11 @@
             app:destination="@id/scamScenairoFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_homeFragment_to_verifyScamFragment"
+            app:destination="@id/verifyScamFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/translateFragment"
@@ -230,4 +235,9 @@
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
+    <fragment
+        android:id="@+id/verifyScamFragment"
+        android:name="com.team21.phishingfence.ui.fragments.VerifyScamFragment"
+        android:label="fragment_verify"
+        tools:layout="@layout/fragment_verify" />
 </navigation>
