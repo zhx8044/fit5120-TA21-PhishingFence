@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.team21.phishingfence.ui.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_scamScenairoFragment"
+            app:destination="@id/scamScenairoFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/translateFragment"
+        android:name="com.team21.phishingfence.ui.fragments.TranslateFragment"
+        android:label="fragment_translate"
+        tools:layout="@layout/fragment_translate" />
+    <fragment
+        android:id="@+id/scamScenairoFragment"
+        android:name="com.team21.phishingfence.ui.fragments.ScamScenairoFragment"
+        android:label="fragment_scam_scenairo"
+        tools:layout="@layout/fragment_scam_scenairo" >
+        <action
+            android:id="@+id/action_scamScenairoFragment_to_statisticalTrendFragment"
+            app:destination="@id/statisticalTrendFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_scamScenairoFragment_to_newsFeedFragment"
+            app:destination="@id/newsFeedFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/statisticalTrendFragment"
+        android:name="com.team21.phishingfence.ui.fragments.StatisticalTrendFragment"
+        android:label="fragment_statistical_trend"
+        tools:layout="@layout/fragment_statistical_trend" >
+        <action
+            android:id="@+id/action_statisticalTrendFragment_to_scamScenairoFragment"
+            app:destination="@id/scamScenairoFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsFeedFragment"
+        android:name="com.team21.phishingfence.ui.fragments.NewsFeedFragment"
+        android:label="fragment_news_feed"
+        tools:layout="@layout/fragment_news_feed" >
+        <action
+            android:id="@+id/action_newsFeedFragment_to_scamScenairoFragment"
+            app:destination="@id/scamScenairoFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_newsFeedFragment_to_historyFragment"
+            app:destination="@id/historyFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.team21.phishingfence.ui.fragments.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" >
+        <action
+            android:id="@+id/action_historyFragment_to_newsFeedFragment"
+            app:destination="@id/newsFeedFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/emergencyMenuFragment"
+        android:name="com.team21.phishingfence.ui.fragments.EmergencyMenuFragment"
+        android:label="fragment_emergency_menu"
+        tools:layout="@layout/fragment_emergency_menu" >
+        <action
+            android:id="@+id/action_emergencyMenuFragment_to_reportScamFragment"
+            app:destination="@id/reportScamFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_emergencyMenuFragment_to_remedialActionsFragment"
+            app:destination="@id/remedialActionsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_emergencyMenuFragment_to_legelSupportFragment"
+            app:destination="@id/legelSupportFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/reportScamFragment"
+        android:name="com.team21.phishingfence.ui.fragments.emergency.ReportScamFragment"
+        android:label="fragment_report_scam"
+        tools:layout="@layout/fragment_report_scam" >
+        <action
+            android:id="@+id/action_reportScamFragment_to_emergencyMenuFragment"
+            app:destination="@id/emergencyMenuFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/remedialActionsFragment"
+        android:name="com.team21.phishingfence.ui.fragments.emergency.RemedialActionsFragment"
+        android:label="fragment_remedial_actions"
+        tools:layout="@layout/fragment_remedial_actions" >
+        <action
+            android:id="@+id/action_remedialActionsFragment_to_emergencyMenuFragment"
+            app:destination="@id/emergencyMenuFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_remedialActionsFragment_to_reportScamFragment"
+            app:destination="@id/reportScamFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_remedialActionsFragment_to_blockingContactsFragment"
+            app:destination="@id/blockingContactsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_remedialActionsFragment_to_blockCardsFragment"
+            app:destination="@id/blockCardsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_remedialActionsFragment_to_strongPasswordFragment"
+            app:destination="@id/strongPasswordFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_remedialActionsFragment_to_warnFragment"
+            app:destination="@id/warnFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_remedialActionsFragment_to_contactIDCAREFragment"
+            app:destination="@id/contactIDCAREFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_remedialActionsFragment_to_scamUpdatesFragment"
+            app:destination="@id/scamUpdatesFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/blockingContactsFragment"
+        android:name="com.team21.phishingfence.ui.fragments.emergency.BlockingContactsFragment"
+        android:label="fragment_blocking_contacts"
+        tools:layout="@layout/fragment_blocking_contacts" >
+        <action
+            android:id="@+id/action_blockingContactsFragment_to_remedialActionsFragment"
+            app:destination="@id/remedialActionsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/blockCardsFragment"
+        android:name="com.team21.phishingfence.ui.fragments.emergency.BlockCardsFragment"
+        android:label="fragment_block_cards"
+        tools:layout="@layout/fragment_block_cards" >
+        <action
+            android:id="@+id/action_blockCardsFragment_to_remedialActionsFragment"
+            app:destination="@id/remedialActionsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/strongPasswordFragment"
+        android:name="com.team21.phishingfence.ui.fragments.emergency.StrongPasswordFragment"
+        android:label="fragment_strong_password"
+        tools:layout="@layout/fragment_strong_password" >
+        <action
+            android:id="@+id/action_strongPasswordFragment_to_remedialActionsFragment"
+            app:destination="@id/remedialActionsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/warnFragment"
+        android:name="com.team21.phishingfence.ui.fragments.emergency.WarnFragment"
+        android:label="fragment_warn"
+        tools:layout="@layout/fragment_warn" >
+        <action
+            android:id="@+id/action_warnFragment_to_remedialActionsFragment"
+            app:destination="@id/remedialActionsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactIDCAREFragment"
+        android:name="com.team21.phishingfence.ui.fragments.emergency.ContactIDCAREFragment"
+        android:label="fragment_contact_idcare"
+        tools:layout="@layout/fragment_contact_idcare" >
+        <action
+            android:id="@+id/action_contactIDCAREFragment_to_remedialActionsFragment"
+            app:destination="@id/remedialActionsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/scamUpdatesFragment"
+        android:name="com.team21.phishingfence.ui.fragments.emergency.ScamUpdatesFragment"
+        android:label="fragment_scam_updates"
+        tools:layout="@layout/fragment_scam_updates" >
+        <action
+            android:id="@+id/action_scamUpdatesFragment_to_remedialActionsFragment"
+            app:destination="@id/remedialActionsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/legelSupportFragment"
+        android:name="com.team21.phishingfence.ui.fragments.emergency.LegelSupportFragment"
+        android:label="fragment_legel_support"
+        tools:layout="@layout/fragment_legel_support" >
+        <action
+            android:id="@+id/action_legelSupportFragment_to_emergencyMenuFragment"
+            app:destination="@id/emergencyMenuFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+</navigation>
