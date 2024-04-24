@@ -77,15 +77,29 @@ public class VerifyScamRepository {
             try {
                 JSONObject jsonResponse = new JSONObject(result);
                 String formattedResult = jsonResponse.getString("formattedResult");
+
+                // Extract probabilities from formattedResult assuming they are in the format:
+                // "Probability of being ham: [hamProbability]\nProbability of being spam: [spamProbability]"
+                String[] lines = formattedResult.split("\\n");
+                double hamProbability = Double.parseDouble(lines[2].split(": ")[1]);
+                double spamProbability = Double.parseDouble(lines[3].split(": ")[1]);
+
+                // Determine the predicted class based on probabilities
+                String predictedClass = spamProbability > hamProbability ? "spam" : "ham";
+
+                // Replace the predicted class in formattedResult
+                formattedResult = formattedResult.replaceAll("Predicted class: (spam|ham)", "Predicted class: " + predictedClass);
+
                 if (resultView != null) {
                     resultView.setText(formattedResult);
                 }
-            } catch (JSONException e) {
+            } catch (JSONException | NumberFormatException | ArrayIndexOutOfBoundsException e) {
                 e.printStackTrace();
                 if (resultView != null) {
-                    resultView.setText("Error parsing the response.");
+                    resultView.setText("Error parsing the response or formattedResult.");
                 }
             }
         }
+
     }
 }
