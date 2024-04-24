@@ -119,9 +119,9 @@ public class VerifyScamRepository {
                 double hamProbability = jsonResponse.getDouble("Probability of being ham");
                 double spamProbability = jsonResponse.getDouble("Probability of being spam");
 
-                // 转换概率为百分比形式，保留小数点后四位
-                String hamProbabilityString = String.format("%.4f%%", hamProbability * 100);
-                String spamProbabilityString = String.format("%.4f%%", spamProbability * 100);
+                // 转换概率为百分比形式，保留小数点后2位
+                String hamProbabilityString = String.format("%.2f%%", hamProbability * 100);
+                String spamProbabilityString = String.format("%.2f%%", spamProbability * 100);
 
                 // 构造格式化后的结果字符串
                 String formattedResult = "Predicted class: " + predictedClass + "\n";
