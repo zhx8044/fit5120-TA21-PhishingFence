@@ -115,4 +115,6 @@
     <string name="fragment_verify_edittext_hint">Paste here</string>
     <string name="fragment_verify_button">Verify</string>
     <string name="fragment_verify_text2">Validation results</string>
+    <string name="verify">verify</string>
+    <string name="fragment_translate_verifyButton">verify scam here</string>
 </resources>

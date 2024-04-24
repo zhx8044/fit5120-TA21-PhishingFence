@@ -19,6 +19,8 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import com.team21.phishingfence.R;
 import com.team21.phishingfence.viewmodels.TranslateViewModel;
@@ -28,7 +30,7 @@ import java.util.Objects;
 public class TranslateFragment extends Fragment {
     private Spinner spinnerSourceLang, spinnerTargetLang;
     private EditText editText;
-    private ImageView imageViewCheck, imageViewCancel;
+    private ImageView imageViewCheck, imageViewCancel,imageViewVerify;
     private TextView textView;
     private TranslateViewModel viewModel;
 
@@ -48,6 +50,7 @@ public class TranslateFragment extends Fragment {
         this.imageViewCheck = rootView.findViewById(R.id.imageViewCheck);
         this.textView = rootView.findViewById(R.id.textViewResult);
         this.textView.setTextIsSelectable(true);
+        this.imageViewVerify = rootView.findViewById(R.id.imageViewVerify);
 
         this.viewModel = new ViewModelProvider(requireActivity()).get(TranslateViewModel.class);
         //从ViewModel处获取用户输入和之前翻译结果
@@ -60,8 +63,24 @@ public class TranslateFragment extends Fragment {
         setImageViewCheckOnClickListner();//设置确认按钮监听器
         setImageViewCancelOnClickListener();//设置删除按钮监听器
         setEditTextChangeListener();//设置输入框监听器
+        setButtonOnClickListener();
 
         return rootView;
+    }
+
+    private void setButtonOnClickListener() {
+        this.imageViewVerify.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 创建一个Bundle对象来包含需要传递的数据
+                Bundle bundle = new Bundle();
+                bundle.putString("message to verify", TranslateFragment.this.viewModel.getTextToTranslate());
+
+                // 使用NavController进行跳转并传递Bundle
+                NavController navController = Navigation.findNavController(v);
+                navController.navigate(R.id.action_translateFragment_to_verifyScamFragment, bundle);
+            }
+        });
     }
 
     private void setSpinnerOption() {

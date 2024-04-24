@@ -3,6 +3,7 @@ package com.team21.phishingfence.ui.fragments.emergency;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.LinearLayoutCompat;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -17,7 +18,7 @@ import com.team21.phishingfence.R;
 
 public class RemedialActionsFragment extends Fragment {
     private ImageButton imageButton;
-    private LinearLayoutCompat blocking_contacts,block_cards,strong_password,warn,report,create_IDCARE,scam_update;
+    private ConstraintLayout blocking_contacts,block_cards,strong_password,warn,report,create_IDCARE,scam_update;
 
     public RemedialActionsFragment() {
         // Required empty public constructor

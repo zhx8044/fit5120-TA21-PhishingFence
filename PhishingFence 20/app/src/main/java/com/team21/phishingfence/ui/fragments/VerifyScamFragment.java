@@ -51,7 +51,6 @@ public class VerifyScamFragment extends Fragment {
         this.viewmodel = new ViewModelProvider(requireActivity()).get(VerifyScamViewmodel.class);//获取ViewModel
 
         if(this.viewmodel.getResult() != null) {
-            Log.e("My", "onCreateView: " + this.viewmodel.getResult());
             this.textViewResults.setText(this.viewmodel.getResult());
         }
 
@@ -68,6 +67,13 @@ public class VerifyScamFragment extends Fragment {
                 Toast.makeText(requireActivity(), "verified", Toast.LENGTH_SHORT).show();
             }
         });
+
+        // 在目标Fragment的onCreate或onCreateView中
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            String value = bundle.getString("message to verify");
+            this.editTextMessage.setText(value);
+        }
 
         setEditTextMessageListener();
 

@@ -25,7 +25,13 @@
         android:id="@+id/translateFragment"
         android:name="com.team21.phishingfence.ui.fragments.TranslateFragment"
         android:label="fragment_translate"
-        tools:layout="@layout/fragment_translate" />
+        tools:layout="@layout/fragment_translate" >
+        <action
+            android:id="@+id/action_translateFragment_to_verifyScamFragment"
+            app:destination="@id/verifyScamFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
     <fragment
         android:id="@+id/scamScenairoFragment"
         android:name="com.team21.phishingfence.ui.fragments.ScamScenairoFragment"

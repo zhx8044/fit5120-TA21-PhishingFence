@@ -66,9 +66,7 @@
             android:layout_marginBottom="5dp"
             android:gravity="center"
             android:text="@string/fragment_verify_button"
-            android:textColor="@color/my_light_primary2"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textColor="@color/my_light_primary2" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
