@@ -54,6 +54,10 @@
         * Other: Reports to other authorities have remained consistent, ranging from 8.90% to 9.90%. \n
         \n
         It\'s encouraging to see more people reporting scams, with overall reports to any authority increasing from 49.50% to 69.40%. By reporting scams, we empower ourselves and others to combat fraud effectively. </string>
+    <string name="fragment_statistical_trend_chart1_question">"\"What is the purpose of the pie chart?\"      \n\n* \"The pie chart represents proportions of a whole by dividing a circular area into slices, with each slice's size proportional to the quantity it represents, making it easy to visualize the distribution or composition of data categories.\" "</string>
+    <string name="fragment_statistical_trend_chart2_question">"\"What information does the line chart convey?\"      \n\n* \"The line chart illustrates trends and patterns over time or continuous data points by connecting them with straight lines, providing insights into changes and fluctuations.\" "</string>
+    <string name="fragment_statistical_trend_chart3_question">"\"What does the bar chart represent?\"      \n\n* \"The bar chart visually displays categorical data using rectangular bars, where the length of each bar corresponds to the value it represents.\" "</string>
+    <string name="fragment_statistical_trend_chart4_question">\"What does the bar chart represent?\"      \n\n* \"The bar chart visually displays categorical data using rectangular bars, where the length of each bar corresponds to the value it represents.\"</string>
     <string name="fragment_statistical_trend_imgbutton_back">back</string>
     <string name="fragment_statistical_trend_imgbutton_next">next chart</string>
     <string name="fragment_statistical_trend_text_back">Back</string>
@@ -65,7 +69,7 @@
     <string name="fragment_history_deleteDialog_message">Do you really want to delete this history item?</string>
     <string name="fragment_history_deleteToast">Deleted</string>
     <string name="fragment_emergencyMenu_text1">Emergency Response Info</string>
-    <string name="fragment_emergencyMenu_text2">If you have been scamed,\nconsider the following.</string>
+    <string name="fragment_emergencyMenu_text2">If you have been scammed,\nconsider the following.</string>
     <string name="fragment_emergencyMenu_button1">Report scam</string>
     <string name="fragment_emergencyMenu_button2">Remedial actions</string>
     <string name="fragment_emergencyMenu_button">Legal support</string>

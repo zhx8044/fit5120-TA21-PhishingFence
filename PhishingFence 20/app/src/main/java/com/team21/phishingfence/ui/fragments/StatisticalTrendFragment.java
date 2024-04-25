@@ -135,8 +135,15 @@ public class StatisticalTrendFragment extends Fragment {
         this.imageViewHelp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String helpInfo = "";
+                switch (StatisticalTrendFragment.this.viewModel.getChoosenOption().getValue()) {
+                    case StatisticalTrendViewModel.PIECHART1 -> helpInfo = requireActivity().getString(R.string.fragment_statistical_trend_chart1_question);
+                    case StatisticalTrendViewModel.LINECHART2 -> helpInfo = requireActivity().getString(R.string.fragment_statistical_trend_chart2_question);
+                    case StatisticalTrendViewModel.BARCHART3 -> helpInfo = requireActivity().getString(R.string.fragment_statistical_trend_chart3_question);
+                    case StatisticalTrendViewModel.BARCHART4 -> helpInfo = requireActivity().getString(R.string.fragment_statistical_trend_chart4_question);
+                }
                 new AlertDialog.Builder(requireActivity())
-                        .setMessage(StatisticalTrendFragment.this.description.getText())
+                        .setMessage(helpInfo)
                         .setPositiveButton(R.string.close,null)
                         .create()
                         .show();
