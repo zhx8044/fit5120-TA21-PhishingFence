@@ -10,7 +10,12 @@
     <string name="fragment_home_button1">Scam Scenario</string>
     <string name="fragment_home_button2">Verify Scam</string>
     <string name="menu_translate">Translate</string>
+    <string name="menu_verify">Verify</string>
     <string name="menu_emergency">Emergency Response</string>
+    <string name="menu_newsfeed">News Feed</string>
+    <string name="menu_news_history">News History</string>
+    <string name="menu_view_chart">View Chart</string>
+
     <string name="menu_quit">Quit</string>
 
     <string name="fragment_translate_text1">Translate scam messages into\nNative Language</string>

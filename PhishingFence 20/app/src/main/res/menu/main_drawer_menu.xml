@@ -4,10 +4,33 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/nav_newsfeed"
+            android:icon="@drawable/news_feed"
+
+            android:title="@string/menu_newsfeed" />
+
+        <item
+            android:id="@+id/nav_news_history"
+            android:icon="@drawable/news_history2"
+
+            android:title="@string/menu_news_history" />
+
+        <item
+            android:id="@+id/nav_view_chart"
+            android:icon="@drawable/view_chart"
+            android:title="@string/menu_view_chart" />
+
         <item
             android:id="@+id/nav_translate"
             android:icon="@drawable/translate"
             android:title="@string/menu_translate" />
+
+        <item
+            android:id="@+id/nav_verify"
+            android:icon="@drawable/verify2"
+            android:title="@string/menu_verify" />
         <item
             android:id="@+id/nav_emergency"
             android:icon="@drawable/emergency"

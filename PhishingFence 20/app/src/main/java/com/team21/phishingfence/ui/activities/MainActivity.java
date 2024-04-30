@@ -78,21 +78,33 @@ public class MainActivity extends AppCompatActivity {
 
     private void setNavigationListener() {
         this.navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                NavController controller = Navigation.findNavController(MainActivity.this,R.id.fragmentContainerView);
-                if (menuItem.getItemId() == R.id.nav_translate) {
-                    //侧边栏translate按钮
+                NavController controller = Navigation.findNavController(MainActivity.this, R.id.fragmentContainerView);
+
+                int itemId = menuItem.getItemId();
+                //侧边栏
+                if (itemId == R.id.nav_newsfeed) {
+                    controller.navigate(R.id.newsFeedFragment);
+                } else if (itemId == R.id.nav_news_history) {
+                    controller.navigate(R.id.historyFragment);
+                } else if (itemId == R.id.nav_view_chart) {
+                    controller.navigate(R.id.statisticalTrendFragment);
+                } else if (itemId == R.id.nav_translate) {
                     controller.navigate(R.id.translateFragment);
-                } else if (menuItem.getItemId() == R.id.nav_emergency) {
+                } else if (itemId == R.id.nav_verify) {
+                    controller.navigate(R.id.verifyScamFragment);
+                } else if (itemId == R.id.nav_emergency) {
                     controller.navigate(R.id.emergencyMenuFragment);
                 } else {
-                    //侧边栏quit按钮
                     finish();
                 }
+
                 MainActivity.this.drawer.close();
                 return true;
             }
+
         });
     }
 }
