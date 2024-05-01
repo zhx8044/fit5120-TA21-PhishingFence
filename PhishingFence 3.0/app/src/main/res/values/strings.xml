@@ -1,0 +1,131 @@
+<resources>
+    <string name="app_name">PhishingFence</string>
+    <string name="logo">logo</string>
+    <string name="floating_action_button_des">Home</string>
+    <string name="navigation_drawer_open">navigation drawer open</string>
+    <string name="navigation_drawer_close">navigation drawer close</string>
+    <string name="fragment_home_text1">Welcome to the</string>
+    <string name="fragment_home_text2">PhishingFence APP</string>
+    <string name="fragment_home_text3">Avoid Scam\nKnow the scenario of International\nStudent in Australia</string>
+    <string name="fragment_home_button1">Scam Scenario</string>
+    <string name="fragment_home_button2">Verify Scam</string>
+    <string name="menu_translate">Translate</string>
+    <string name="menu_verify">Verify</string>
+    <string name="menu_emergency">Emergency Response</string>
+    <string name="menu_newsfeed">News Feed</string>
+    <string name="menu_news_history">News History</string>
+    <string name="menu_scam_awareness">Scam Awareness</string>
+    <string name="menu_scam_knowledge_check">Scam Knowledge Check</string>
+    <string name="menu_view_chart">View Chart</string>
+
+    <string name="menu_quit">Quit</string>
+
+    <string name="fragment_translate_text1">Translate scam messages into\nNative Language</string>
+    <string name="fragment_translate_text2">to</string>
+    <string name="fragment_translate_img_check">check</string>
+    <string name="fragment_translate_img_cancel">cancel</string>
+    <string name="fragment_translate_editText_hint">Enter your message here</string>
+    <string name="fragment_translate_text3">Here is your result</string>
+    <string name="fragment_translate_toast">Translated successfully</string>
+    <string name="fragment_statistical_trend_text1">Trend of incoming international\nstudents in Australia</string>
+    <string name="fragment_statistical_trend_option1">Cultural Canvas</string>
+    <string name="fragment_statistical_trend_option2">Visa Voyage</string>
+    <string name="fragment_statistical_trend_option3">Scam Exposure</string>
+    <string name="fragment_statistical_trend_option4">Scam Reporting</string>
+    <string name="fragment_statistical_trend_chart1_description">Check out our international student diversity snapshot for 2022! 🌍 🎓\n
+        \n
+        * China leads the pack, with a whopping 58.51% of our students hailing from there.\n
+        * India isn\'t far behind, making up 26.22% of our vibrant community. \n
+        * The USA contributes 1.34% to our diverse community. \n
+        * Additionally, students from South Korea, Malaysia, Nepal, Brazil, Japan, Thailand, and Indonesia enrich our campus life. </string>
+    <string name="fragment_statistical_trend_chart2_description">Welcome to our Visa Arrivals Timeline! Take a peek at how visa arrivals to Australia have changed over the months and years. It\'s like flipping through a travel diary!\n
+        \n
+        * January 2019: 90,260 visa arrivals\n
+        * January 2024: Strong at 82,890\n
+        * February: Continuously increasing\n
+        * March and April: Unpredictable\n
+        * July 2023: Peak month with 131,640 arrivals\n
+        \n
+        Each month tells a unique story, reflecting the dynamic nature of travel trends. Join us on this fascinating journey through time !🛫  </string>
+    <string name="fragment_statistical_trend_chart3_description">Ever wondered how scammers are reaching out to their victims? Our bar chart below reveals exposure rates to different scam modes over the past two years. It\'s like peeking behind the curtain of cybercrime!\n
+        \n
+        * Over the Phone: Exposure spiked from 38.3% to 48.2% in just a year. Scammers are dialing up their game! \n
+        * Text Message: Scam exposure via SMS jumped from 23.4% to a whopping 46.5% in one year. \n
+        * Email: Although exposure rates dipped slightly from 32.2% to 37.1%, scammers are still lurking in your inbox.</string>
+    <string name="fragment_statistical_trend_chart4_description">Curious about where people report scams to seek help? Our chart below lays out the channels through which scam reports are made to various authorities over the past three years. It\'s like having a roadmap to report scams and protect yourself and others!\n
+        \n
+        * Bank or Financial Institution: Reports have steadily risen from 27.30% to 48.90% over three years. Alert your bank if you suspect fraudulent activity! \n
+        * Social Media or Selling Site: Reports have seen slight fluctuations, hovering around 8.70% to 11.10%. Stay vigilant online! \n
+        * Government Organization or Department: Some variation observed but remained stable, ranging from 8.40% to 11.80%. Don\'t hesitate to seek assistance! \n
+        * Police: Reports have notably increased from 8.20% to 13.90%. Law enforcement is here to help! \n
+        * Other: Reports to other authorities have remained consistent, ranging from 8.90% to 9.90%. \n
+        \n
+        It\'s encouraging to see more people reporting scams, with overall reports to any authority increasing from 49.50% to 69.40%. By reporting scams, we empower ourselves and others to combat fraud effectively. </string>
+    <string name="fragment_statistical_trend_chart1_question">"\"What is the purpose of the pie chart?\"      \n\n* \"The pie chart represents proportions of a whole by dividing a circular area into slices, with each slice's size proportional to the quantity it represents, making it easy to visualize the distribution or composition of data categories.\" "</string>
+    <string name="fragment_statistical_trend_chart2_question">"\"What information does the line chart convey?\"      \n\n* \"The line chart illustrates trends and patterns over time or continuous data points by connecting them with straight lines, providing insights into changes and fluctuations.\" "</string>
+    <string name="fragment_statistical_trend_chart3_question">"\"What does the bar chart represent?\"      \n\n* \"The bar chart visually displays categorical data using rectangular bars, where the length of each bar corresponds to the value it represents.\" "</string>
+    <string name="fragment_statistical_trend_chart4_question">\"What does the bar chart represent?\"      \n\n* \"The bar chart visually displays categorical data using rectangular bars, where the length of each bar corresponds to the value it represents.\"</string>
+    <string name="fragment_statistical_trend_imgbutton_back">back</string>
+    <string name="fragment_statistical_trend_imgbutton_next">next chart</string>
+    <string name="fragment_statistical_trend_text_back">Back</string>
+    <string name="fragment_statistical_trend_text_next">Next chart</string>
+    <string name="fragment_newsfeed_text1">News Feed</string>
+    <string name="fragment_newsfeed_img">history records</string>
+    <string name="newsImg">news image</string>
+    <string name="fragment_history_deleteDialog_title">Confirm Deletion</string>
+    <string name="fragment_history_deleteDialog_message">Do you really want to delete this history item?</string>
+    <string name="fragment_history_deleteToast">Deleted</string>
+    <string name="fragment_emergencyMenu_text1">Emergency Response Info</string>
+    <string name="fragment_emergencyMenu_text2">If you have been scammed,\nconsider the following.</string>
+    <string name="fragment_emergencyMenu_button1">Report scam</string>
+    <string name="fragment_emergencyMenu_button2">Remedial actions</string>
+    <string name="fragment_emergencyMenu_button">Legal support</string>
+    <string name="fragment_report_scam_text1">Reporting scams aids the victims and\nenables anti scam agencies to track\nscams and warn others</string>
+    <string name="fragment_report_scam_text2">So, report scam immediately if you\nfeel you have been scammed</string>
+    <string name="fragment_report_scam_text3">* Call 000 if your life is in danger and report your\nlocal or territory police on 13 11 14\n
+        \n
+        * In case of an email, online or telephone scam\nreport to Scamwatch through the following link:\nhttps://portal.scamwatch.gov.au/report-a-scam/\n
+        \n
+        * In case of financial scam report to Australian\nSecurities and Investment Commission on the\nfollowing link:\n
+        https://moneysmart.gov.au/check-and-report-\n
+        scams/report-an-investment-scam\n
+        \n
+        * For anonymous reporting call Crime Stoppers\nover 1800 333 000</string>
+    <string name="fragment_remedial_text1">A victim of scam should consider\nthe following measures</string>
+    <string name="fragment_remedial_button">goto</string>
+    <string name="fragment_remedial_text2">Block all contacts from the scammer</string>
+    <string name="fragment_remedial_text3">Block all debit and credit cards</string>
+    <string name="fragment_remedial_text4">Create new and strong passwords</string>
+    <string name="fragment_remedial_text5">Warn family and friends about the scam</string>
+    <string name="fragment_remedial_text6">Report the scam immediately  </string>
+    <string name="fragment_remedial_text7">Contact IDCARE</string>
+    <string name="fragment_remedial_text8">During a scam disaster follow the updates</string>
+    <string name="fragments_blocking_contacts_text1">"Blocking contact will prevent \nscammers from further \ncommunication and reduce \nrisks  "</string>
+    <string name="fragment_blocking_contacts_text2">How to block\n\n\t*Use your phone’s built-in Call blocking features\n\t*Add numbers to block list\n\t*You can also use third-party call blocking Apps\n\t*Use carrier call blocking services\n\t*Report scam numbers\n\t*Be cautious with unknown numbers\n\nRegister your numbers with “do not call”   service of Australian government to stop unsolicited calls.\n\n\thttps://www.donotcall.gov.au/consumers/register-your-numbers/</string>
+    <string name="fragment_blockcards_text1">Block debit and credit cards\nimmediately for safeguarding\nyour financial accounts</string>
+    <string name="fragments_blockcards_text2">*If you suspect your debit or credit card/s has been compromised, temporarily block them using the bank’s App.\n\n*Contact with your bank through its scam reporting hotline 24/7. \n\n*Here are some of the major Australian banks’ scam reporting hot-lines (24/7):\n     \n         NAB: 132265\n          ANZ Bank: 132273\n          CommBank: 132221\n\n*Apply for new cards online via the App or in person at a nearby outlet.</string>
+    <string name="fragment_strong_password_text1">Changing passwords of all\naccounts after a suspicious\nscam attack is crucial</string>
+    <string name="fragment_strong_password_text2">Create strong and unique password based on the following guidelines:\n\n\n\t*Blending uppercase and lowercase letters, numbers, and special characters.\n\t*Making passwords 8–16 characters long.\n\t*Avoiding easy-to-guess patterns.\n\t*Using different passwords for each account.\n\t*Ensuring multi-factor authentication.\n\t*Regularly update passwords.</string>
+    <string name="fragment_warn_text1">Alert family and friends to\nprevent them from falling\nvictim of the same scammers</string>
+    <string name="fragment_warn_text2">Encourage family and friends to:\n\n\t*ignore unsolicited phone calls or emails asking for personal/financial information \n\t*avoid urgent  money or threats\n\t*report any suspicious activity with your family to the Australian Competition and Consumer Commission (ACCC), Scamwatch or the Australian Cyber Security Centre (ACSC)\n\t*share the scam information with other family members</string>
+    <string name="fragment_IDCARE_text1">IDCARE helps scam victims in\nAustralia to make a plan (for\nfree) to limit further risks.</string>
+    <string name="fragment_IDCARE_text2"><![CDATA[Contact IDCARE:\n\n\tAustralia: 1800 595 160‍\n\tQLD: 07 3555 5900\n\tACT & NSW: 02 8999 3356\n\tVIC: 03 7018 2366\n\tNT, SA & WA : 08 7078 7741\n\nBusiness hours:\n    Mon - Fri: 8am - 5pm AEST\n\nReport phishing:\n\n\tEmail: reportphishing@idcare.org]]></string>
+    <string name="fragment_scam_updates_text1">Increase vigilance to scam\nalerts</string>
+    <string name="fragment_scam_updates_text2">*Examine emergency alerts and notifications directly from relevant authorities\n\n *Follow official sources like government, law enforcement or reputable news agencies for updates during a scam disaster \n\n*Join in different discussion forums where users exchange information, support each other, and stay informed collectively\n\n*Use your uni support service to prevent or get relief from scam attack</string>
+    <string name="fragment_legel_support">Legal support for scam victim\nis not free in Australia</string>
+    <string name="fragment_legel_support_text2">*It is suggested that civil remedy is better than police or anti-scam agencies’ intervention for a scam.\n\n*So act quickly and follow the remedial actions to prevent scam\n</string>
+    <string name="fragment_scam_scenairo_button1">News Feed</string>
+    <string name="fragment_scam_scenairo_button2">View Statistics</string>
+    <string name="fragment_scam_scenairo_text1">Scam Scenairo</string>
+    <string name="fragment_scam_scenairo_text2">Read the latest scam news</string>
+    <string name="fragment_scam_scenairo_text3">Australian Interational Students Statistics</string>
+    <string name="fragment_statical_trend_des">description</string>
+    <string name="help">help</string>
+    <string name="close">close</string>
+    <string name="fragment_verify_text1">To begin type or paste\nyour message here...</string>
+    <string name="fragment_verify_edittext_hint">Paste here</string>
+    <string name="fragment_verify_button">Verify</string>
+    <string name="fragment_verify_text2">Validation results</string>
+    <string name="verify">verify</string>
+    <string name="fragment_translate_verifyButton">verify scam here</string>
+</resources>

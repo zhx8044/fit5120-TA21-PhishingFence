@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="source_languages">
+        <item>Detect Language</item>
+        <item>中文</item>
+        <item>English</item>
+        <item>한국</item>
+        <item>Français</item>
+        <item>Português</item>
+        <item>日本語</item>
+        <item>Melayu dan Indonesia</item>
+        <item>Русский</item>
+        <item>Español</item>
+        <item>Deutsch</item>
+        <item>Italiano</item>
+    </string-array>
+    <string-array name="target_languages">
+        <item>中文</item>
+        <item>English</item>
+        <item>한국</item>
+        <item>Français</item>
+        <item>Português</item>
+        <item>日本語</item>
+        <item>Melayu dan Indonesia</item>
+        <item>Русский</item>
+        <item>Español</item>
+        <item>Deutsch</item>
+        <item>Italiano</item>
+    </string-array>
+    <string-array name="chart_options">
+        <item>@string/fragment_statistical_trend_option1</item>
+        <item>@string/fragment_statistical_trend_option2</item>
+        <item>@string/fragment_statistical_trend_option3</item>
+        <item>@string/fragment_statistical_trend_option4</item>
+    </string-array>
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/nav_newsfeed"
+            android:icon="@drawable/news_feed"
+
+            android:title="@string/menu_newsfeed" />
+
+        <item
+            android:id="@+id/nav_news_history"
+            android:icon="@drawable/news_history2"
+
+            android:title="@string/menu_news_history" />
+
+        <item
+            android:id="@+id/nav_view_chart"
+            android:icon="@drawable/view_chart"
+            android:title="@string/menu_view_chart" />
+
+        <item
+            android:id="@+id/nav_translate"
+            android:icon="@drawable/translate"
+            android:title="@string/menu_translate" />
+
+        <item
+            android:id="@+id/nav_verify"
+            android:icon="@drawable/verify2"
+            android:title="@string/menu_verify" />
+        <item
+            android:id="@+id/nav_emergency"
+            android:icon="@drawable/emergency"
+            android:title="@string/menu_emergency" />
+        <item
+            android:id="@+id/nav_scam_awareness"
+            android:icon="@drawable/scam_awareness"
+            android:title="@string/menu_emergency" />
+        <item
+            android:id="@+id/nav_scam_knowledge_check"
+            android:icon="@drawable/scam_knowledge_check"
+            android:title="@string/menu_scam_knowledge_check" />
+        <item
+            android:id="@+id/nav_quit"
+            android:icon="@drawable/quit"
+            android:title="@string/menu_quit" />
+    </group>
+</menu>
