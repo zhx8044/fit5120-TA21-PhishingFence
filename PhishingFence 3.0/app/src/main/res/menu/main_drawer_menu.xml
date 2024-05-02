@@ -38,7 +38,7 @@
         <item
             android:id="@+id/nav_scam_awareness"
             android:icon="@drawable/scam_awareness"
-            android:title="@string/menu_emergency" />
+            android:title="@string/menu_scam_awareness" />
         <item
             android:id="@+id/nav_scam_knowledge_check"
             android:icon="@drawable/scam_knowledge_check"
