@@ -121,10 +121,10 @@ public class MainActivity extends AppCompatActivity {
                     controller.navigate(R.id.verifyScamFragment);
                 } else if (itemId == R.id.nav_emergency) {
                     controller.navigate(R.id.emergencyMenuFragment);
-//                } else if (itemId == R.id.nav_scam_awareness) {
-//                    controller.navigate(R.id.scamAwarenessFragment);
-//                } else if (itemId == R.id.nav_scam_knowledge_check) {
-//                    controller.navigate(R.id.scamKnowledgeCheckFragment);
+                } else if (itemId == R.id.nav_scam_awareness) {
+                    controller.navigate(R.id.scamAwarenessFragment);
+                } else if (itemId == R.id.nav_scam_knowledge_check) {
+                    controller.navigate(R.id.scamKnowledgeCheckFragment);
                 } else if (itemId == R.id.nav_quit) {
                     finish();
                 } else {

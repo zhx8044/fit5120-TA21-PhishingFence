@@ -83,5 +83,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonScamScenrio"
         app:layout_constraintVertical_bias="0.15" />
+    <!-- 帮助浮层 -->
+    <include
+        layout="@layout/help_overlay"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

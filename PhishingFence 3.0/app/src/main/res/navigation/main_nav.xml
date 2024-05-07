@@ -245,5 +245,21 @@
         android:id="@+id/verifyScamFragment"
         android:name="com.team21.phishingfence.ui.fragments.VerifyScamFragment"
         android:label="fragment_verify"
-        tools:layout="@layout/fragment_verify" />
+        tools:layout="@layout/fragment_verify" >
+        <action
+            android:id="@+id/action_verifyScamFragment_to_translateFragment"
+            app:destination="@id/translateFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/scamAwarenessFragment"
+        android:name="com.team21.phishingfence.ui.fragments.ScamAwarenessFragment"
+        android:label="fragment_scam_awareness"
+        tools:layout="@layout/fragment_scam_awareness" />
+    <fragment
+        android:id="@+id/scamKnowledgeCheckFragment"
+        android:name="com.team21.phishingfence.ui.fragments.ScamKnowledgeCheckFragment"
+        android:label="fragment_scam_knowledge_check"
+        tools:layout="@layout/fragment_scam_knowledge_check" />
 </navigation>
