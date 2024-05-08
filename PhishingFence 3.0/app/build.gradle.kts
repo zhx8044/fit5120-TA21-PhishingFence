@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     id("org.jetbrains.kotlin.android")
     kotlin("kapt")
-    id("com.google.gms.google-services")
+//    id("com.google.gms.google-services")
 }
 
 android {
@@ -75,14 +75,14 @@ dependencies {
     kapt("com.github.bumptech.glide:compiler:4.13.2")
 
     // Import the BoM for the Firebase platform
-    implementation(platform("com.google.firebase:firebase-bom:32.3.1"))
+//    implementation(platform("com.google.firebase:firebase-bom:32.3.1"))
 
     // Add the dependency for the Realtime Database library
     // When using the BoM, you don't specify versions in Firebase library dependencies
-    implementation("com.google.firebase:firebase-database")
-
-    implementation(platform("com.google.firebase:firebase-bom:32.8.1"))
-    implementation("com.google.firebase:firebase-analytics")
+//    implementation("com.google.firebase:firebase-database")
+//
+//    implementation(platform("com.google.firebase:firebase-bom:32.8.1"))
+//    implementation("com.google.firebase:firebase-analytics")
 
     // AWS Lambda SDK
     implementation("com.amazonaws:aws-android-sdk-lambda:2.43.0")

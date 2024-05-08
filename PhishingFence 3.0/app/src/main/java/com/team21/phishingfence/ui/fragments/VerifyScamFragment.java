@@ -64,7 +64,7 @@ public class VerifyScamFragment extends Fragment {
                  */
 
                 VerifyScamFragment.this.viewmodel.verify(VerifyScamFragment.this.textViewResults);
-                Toast.makeText(requireActivity(), "verified", Toast.LENGTH_SHORT).show();
+                Toast.makeText(requireActivity(), "verifying", Toast.LENGTH_LONG).show();
             }
         });
 
