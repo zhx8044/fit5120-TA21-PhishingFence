@@ -1,4 +1,4 @@
-package com.team21.phishingfence.ui.fragments;
+package com.team21.phishingfence.ui.fragments.awareness;
 
 import android.os.Bundle;
 
@@ -9,22 +9,23 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.team21.phishingfence.R;
 
-public class ScamKnowledgeCheckFragment extends Fragment {
-    private Button button;
-    public ScamKnowledgeCheckFragment() {
+public class TrendsOfScamFragment extends Fragment {
+    private ImageButton imageButton;
+
+    public TrendsOfScamFragment() {
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_scam_knowledge_check, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_trends_of_scam, container, false);
 
-        //初始化控件
-        this.button = rootView.findViewById(R.id.button);
+        this.imageButton = rootView.findViewById(R.id.imageButton);
 
         setButtonOnClickListener();
 
@@ -32,13 +33,18 @@ public class ScamKnowledgeCheckFragment extends Fragment {
     }
 
     private void setButtonOnClickListener() {
-        this.button.setOnClickListener(new View.OnClickListener() {
+        setBackButtonListener();
+    }
+
+    private void setBackButtonListener() {
+        this.imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 NavController controller = Navigation.findNavController(v);
-                controller.navigate(R.id.action_scamKnowledgeCheckFragment_to_attemptQuizFragment);
+                controller.navigate(R.id.action_trendsOfScamFragment_to_scamAwarenessFragment);
             }
         });
     }
+
 
 }
