@@ -1,6 +1,7 @@
 package com.team21.phishingfence.repositories;
 
 import android.os.AsyncTask;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.team21.phishingfence.ui.fragments.VerifyScamFragment;
@@ -16,7 +17,11 @@ import java.net.URL;
 
 public class VerifyScamRepository {
 //    private final static String apiEndpoint = "https://nbhq8mbflg.execute-api.ap-southeast-2.amazonaws.com/default/testnow";
-    private final static String apiEndpoint = "https://bxa6v3wtpe.execute-api.ap-southeast-2.amazonaws.com/default/SpamSMSdetection";
+//    private final static String apiEndpoint = "https://bxa6v3wtpe.execute-api.ap-southeast-2.amazonaws.com/default/SpamSMSdetection";
+
+    private final static String apiEndpoint = "https://x571evpon6.execute-api.ap-southeast-2.amazonaws.com/test3001";
+
+
 
     /**
      * 使用该方法进行验证逻辑
@@ -36,10 +41,16 @@ public class VerifyScamRepository {
         protected String doInBackground(String... strings) {
             String endpoint = strings[0];
             String inputMessage = strings[1];
+
+//            System.out.println("Sending data: " + inputMessage);  // 打印发送的数据
+
+
             try {
                 URL url = new URL(endpoint);
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 connection.setRequestMethod("POST");
+
+
                 connection.setDoOutput(true);
                 connection.setRequestProperty("Content-Type", "application/json");
 
@@ -47,10 +58,16 @@ public class VerifyScamRepository {
                 JSONObject jsonMessage = new JSONObject();
                 jsonMessage.put("message", inputMessage);
 
+                System.out.println("Sending data2: " + inputMessage);  // 打印发送的数据
+
+
                 // 发送JSON字符串
                 try (OutputStream os = connection.getOutputStream()) {
                     byte[] input = jsonMessage.toString().getBytes("utf-8");
                     os.write(input, 0, input.length);
+
+//                    System.out.println("Sending data2: " + inputMessage);  // 打印发送的数据
+
                 }
 
                 connection.connect();
@@ -114,6 +131,8 @@ public class VerifyScamRepository {
                         "body": "{\"Predicted class\": \"ham\", \"Probability of being ham\": 0.9875905427682923, \"Probability of being spam\": 0.01240945723170767}"
                 }
                  */
+                System.out.println("Sending data-json: " + result);  //  发送的数据
+
 
                 String predictedClass = jsonResponse.getString("Predicted class");
                 double hamProbability = jsonResponse.getDouble("Probability of being ham");
@@ -142,4 +161,7 @@ public class VerifyScamRepository {
 
 
     }
+
+
+
 }

@@ -77,6 +77,8 @@ public class VerifyScamFragment extends Fragment {
 
         setEditTextMessageListener();
 
+//        testLambdaFunction(); // 测试
+
         return view;
     }
 
@@ -113,4 +115,65 @@ public class VerifyScamFragment extends Fragment {
             }
         });
     }
+    /**
+     * 测试Lambda函数test3001
+     */
+//
+//    private final static String apiEndpoint2 = "https://x571evpon6.execute-api.ap-southeast-2.amazonaws.com/test3001";
+//    public void testLambdaFunction() {
+//        new TestLambdaAsyncTask().execute(apiEndpoint2, "hello");
+//    }
+//
+//    private static class TestLambdaAsyncTask extends AsyncTask<String, Void, String> {
+//        @Override
+//        protected String doInBackground(String... strings) {
+//            String endpoint = strings[0];
+//            String inputMessage = strings[1];
+//            try {
+//                URL url = new URL(endpoint);
+//                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+//                connection.setRequestMethod("POST");
+//                connection.setDoOutput(true);
+//                connection.setRequestProperty("Content-Type", "application/json");
+//
+//                JSONObject jsonMessage = new JSONObject();
+//                jsonMessage.put("message", inputMessage);
+//
+//                // 打印发送的数据
+////                Log.d("TestLambda", "Sending data: " + jsonMessage.toString());
+//                System.out.println("Sending data: " + jsonMessage.toString());
+//
+//                try (OutputStream os = connection.getOutputStream()) {
+//                    byte[] input = jsonMessage.toString().getBytes("utf-8");
+//                    os.write(input, 0, input.length);
+//                }
+//
+//                connection.connect();
+//
+//                int responseCode = connection.getResponseCode();
+//                if (responseCode == HttpURLConnection.HTTP_OK) {
+//                    BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+//                    StringBuilder response = new StringBuilder();
+//                    String line;
+//                    while ((line = reader.readLine()) != null) {
+//                        response.append(line);
+//                    }
+//                    reader.close();
+//                    return response.toString();
+//                } else {
+//                    return "Error: " + responseCode;
+//                }
+//            } catch (Exception e) {
+//                return "Exception: " + e.getMessage();
+//            }
+//        }
+//
+//        @Override
+//        protected void onPostExecute(String result) {
+//            // 打印接收的数据
+////            Log.d("TestLambda", "Received response: " + result);
+//            System.out.println("Received response: " + result);
+//
+//        }
+//    }
 }
