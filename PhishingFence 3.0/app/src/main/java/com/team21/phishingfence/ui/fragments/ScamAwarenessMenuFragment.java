@@ -13,9 +13,9 @@ import android.widget.Button;
 
 import com.team21.phishingfence.R;
 
-public class ScamAwarenessFragment extends Fragment {
+public class ScamAwarenessMenuFragment extends Fragment {
     private Button button,button2;
-    public ScamAwarenessFragment() {
+    public ScamAwarenessMenuFragment() {
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

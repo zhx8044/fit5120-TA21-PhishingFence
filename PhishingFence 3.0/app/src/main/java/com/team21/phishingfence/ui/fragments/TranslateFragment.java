@@ -30,7 +30,7 @@ import java.util.Objects;
 public class TranslateFragment extends Fragment {
     private Spinner spinnerSourceLang, spinnerTargetLang;
     private EditText editText;
-    private ImageView imageViewCheck, imageViewCancel,imageViewVerify;
+    private ImageView imageViewCheck, imageViewCancel,imageViewVerify,imageViewVerify0;
     private TextView textView;
     private TranslateViewModel viewModel;
 
@@ -51,6 +51,7 @@ public class TranslateFragment extends Fragment {
         this.textView = rootView.findViewById(R.id.textViewResult);
         this.textView.setTextIsSelectable(true);
         this.imageViewVerify = rootView.findViewById(R.id.imageViewVerify);
+//        this.imageViewVerify0 = rootView.findViewById(R.id.imageViewVerify0);
 
         this.viewModel = new ViewModelProvider(requireActivity()).get(TranslateViewModel.class);
         //从ViewModel处获取用户输入和之前翻译结果
@@ -81,6 +82,20 @@ public class TranslateFragment extends Fragment {
                 navController.navigate(R.id.action_translateFragment_to_verifyScamFragment, bundle);
             }
         });
+
+//        // 在输入框 也加一个，同上
+//        this.imageViewVerify0.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                // 创建一个Bundle对象来包含需要传递的数据
+//                Bundle bundle = new Bundle();
+//                bundle.putString("message to verify", TranslateFragment.this.viewModel.getTextToTranslate());
+//
+//                // 使用NavController进行跳转并传递Bundle
+//                NavController navController = Navigation.findNavController(v);
+//                navController.navigate(R.id.action_translateFragment_to_verifyScamFragment, bundle);
+//            }
+//        });
     }
 
     private void setSpinnerOption() {

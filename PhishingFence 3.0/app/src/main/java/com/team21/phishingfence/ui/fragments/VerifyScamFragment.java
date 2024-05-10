@@ -37,7 +37,7 @@ public class VerifyScamFragment extends Fragment {
     private VerifyScamViewmodel viewmodel;
 
     public VerifyScamFragment() {
-        // Required empty public constructor
+
     }
 
     @Override

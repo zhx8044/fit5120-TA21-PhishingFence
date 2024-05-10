@@ -1,14 +1,11 @@
-package com.team21.phishingfence.ui.fragments.emergency;
+package com.team21.phishingfence.ui.fragments.awareness;
 
-import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
-import android.text.Html;
-import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,19 +14,18 @@ import android.widget.TextView;
 
 import com.team21.phishingfence.R;
 
-public class ReportScamFragment extends Fragment {
+public class ScamScopeFragment extends Fragment {
+
     private ImageButton imageButton;
     private TextView textView1;
-
-    public ReportScamFragment() {
+    public ScamScopeFragment() {
         // Required empty public constructor
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_report_scam, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_scam_scope, container, false);
 
         this.imageButton = rootView.findViewById(R.id.imageButton);
         this.textView1 = rootView.findViewById(R.id.textView1);
@@ -39,7 +35,7 @@ public class ReportScamFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 NavController controller = Navigation.findNavController(v);
-                controller.navigate(R.id.action_reportScamFragment_to_emergencyMenuFragment);
+                controller.navigate(R.id.action_scamScopeFragment_to_typesOfScamFragment);
             }
         });
 
