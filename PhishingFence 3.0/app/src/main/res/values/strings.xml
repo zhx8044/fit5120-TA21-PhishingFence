@@ -130,4 +130,9 @@
     <string name="fragment_translate_verifyButton">verify scam here</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="scambutton1">Scam</string>
+    <string name="scambutton2">Not a Scam</string>
+    <string name="right_hint">You are right – This is not a scam!</string>
+    <string name="wrongHint">Oops, you’re wrong – this is not a scam!</string>
+    <string name="fragment_attempt_quiz_text">next quiz</string>
 </resources>

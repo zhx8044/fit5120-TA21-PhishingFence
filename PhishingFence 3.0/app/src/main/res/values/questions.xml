@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="question1">Dear Taxpayer, You are eligible for a tax refund! Click here to claim your refund now. Act fast, limited time offer! </string>
+    <string name="warning1">Warning signs:  \n\t· Urgency in claiming the tax refund.  \n\t· Request to click on a link without proper verification.  \n\t·Lack of personalized information.  \n\t· Suspicious sender email address.</string>
+    <string name="tips1">"Tips:  \n\t· Verify the sender's email address for authenticity.  \n\t· Government agencies usually communicate through official channels, not email.  \n\t·Be cautious of urgent requests for personal information or clicking on links without proper verification.  \n\t·Official communication regarding tax refunds often includes personalized information and does not pressure recipients to act quickly. \nHow it's a scam:   \n\tScammers often use urgent language and fake tax refund notifications to trick recipients into clicking malicious links or providing personal information. "</string>
+    <string name="question2">Subject: Important Government Announcement - Verify Your Details!\nMessage: Dear Citizen, Your government benefits require verification. Please provide your personal details by clicking the link government details.verify. Failure to comply may result in benefits suspension. </string>
+    <string name="warning2">Warning signs: \n
+·Threat of benefits suspension for non-compliance. \n
+·Request to provide personal details through a link. \n
+·Lack of official government logo or email address. \n
+·Pressure to act quickly.</string>
+    <string name="tips2">Tips:\n
+·Government agencies typically communicate through official channels, not email.\n
+·Check for official government logos or email addresses.\n
+·Be wary of threats of benefits suspension for non-compliance.\n
+·Avoid clicking on links in unsolicited emails requesting personal details. </string>
+    <string name="question3">Subject: Your Banking Account Security Alert - Immediate Action Required! \n
+Message: Dear Customer, Your banking account has been compromised. Click the link banking security.alert/secure to secure your account immediately. Failure to act may lead to financial loss. </string>
+    <string name="warning3">Warning signs: \n
+·Fear-inducing subject line. \n
+·Request to click on a link to secure account. \n
+·Lack of personalized information or account details. \n
+·Pressure to act quickly due to potential financial loss. </string>
+    <string name="tips3">Tips:\n
+    ·Genuine security alerts from banks often include specific account information.\n
+    ·Banks usually communicate important security updates through secure channels, not email.\n
+    · Be cautious of urgent requests to click on links to secure your account without proper verification.\n
+    ·Contact your bank directly using official contact information to verify the authenticity of the message. ></string>
+    <string name="question4">Subject: Exclusive Job Opportunity - Apply Now!\n
+Message: Dear Job Seeker, A prestigious company is offering you a job opportunity! Click the link job opportunity.apply/limited to apply now and secure your dream job. Limited positions available! </string>
+    <string name="warning4">Warning signs: \n
+·Unsolicited job offer. \n
+·Request to click on a link for job application. \n
+·Lack of company details or job description. \n
+·Pressure to apply quickly due to limited positions. </string>
+    <string name="tips4">Tips:
+·Legitimate job offers provide detailed information about the company and the job role.
+·Be cautious of unsolicited job offers that pressure you to apply quickly.
+·Research the company independently to verify the job offer\'s legitimacy.
+·Avoid clicking on links in unsolicited emails offering job opportunities. </string>
+    <string name="question5">Congratulations! You\'ve been selected to receive a free gift voucher. Click the link free gift voucher.claim/hurry to claim your prize now. Hurry, offer ends soon! </string>
+    <string name="warning5">Warning signs: \n
+·Unsolicited offer for free gift voucher. \n
+·Request to click on a link to claim prize. \n
+·Lack of information about the sender or promotion. \n
+·Urgency in claiming the prize. </string>
+    <string name="tips5">Tips: \n
+·Legitimate gift voucher offers usually come from reputable companies and are not unsolicited. \n
+·Be wary of urgent requests to claim prizes or click on links in unsolicited emails. \n
+·Avoid providing personal information or clicking on suspicious links in emails. </string>
+    <string name="question6">Your package delivery is pending! Click the link delivery tracking.track/act now to track your shipment and reschedule delivery. Act now to avoid delays. </string>
+    <string name="warning6">Warning signs: \n
+· Unsolicited package delivery notification. \n
+· Request to click on a link to track shipment. \n
+· Lack of specific details about the package or sender. \n
+· Urgency in tracking the shipment. </string>
+    <string name="tips6">Tips: \n
+· Verify the legitimacy of package delivery notifications by contacting the shipping company directly. \n
+· Be cautious of urgent requests to track shipments or reschedule delivery through unsolicited emails. \n
+· Avoid clicking on links in emails from unknown senders. </string>
+    <string name="question7">Subject: Important Account Security Update - Verify Your Details!\n
+Message: Dear Customer, Your account security is at risk! Click the link accountsecurity.verify/secure to verify your details and secure your account. Failure to do so may result in account suspension. </string>
+    <string name="warning7">Warning signs: \n
+· Fear-inducing subject line regarding account security. \n
+· Request to click on a link to verify details. \n
+· Lack of personalized information or account specifics. \n
+· Urgency in securing the account. </string>
+    <string name="tips7">Tips: \n
+· Legitimate account security updates often provide personalized information and do not pressure recipients to click on links. \n
+· Be wary of urgent requests to verify account details through links in unsolicited emails. \n
+· Verify the legitimacy of the email by contacting your account provider directly using official contact information. </string>
+    <string name="question8">Congratulations! You\'ve won a lottery prize! Click lottery prize.claim/act quick to claim your winnings now. Act quickly to secure your prize. </string>
+    <string name="warning8">Warning signs: \n
+• Unsolicited notification of lottery winnings. \n
+• Request to click on a link to claim prize. \n
+• Lack of information about the lottery or organization.\n
+• Urgency in claiming the prize. </string>
+    <string name="tips8">Tips:
+· Be cautious of unsolicited notifications of lottery winnings, especially if you did not participate in a lottery.
+· Legitimate lottery organizations do not require winners to pay fees upfront to claim prizes.
+· Avoid clicking on links in unsolicited emails offering lottery prizes. </string>
+    <string name="question9">Attention! You\'ve been served with a legal notice. Click here to view the details and respond immediately to avoid legal consequences. </string>
+    <string name="warning9">Warning signs: \n
+· Fear-inducing subject line regarding legal notice. \n
+· Request to click on a link to view details. \n
+· Lack of specific information about the legal matter. \n
+· Urgency in responding to the notice. </string>
+    <string name="tips9">Tips: \n
+· Genuine legal notices usually include specific details about the legal matter and come from verified sources. \n
+· Be cautious of urgent requests to click on links in unsolicited emails regarding legal matters. \n
+· Verify the legitimacy of the legal notice by contacting relevant authorities independently. </string>
+    <string name="question10">Subject: Urgent Charity Donation Appeal - Help Those in Need!\n
+Message: Dear Benefactor, Urgent appeal for donations to support those in need. Click the link charity donation.contribute/help to make a contribution now and make a difference. </string>
+    <string name="warning10">Warning signs: \n
+·Urgency in making charitable donations. \n
+·Request to click on a link to donate. \n
+·Lack of information about the charity or organization. \n
+·Emotional appeal to recipients.  </string>
+    <string name="tips10">Tips: \n
+· Verify the legitimacy of charity donation appeals by researching the organization independently. \n
+· Be cautious of urgent requests to donate or click on links in unsolicited emails. \n
+· Legitimate charity organizations provide detailed information about their causes and accept donations through secure channels. </string>
+</resources>

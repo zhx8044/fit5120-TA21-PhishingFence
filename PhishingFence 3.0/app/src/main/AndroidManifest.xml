@@ -15,6 +15,9 @@
         android:theme="@style/Theme.PhishingFence"
         tools:targetApi="31">
         <activity
+            android:name=".ui.activities.QuizAddActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.activities.NewsDetailsActivity"
             android:exported="false" />
         <activity
