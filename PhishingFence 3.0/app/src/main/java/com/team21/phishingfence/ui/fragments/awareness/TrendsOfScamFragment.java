@@ -1,6 +1,7 @@
 package com.team21.phishingfence.ui.fragments.awareness;
 
 import android.app.AlertDialog;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -26,11 +27,21 @@ import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
+import com.github.mikephil.charting.formatter.ValueFormatter;
 import com.team21.phishingfence.R;
 import com.team21.phishingfence.ui.fragments.StatisticalTrendFragment;
 import com.team21.phishingfence.viewmodels.StatisticalTrendViewModel;
 import com.team21.phishingfence.viewmodels.TrendsOfScamViewModel;
+import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
+
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -81,7 +92,7 @@ public class TrendsOfScamFragment extends Fragment {
 
         //绘图
         drawBarChart1(this.barChart1);//图1
-//        drawTrendLineChart(this.lineChart);//图2
+        drawLineChart(this.lineChart);//图2
 //        drawBarChart2(this.barChart2);//图3
 
         return rootView;
@@ -132,9 +143,9 @@ public class TrendsOfScamFragment extends Fragment {
             public void onClick(View v) {
                 String helpInfo = "";
                 switch (TrendsOfScamFragment.this.viewModel.getChooseOption().getValue()) {
-                    case TrendsOfScamViewModel.BARCHART1 -> helpInfo = requireActivity().getString(R.string.fragment_statistical_trend_chart1_question);
-                    case TrendsOfScamViewModel.LINECHART2 -> helpInfo = requireActivity().getString(R.string.fragment_statistical_trend_chart2_question);
-                    case TrendsOfScamViewModel.BARCHART3 -> helpInfo = requireActivity().getString(R.string.fragment_statistical_trend_chart3_question);
+                    case TrendsOfScamViewModel.BARCHART1 -> helpInfo = requireActivity().getString(R.string.fragment_trend_of_scam_chart1_question);
+                    case TrendsOfScamViewModel.LINECHART2 -> helpInfo = requireActivity().getString(R.string.fragment_trend_of_scam_chart2_question);
+                    case TrendsOfScamViewModel.BARCHART3 -> helpInfo = requireActivity().getString(R.string.fragment_trend_of_scam_chart3_question);
                 }
                 new AlertDialog.Builder(requireActivity())
                         .setMessage(helpInfo)
@@ -163,13 +174,13 @@ public class TrendsOfScamFragment extends Fragment {
                         TrendsOfScamFragment.this.barChart1.setVisibility(View.GONE);
                         TrendsOfScamFragment.this.lineChart.setVisibility(View.VISIBLE);
                         TrendsOfScamFragment.this.barChart2.setVisibility(View.GONE);
-                        TrendsOfScamFragment.this.description.setText(R.string.fragment_statistical_trend_chart2_description);
+                        TrendsOfScamFragment.this.description.setText(R.string.fragment_trend_of_scam_description2);
                     }
                     case TrendsOfScamViewModel.BARCHART3 -> {
                         TrendsOfScamFragment.this.barChart1.setVisibility(View.GONE);
                         TrendsOfScamFragment.this.lineChart.setVisibility(View.GONE);
                         TrendsOfScamFragment.this.barChart2.setVisibility(View.VISIBLE);
-                        TrendsOfScamFragment.this.description.setText(R.string.fragment_statistical_trend_chart3_description);
+                        TrendsOfScamFragment.this.description.setText(R.string.fragment_trend_of_scam_description3);
                     }
                 }
             }
@@ -180,13 +191,13 @@ public class TrendsOfScamFragment extends Fragment {
         // 设置spinner选项--
         // 后续要改chart_options
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),
-                R.array.chart_options, R.layout.custom_spinner_item);
+                R.array.type_of_scam_chart_options, R.layout.custom_spinner_item);
         adapter.setDropDownViewResource(R.layout.custom_spinner_item);
         this.spinner.setAdapter(adapter);
     }
 
     // 绘图
-    private void drawBarChart1(BarChart barChart) {
+    private void drawBarChart1(BarChart barChart) { //图1
         List<BarEntry> entries = new ArrayList<>();
         float[] losses = {377, 40, 24, 24, 21, 13, 10, 9, 9, 8}; // 数据点
         for (int i = 0; i < losses.length; i++) {
@@ -235,11 +246,112 @@ public class TrendsOfScamFragment extends Fragment {
 
 
 
-    private List<String> getCategories() {
+    private List<String> getCategories() { // 图1 的标签
         return Arrays.asList("Investment scams", "Dating & romance scams", "False billing",
                 "Phishing", "Remote access scams", "Threats to life, arrest or other",
                 "Identity theft", "Jobs & employment scams", "Online shopping scams", "Classified scams");
     }
+
+    //图2
+    private void drawLineChart11(LineChart lineChart) {
+        List<Entry> entries2022 = new ArrayList<>();
+        List<Entry> entries2023 = new ArrayList<>();
+
+        // 假设的数据，你需要替换为实际的数据
+        float[] data2022 = {33.1f, 37.9f, 34.4f, 37.1f, 51.3f, 37.6f, 42.8f, 44.7f, 43.5f, 49.2f, 51.7f, 43.3f};
+        float[] data2023 = {53.3f, 43.2f, 45.3f, 51.5f, 53.3f, 38.1f, 42.4f, 38.6f, 29.0f, 31.3f, 25.7f, 25.1f};
+        String[] months = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+
+        for (int i = 0; i < data2022.length; i++) {
+            entries2022.add(new Entry(i, data2022[i]));
+            entries2023.add(new Entry(i, data2023[i]));
+        }
+
+        LineDataSet dataSet2022 = new LineDataSet(entries2022, "2022 Losses (million)");
+        dataSet2022.setColor(Color.BLUE);
+        dataSet2022.setValueTextColor(Color.BLACK);
+        dataSet2022.setLineWidth(2f);
+        dataSet2022.setCircleRadius(3f);
+        dataSet2022.setCircleColor(Color.BLUE);
+        dataSet2022.setHighLightColor(Color.RED);  // Color for the highlight indicator
+
+        LineDataSet dataSet2023 = new LineDataSet(entries2023, "2023 Losses (million)");
+        dataSet2023.setColor(Color.GREEN);
+        dataSet2023.setValueTextColor(Color.BLACK);
+        dataSet2023.setLineWidth(2f);
+        dataSet2023.setCircleRadius(3f);
+        dataSet2023.setCircleColor(Color.GREEN);
+        dataSet2023.setHighLightColor(Color.RED);  // Color for the highlight indicator
+
+        LineData lineData = new LineData(dataSet2022, dataSet2023);
+        lineChart.setData(lineData);
+        lineChart.getDescription().setEnabled(false);
+
+        XAxis xAxis = lineChart.getXAxis();
+        xAxis.setValueFormatter(new IndexAxisValueFormatter(months));
+        xAxis.setGranularity(1f);
+        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+
+        lineChart.getAxisRight().setEnabled(false); // Disable right Y-axis
+        lineChart.animateY(1000);
+        lineChart.invalidate(); // Refresh the chart
+    }
+
+    private void drawLineChart(LineChart lineChart) {
+        List<Entry> entries2022 = new ArrayList<>();
+        List<Entry> entries2023 = new ArrayList<>();
+
+        // 数据
+        float[] data2022 = {33.1f, 37.9f, 34.4f, 37.1f, 51.3f, 37.6f, 42.8f, 44.7f, 43.5f, 49.2f, 51.7f, 43.3f};
+        float[] data2023 = {53.3f, 43.2f, 45.3f, 51.5f, 53.3f, 38.1f, 42.4f, 38.6f, 29.0f, 31.3f, 25.7f, 25.1f};
+        String[] months = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+        String[] percentChanges = {"61.1%", "14.0%", "31.7%", "38.6%", "3.9%", "1.3%", "-1.0%", "-13.7%", "-33.3%", "-36.4%", "-50.3%", "-42.0%"};
+
+        for (int i = 0; i < data2022.length; i++) {
+            entries2022.add(new Entry(i, data2022[i]));
+            entries2023.add(new Entry(i, data2023[i]));
+        }
+
+        LineDataSet dataSet2022 = new LineDataSet(entries2022, "2022 Losses (million)");
+        dataSet2022.setColor(Color.BLUE);
+        dataSet2022.setCircleColor(Color.BLUE);
+        dataSet2022.setDrawValues(false); // 确保不绘制任何文本值
+
+        LineDataSet dataSet2023 = new LineDataSet(entries2023, "2023 Losses (million)");
+        dataSet2023.setColor(Color.GREEN);
+        dataSet2023.setCircleColor(Color.GREEN);
+
+        dataSet2023.setValueTextSize(12f); // 设置“百分比”字段的字体大小
+
+        dataSet2023.setValueFormatter(new ValueFormatter() {
+            @Override
+            public String getPointLabel(Entry entry) {
+                int index = (int) entry.getX();
+                return percentChanges[index]; // 只显示百分比
+            }
+        });
+
+        LineData lineData = new LineData(dataSet2022, dataSet2023);
+        lineChart.setData(lineData);
+        lineChart.getDescription().setEnabled(false);
+
+        XAxis xAxis = lineChart.getXAxis();
+        xAxis.setValueFormatter(new IndexAxisValueFormatter(months));
+        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+        lineChart.getAxisLeft().setEnabled(false);
+        lineChart.getAxisRight().setEnabled(false);
+
+        lineChart.getXAxis().setDrawGridLines(false); // 不显示X轴网格线
+        lineChart.getAxisLeft().setDrawGridLines(false); // 不显示左侧Y轴网格线
+        lineChart.getAxisRight().setDrawGridLines(false); // 不显示右侧Y轴网格线
+
+        lineChart.setDrawGridBackground(false); // 不显示网格背景
+
+        lineChart.animateY(1000);
+        lineChart.invalidate();
+    }
+
+
 
 
 
