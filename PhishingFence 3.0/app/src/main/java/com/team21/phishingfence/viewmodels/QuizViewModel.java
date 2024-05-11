@@ -1,14 +1,19 @@
 package com.team21.phishingfence.viewmodels;
 
 import android.app.Application;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
 
+import com.team21.phishingfence.R;
 import com.team21.phishingfence.models.Quiz;
 import com.team21.phishingfence.repositories.QuizRepository;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
@@ -49,6 +54,7 @@ public class QuizViewModel extends AndroidViewModel {
 
     // 使用 Callable 获取 Quiz 对象
     public Quiz getQuizById(int id) {
+        Log.e("TAG", "getQuizById: " + id);
         // 定义 Callable，用于从 Repository 中获取 Quiz 对象
         Callable<Quiz> callable = () -> quizRepository.getQuizById(id);
 
@@ -78,11 +84,22 @@ public class QuizViewModel extends AndroidViewModel {
 
     public void generateQuizList() {
         Random random = new Random();
-        this.quizList = new int[7];
-        for (int i = 0;i < this.quizList.length;i++) {
-            //this.quizList[i] = random.nextInt(4) + 1;
-            this.quizList[i] = 10;
+        // 创建一个包含 1 到 30 的列表
+        List<Integer> numbers = new ArrayList<>();
+        for (int i = 1; i <= 30; i++) {
+            numbers.add(i);
         }
+
+        // 打乱列表以确保随机性
+        Collections.shuffle(numbers, random);
+
+        // 初始化 quizList 数组
+        this.quizList = new int[7]; // 假设 quizList 的长度是 7
+        for (int i = 0; i < this.quizList.length; i++) {
+            // 从打乱的列表中取出前 7 个数
+            this.quizList[i] = numbers.get(i);
+        }
+
         resetScore();
         this.quizNum.setValue(1);
     }

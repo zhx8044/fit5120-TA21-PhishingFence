@@ -100,4 +100,185 @@ Message: Dear Benefactor, Urgent appeal for donations to support those in need. 
 · Verify the legitimacy of charity donation appeals by researching the organization independently. \n
 · Be cautious of urgent requests to donate or click on links in unsolicited emails. \n
 · Legitimate charity organizations provide detailed information about their causes and accept donations through secure channels. </string>
+    <string name="question11">Suppose you come across a promising apartment listing on a marketplace. The owner insists on six months’ rent upfront, but claims to be abroad and unable to show you the property. They emphasize the urgency of early payment due to other interested parties. However, they do not ask for any documents as proof of your financial ability. </string>
+    <string name="warning11">Warning signs of this message being a scam \n
+ \n
+\tOwner’s reluctance to show the property, citing being abroad.  \n
+\tRequest for six months’ bond instead of standard one month’s deposit. \n
+\tUrging quick payment due to high demand. \n
+\tOwner didn’t ask for any documents as proof of applicant’s financial ability. </string>
+    <string name="tips11">Tips:\n
+\tRequest a property tour \n
+\tAsk to meet the property owner \n
+\tDo not pay before physical inspection  \n
+\tAvoid property listing that offers too low price than market standard </string>
+    <string name="question12">Dear NAB customer, your account has been locked because of suspicious activity. Please visit the internet bank at \nhttps://www.nabscam.au/ \nto validate your details and unlock your account. </string>
+    <string name="warning12">Warning signs of this message being scam \n
+NAB is not addressing the customer by name. \n
+Poor grammar. \n
+The URL does not match with the official NAB site \n
+Request for personal info via link. </string>
+    <string name="tips12">Tips \n
+\tVerify sender details and URLs \n
+\tDo not share personal information via links  </string>
+    <string name="message13">Hi, I\'m Peter. I\'m calling from We Care Investment Ltd. Hope you are doing well!</string>
+    <string name="question13">We have some fantastic investment opportunities that I\'d love to discuss – all guaranteed to give a high return. We are also offering a special discount if you sign up today.</string>
+    <string name="warning13">Warning signs of this phone call being a scam\n
+\tUnsolicited call \n
+\tPromises of high investment returns\n
+\tUrgency for immediate signup </string>
+    <string name="tips13">Tips\n
+\tHang up/delete unsolicited emails or calls \n
+\tBe wary  of high pressure sales tactics </string>
+    <string name="message14">Apple: Congrats!!! Your IP has been chosen for this month’s Apple product tester. Confirm shipping address via this link: \ndgeo7.com/Z4ygZpmn1k</string>
+    <string name="warning14">Warning signs of this message being a scam \n
+The link does not look like an official Apple website \n
+Unsolicited message from Apple \n
+There is a tone of urgency \n
+Asking personal info via a link\n
+Abnormal URL format  </string>
+    <string name="tips14">Tips\n
+Don’t provide personal info through any link \n
+Verify legitimacy of the offer  \n
+Be wary about suspicious messages </string>
+    <string name="message15">HSBC ALERT:\n
+Your payment to Rose was stopped for further checks. If this was not you please contact us on 1300 303 008.</string>
+    <string name="warning15">Warning signs of this message being a scam\n
+Fake caller ID resembling an Australian number \n
+Requests to contact via phone, vulnerable to spoofing\n
+Tempting user into potentially confusing call  </string>
+    <string name="tips15">Tips\n
+Stay wary of susceptible communication\n
+Verify provider’s on official site \n
+Report the scam to protect Australia </string>
+    <string name="message16">Hello Lotus. Your complaint with ABC Airlines ticket number ABC215 has been resolved. We appreciate your patience. Kindly let us know if you\'d need anything else.</string>
+    <string name="warning16">How to know it\'s legit? \n
+Personalized communication addressed the receiver by name \n
+No request for sensitive info \n
+No link for log in \n
+No urgency in building contact </string>
+    <string name="tips16">Tips:\n
+If you know the reason of the message just enjoy the service \n
+For further contact check the link on verified page </string>
+    <string name="question17">Chase Fraud Alert &lt;Chase@fraudalert.chase.com&gt;\n
+Chase debit or ATM card: Fraud Alert\n
+Card ending in xxxxxxxxxx165\n
+Heather Kelly:\n
+Did you or someone you authorized use your Chase debit card for the following transactions?\n
+Declined Transaction		$2033		04/24\n
+    \t* Yes,I recognize it\n
+    \t* No,something wrong</string>
+    <string name="warning17">How to know it\'s legit?\n
+Personalized communication\n
+The ending number of debit/credit card given\n
+No link for log in\n
+No urgency in building contact\n
+The email address looks valid </string>
+    <string name="tips17">Tips: \n
+If you know the reason of the message just enjoy the service \n
+If you still has confusion go to Chase’s verified page to get real contact info </string>
+    <string name="message18">Hello, John this is your local electricity utility calling with a special offer. Are you interested in having your house be 100% solar and wind powered?</string>
+    <string name="question18">It won\'t cost you anything at all. This is part of a statewide initiative to move to renewable energy. To get started can you tell me how long you have lived in your house and whether you plan to move soon.</string>
+    <string name="warning18">How to know it\'s legit?\n
+Personalized communication\n  
+No link for log in \n
+No urgency in building contact </string>
+    <string name="tips18">Tips:\n
+If you know the reason of the message just enjoy the service \n
+If you still has confusion go to the agencies verified page to get real contact info </string>
+    <string name="question19">Dear Mr. Anwar\n
+The latest statement for your NAB visa debit card is now online.
+Login to NAB Online Banking – enter your Access Code and password
+Select your debit card account \n
+Click on my statements \n
+Need help?\n
+If you have any questions or need help, please call our Customer Service on 1300 555 666, 24/7 \n
+Yours sincerely \n
+NAB Internet and SMS Banking Team </string>
+    <string name="warning19">How to know it’s legit? \n
+No urgency for login \n
+No link for log in \n
+No request for sensitive info \n
+Personalized communication, addressed the receiver by name \n
+Verifiable contact info </string>
+    <string name="tips19">Tips \n
+Enjoy the service if you are a NAB account holder \n
+Before further communication check the contact info on NAB app or official site </string>
+    <string name="question20">Place: Chennai, Date: 10 Apr 2023.\n
+Sub: Outstanding payment release letter. \n
+Dear Madam,This is regarding the payment request for your recent order with us. You agreed to pay the payment by 21 Apr 2023 of this month. So far, we have not received the payment.
+ \n
+We have to settle that amount with our suppliers within 2 days, so please pay the payment. \n
+Thanking you.\n
+Regards, \n
+Arun Kumar,\n
+Purchase Manager </string>
+    <string name="warning20">How to know it\'s legit? \n
+Personalized communication \n
+No link to complete due payment\n
+No request for sensitive info </string>
+    <string name="tips20">Tips \n
+Don\'t miss payment deadlines assuming everything is a scam  \n
+If familiar with the communication, respond promptly, or verify links from reliable sources</string>
+    <string name="message21">
+    Message: Dear Subscriber, Thank you for subscribing to our newsletter! Click the link abc.newsletter/confirm to confirm your subscription and start receiving updates.</string>
+    <string name="warning21"> </string>
+    <string name="tips21">    Tips:\n
+    ·Legitimate businesses often send confirmation emails for newsletter subscriptions to ensure recipients have willingly opted in to receive updates.\n
+    ·Verify the sender\'s email address to ensure it matches the official domain of the company or organization.\n
+    ·Legitimate confirmation emails typically include personalized information, such as your name or the newsletter you subscribed to.</string>
+    <string name="message22">Dear Valued Customer, We invite you to participate in our customer satisfaction survey. Your feedback is important to us. Click the link to begin the survey. feedback.survey/begin </string>
+    <string name="warning22"> </string>
+    <string name="tips22"> Tips:\n
+·Genuine customer satisfaction surveys are often conducted by reputable companies seeking to improve their products or services. \n
+·Check the sender\'s email address for authenticity and look for any signs of suspicious activity. \n
+·Legitimate survey invitations usually include clear instructions and do not pressure recipients to provide personal information. </string>
+    <string name="message23">Dear Loyalty Member, Enjoy exclusive discounts and offers as our valued customer! Click the link deals.special/offers to explore our latest deals.  </string>
+    <string name="warning23"> </string>
+    <string name="tips23">Tips:\n
+·Legitimate businesses often send exclusive offers to loyal customers as part of their loyalty programs to enhance customer satisfaction and retention. \n
+·Verify the sender\'s email address and look for any signs of impersonation or suspicious activity. \n
+·Legitimate offers may include specific details about the benefits or discounts available to loyalty members. </string>
+    <string name="message24">Dear Customer, Your monthly account statement is now available. Click the link \naccount.statement/view to view your statement and track your transactions.</string>
+    <string name="warning24"> </string>
+    <string name="tips24">Tips: \n
+·Genuine account statement notifications are often sent by recognized financial institutions. \n
+·Check the sender\'s email address to ensure it matches the official domain of your bank or financial institution. \n
+·Legitimate account statement emails typically include accurate information about your account and recent transactions. </string>
+    <string name="message25">Dear Emily, You are cordially invited to attend our annual conference. Click the link event.registration/secure to register and secure your spot at the event.  </string>
+    <string name="warning25"> </string>
+    <string name="tips25">Tips:\n
+·Legitimate event invitations are often sent by reputable organizations or event management companies. \n
+·Verify the sender\'s email address and look for any signs of impersonation or suspicious activity. \n
+·Legitimate invitations may include details about the event agenda, speakers, or venue. </string>
+    <string name="message26">Dear Customer, Thank you for your recent purchase! Click the link shipment.tracking/track to view your order details and track your shipment.</string>
+    <string name="warning26"> </string>
+    <string name="tips26">Tips:\n
+·Genuine order confirmation emails are usually sent by reputable online retailers or e-commerce platforms. \n
+·Check the sender\'s email address for authenticity and look for any signs of phishing or spoofing. \n
+·Legitimate order confirmation emails typically include accurate details about your purchase and shipment tracking information. </string>
+    <string name="message27">Dear Roger, This is a reminder of your upcoming appointment with Horizon Enterprises. Click the link appointment.details/view to view appointment details and reschedule if necessary. </string>
+    <string name="warning27"> </string>
+    <string name="tips27">Tips:\n
+·Legitimate appointment reminders are often sent by professional service providers or healthcare facilities. \n
+·Verify the sender\'s email address and look for any signs of impersonation or suspicious activity. \n
+·Legitimate reminders may include specific details about your appointment, such as the date, time, and location. </string>
+    <string name="message28">Dear Subscriber, Our latest newsletter is out now! Click the link to read new articles and insights on Phishing Fence. Enjoy! newsletter.articles/read  </string>
+    <string name="warning28"> </string>
+    <string name="tips28">Tips: \n
+·Legitimate newsletters are usually sent by reputable organizations or publications. \n
+·Verify the sender\'s email address and look for any signs of impersonation or suspicious activity. \n
+·Legitimate newsletters may include valuable content relevant to your interests or industry. </string>
+    <string name="message29">Dear Member, Your membership is due for renewal. Click the link membership.renewal/renew to renew your membership and continue enjoying exclusive benefits. </string>
+    <string name="warning29"> </string>
+    <string name="tips29">Tips:\n
+·Legitimate membership renewal reminders are often sent by recognized organizations or membership-based businesses. \n
+·Check the sender\'s email address for authenticity and look for any signs of impersonation or suspicious activity. \n
+·Legitimate reminders may include details about the benefits of renewing your membership and instructions for renewal. </string>
+    <string name="message30">Dear Wang Fang, Your account security is important to us. We have enabled two-factor authentication on your account for added security. Click the link security.learn/more to learn more. </string>
+    <string name="warning30"> </string>
+    <string name="tips30">Tips: \n
+·Genuine account security update notifications are usually sent by trusted online platforms or service providers. \n
+·Verify the sender\'s email address and look for any signs of phishing or spoofing. \n
+·Legitimate notifications may include information about recent security enhancements and steps to take to protect your account. </string>
 </resources>

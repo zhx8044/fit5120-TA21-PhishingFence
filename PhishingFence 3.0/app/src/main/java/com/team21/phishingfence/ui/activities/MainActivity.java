@@ -1,5 +1,7 @@
 package com.team21.phishingfence.ui.activities;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -27,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     private NavigationView navigationView;
     private Toolbar toolbar;
     private FloatingActionButton floatingActionButton;
+    public static final String PREFS_NAME = "MyPrefsFile";
+    public static final String FIRST_TIME_KEY = "firstTime";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +42,21 @@ public class MainActivity extends AppCompatActivity {
         this.navigationView = findViewById(R.id.nav_view);
         this.toolbar = findViewById(R.id.toolbar);
         this.floatingActionButton = findViewById(R.id.floatingActionHomeButton);
+
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        boolean isFirstTime = settings.getBoolean(FIRST_TIME_KEY, true);
+
+        if (isFirstTime) {
+            // 修改 firstTime 为 false
+            SharedPreferences.Editor editor = settings.edit();
+            editor.putBoolean(FIRST_TIME_KEY, false);
+            editor.apply();
+
+            // 跳转到 WelcomeActivity
+            Intent intent = new Intent(this, WelcomeActivity.class);
+            startActivity(intent);
+        }
+
 
         setDrawer();//设置侧边导航栏与顶部栏汉堡菜单
         setBackHomeButtonListener();//设置返回home页面按钮监听器
@@ -125,6 +144,9 @@ public class MainActivity extends AppCompatActivity {
                     controller.navigate(R.id.scamAwarenessFragment);
                 } else if (itemId == R.id.nav_scam_knowledge_check) {
                     controller.navigate(R.id.scamKnowledgeCheckFragment);
+                } else if (itemId == R.id.nav_help) {
+                    Intent intent = new Intent(MainActivity.this, WelcomeActivity.class);
+                    startActivity(intent);
                 } else if (itemId == R.id.nav_quit) {
                     finish();
                 } else {

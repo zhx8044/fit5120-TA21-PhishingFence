@@ -55,14 +55,19 @@ public class AttemptQuizFragment extends Fragment {
         this.warning = rootView.findViewById(R.id.warning);
         this.tips = rootView.findViewById(R.id.tips);
         this.viewModel = new ViewModelProvider(requireActivity()).get(QuizViewModel.class);
-        if(this.viewModel.getQuizList() == null) {
-            this.viewModel.generateQuizList();
-        }
 
         setButtonOnClickListener();
         setQuizNumObserver();
 
         return rootView;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (this.viewModel.getQuizList() == null) {
+            this.viewModel.generateQuizList();
+        }
     }
 
     private void setQuizNumObserver() {
@@ -126,17 +131,21 @@ public class AttemptQuizFragment extends Fragment {
                 if(AttemptQuizFragment.this.chooseButton.getCheckedRadioButtonId() != -1) {
                     AttemptQuizFragment.this.chooseButton.clearCheck();
                     if(AttemptQuizFragment.this.viewModel.getQuizNum().getValue() != null) {
-                        if (AttemptQuizFragment.this.viewModel.getQuizNum().getValue() != 8) {
+                        if (AttemptQuizFragment.this.viewModel.getQuizNum().getValue() != 7) {
                             AttemptQuizFragment.this.viewModel.getQuizNum().setValue(
                                     AttemptQuizFragment.this.viewModel.getQuizNum().getValue() + 1);
-                        } else if(AttemptQuizFragment.this.viewModel.getQuizNum().getValue() != -1) {
+                        } else if(AttemptQuizFragment.this.viewModel.getQuizNum().getValue() == -1) {
                             AttemptQuizFragment.this.viewModel.generateQuizList();
                         }
                         else {
                             AttemptQuizFragment.this.viewModel.getQuizNum().setValue(-1);
                             AttemptQuizFragment.this.viewModel.clearQuizList();
-                            Toast.makeText(requireActivity(), "Score=" + AttemptQuizFragment.this.viewModel.getScore(), Toast.LENGTH_SHORT).show();
-                            //TODO:
+                            // 创建一个 Bundle 对象来存放分数
+                            Bundle bundle = new Bundle();
+                            bundle.putInt("score", AttemptQuizFragment.this.viewModel.getScore());
+
+                            NavController controller = Navigation.findNavController(v);
+                            controller.navigate(R.id.action_attemptQuizFragment_to_scoreFragment,bundle);
                         }
                         AttemptQuizFragment.this.whetherChoosed = false;
                     }

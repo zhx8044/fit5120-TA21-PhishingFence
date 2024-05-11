@@ -134,5 +134,10 @@
     <string name="scambutton2">Not a Scam</string>
     <string name="right_hint">You are right – This is not a scam!</string>
     <string name="wrongHint">Oops, you’re wrong – this is not a scam!</string>
-    <string name="fragment_attempt_quiz_text">next quiz</string>
+    <string name="fragment_attempt_quiz_text">next</string>
+    <string name="fragment_score_text">Your Results</string>
+    <string name="fragment_score_text2">Our explanation of scam prevention capacity</string>
+    <string name="fragment_score_text3"><![CDATA[7 Excellent  You beat the scammers, but don\'t forget to keep your wits about you.\n\n5-3 Well done   You’re pretty good at spotting a scam. Just don\'t let your guard down.\n\n3–0 Oh dear  The scammers beat you this time. Take some time to read through the advice available.]]></string>
+    <string name="fragment_score_text_">"Your score: "</string>
+    <string name="menu_help">Help</string>
 </resources>
