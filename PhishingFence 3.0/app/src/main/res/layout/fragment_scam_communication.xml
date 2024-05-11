@@ -34,7 +34,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="380dp"
         android:layout_marginTop="32dp"
         android:layout_marginBottom="100dp"
         android:backgroundTint="#B4448ADF"
@@ -54,7 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="15dp"
-                android:text="
+                android:text="\n
 Scam communicationspossess something incommon, for example:.\n\n
  ●  Offers are too good to be true \n
  ●  Request or pressure for quick action  \n

@@ -34,7 +34,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="380dp"
         android:layout_marginTop="32dp"
         android:layout_marginBottom="100dp"
         android:backgroundTint="@color/background_color2"
@@ -53,7 +53,7 @@
                 android:id="@+id/textView1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="15dp"
+                android:padding="40dp"
                 android:text="
 Scammers approach theirtarget through differentchannels.
 \n\n

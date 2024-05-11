@@ -96,12 +96,6 @@
                 android:layout_height="300dp"
                 android:visibility="visible" />
 
-<!--            <com.github.mikephil.charting.charts.PieChart-->
-<!--                android:id="@+id/pieChart"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="300dp"-->
-<!--                android:visibility="gone" />-->
-
             <com.github.mikephil.charting.charts.LineChart
                 android:id="@+id/lineChart"
                 android:layout_width="match_parent"
@@ -118,6 +112,7 @@
                 android:id="@+id/barChart3"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
+                android:layout_marginTop="30dp"
                 android:visibility="gone" />
 
             <TextView

@@ -2,6 +2,7 @@ package com.team21.phishingfence.ui.fragments.awareness;
 
 import android.app.AlertDialog;
 import android.graphics.Color;
+import android.graphics.Paint;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -21,15 +22,21 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.charts.Chart;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.components.Description;
+import com.github.mikephil.charting.components.Legend;
+import com.github.mikephil.charting.components.LimitLine;
 import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
+import com.github.mikephil.charting.formatter.LargeValueFormatter;
 import com.github.mikephil.charting.formatter.ValueFormatter;
 import com.team21.phishingfence.R;
 import com.team21.phishingfence.ui.fragments.StatisticalTrendFragment;
@@ -58,7 +65,7 @@ public class TrendsOfScamFragment extends Fragment {
     private BarChart barChart3;
     private TextView description;
     private TrendsOfScamViewModel viewModel;
-    private ImageButton imageButtonBack, imageButtonNext;
+    private ImageButton imageButtonNext;
     private ImageView imageViewHelp;
 
     public TrendsOfScamFragment() {
@@ -81,7 +88,6 @@ public class TrendsOfScamFragment extends Fragment {
         this.barChart2 = rootView.findViewById(R.id.barChart2);
         this.barChart3 = rootView.findViewById(R.id.barChart3);
         this.description = rootView.findViewById(R.id.description);
-        this.imageButtonBack = rootView.findViewById(R.id.imageButton);
         this.imageButtonNext = rootView.findViewById(R.id.imageButton2);
         this.imageViewHelp = rootView.findViewById(R.id.imageViewHelp);
         this.description.setTextIsSelectable(true);
@@ -97,8 +103,6 @@ public class TrendsOfScamFragment extends Fragment {
         drawLineChart(this.lineChart);//图2
         drawBarChart2_1(this.barChart2);//图3-1
         drawBarChart2_2(this.barChart3);//图3-2
-
-//        drawBarChart2(this.barChart2, this.barChart3);
 
         return rootView;
     }
@@ -127,14 +131,6 @@ public class TrendsOfScamFragment extends Fragment {
 
     private void setButtonOnClickListener() {
         setBackButtonListener();
-
-//        this.imageButtonBack.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                NavController controller = Navigation.findNavController(v);
-//                controller.navigate(R.id.action_statisticalTrendFragment_to_scamScenairoFragment);
-//            }
-//        });
 
         this.imageButtonNext.setOnClickListener(new View.OnClickListener() {//改变chooseOption参数
             @Override
@@ -196,8 +192,7 @@ public class TrendsOfScamFragment extends Fragment {
     }
 
     private void setSpinnerOption() {
-        // 设置spinner选项--
-        // 后续要改chart_options
+        // 设置spinner选项-
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),
                 R.array.type_of_scam_chart_options, R.layout.custom_spinner_item);
         adapter.setDropDownViewResource(R.layout.custom_spinner_item);
@@ -250,15 +245,12 @@ public class TrendsOfScamFragment extends Fragment {
         barChart.invalidate(); // Refresh the chart
     }
 
-
-
-
-
     private List<String> getCategories() { // 图1 的标签
         return Arrays.asList("Investment scams", "Dating & romance scams", "False billing",
                 "Phishing", "Remote access scams", "Threats to life, arrest or other",
                 "Identity theft", "Jobs & employment scams", "Online shopping scams", "Classified scams");
     }
+
 
     //图2
     private void drawLineChart(LineChart lineChart) {
@@ -315,104 +307,6 @@ public class TrendsOfScamFragment extends Fragment {
         lineChart.invalidate();
     }
 
-    private void drawBarChart22(BarChart reportsChart, BarChart lossesChart) {
-        // 数据
-        String[] contactModes = {"Phone Call", "Social Media", "Email", "Internet", "Mobile Apps", "In Person", "Text Message"};
-        int[] reports2022 = {63816, 13427, 52159, 13692, 10057, 2186, 79835};
-        int[] reports2023 = {55418, 17542, 85941, 17568, 8101, 3614, 109621};
-        float[] losses2022 = {141.0f, 80.2f, 77.3f, 73.5f, 71.7f, 30.6f, 28.5f};
-        float[] losses2023 = {116.0f, 93.5f, 80.0f, 69.7f, 64.8f, 21.5f, 26.9f};
-
-        List<BarEntry> entriesReports2022 = new ArrayList<>();
-        List<BarEntry> entriesReports2023 = new ArrayList<>();
-        List<BarEntry> entriesLosses2022 = new ArrayList<>();
-        List<BarEntry> entriesLosses2023 = new ArrayList<>();
-
-        // 构造数据集
-        for (int i = 0; i < contactModes.length; i++) {
-            entriesReports2022.add(new BarEntry(i, reports2022[i]));
-            entriesReports2023.add(new BarEntry(i, reports2023[i]));
-            entriesLosses2022.add(new BarEntry(i, losses2022[i]));
-            entriesLosses2023.add(new BarEntry(i, losses2023[i]));
-        }
-
-        // 设置报告的条形图
-        BarDataSet dataSetReports2022 = new BarDataSet(entriesReports2022, "2022 Reports");
-        dataSetReports2022.setColor(Color.BLUE);
-        BarDataSet dataSetReports2023 = new BarDataSet(entriesReports2023, "2023 Reports");
-        dataSetReports2023.setColor(Color.GREEN);
-
-        BarData dataReports = new BarData(dataSetReports2022, dataSetReports2023);
-        reportsChart.setData(dataReports);
-        reportsChart.getXAxis().setValueFormatter(new IndexAxisValueFormatter(contactModes));
-        reportsChart.getDescription().setEnabled(false);
-        reportsChart.getXAxis().setPosition(XAxis.XAxisPosition.BOTTOM);
-        reportsChart.getXAxis().setGranularity(1f);
-        reportsChart.getAxisLeft().setAxisMinimum(0);
-        reportsChart.getAxisRight().setEnabled(false);
-
-        // 设置损失的条形图
-        BarDataSet dataSetLosses2022 = new BarDataSet(entriesLosses2022, "2022 Losses (m)");
-        dataSetLosses2022.setColor(Color.BLUE);
-        BarDataSet dataSetLosses2023 = new BarDataSet(entriesLosses2023, "2023 Losses (m)");
-        dataSetLosses2023.setColor(Color.GREEN);
-
-        BarData dataLosses = new BarData(dataSetLosses2022, dataSetLosses2023);
-        lossesChart.setData(dataLosses);
-        lossesChart.getXAxis().setValueFormatter(new IndexAxisValueFormatter(contactModes));
-        lossesChart.getDescription().setEnabled(false);
-        lossesChart.getXAxis().setPosition(XAxis.XAxisPosition.BOTTOM);
-        lossesChart.getXAxis().setGranularity(1f);
-        lossesChart.getAxisLeft().setAxisMinimum(0);
-        lossesChart.getAxisRight().setEnabled(false);
-
-        // 刷新图表
-        reportsChart.invalidate();
-        lossesChart.invalidate();
-    }
-
-
-
-    private void drawBarChart2_11(BarChart barChart) {
-        // 示例数据
-        String[] contactModes = {"Phone Call", "Social Media", "Email", "Internet", "Mobile apps", "In Person", "Text Message"};
-        float[] reports2022 = {63816, 13427, 52159, 13692, 10057, 2186, 79835};
-        float[] reports2023 = {55418, 17542, 85941, 17568, 8101, 3614, 109621};
-
-        List<BarEntry> entries2022 = new ArrayList<>();
-        List<BarEntry> entries2023 = new ArrayList<>();
-
-        for (int i = 0; i < contactModes.length; i++) {
-            // 注意i的使用，它将每个条目正确地放在X轴的位置上
-            entries2022.add(new BarEntry(i, reports2022[i]));
-            entries2023.add(new BarEntry(i + 0.4f, reports2023[i])); // 添加0.4的偏移创建分组效果
-        }
-
-        // 创建2022年数据的集合
-        BarDataSet dataSet2022 = new BarDataSet(entries2022, "2022 Reports");
-        dataSet2022.setColor(Color.BLUE);
-
-        // 创建2023年数据的集合
-        BarDataSet dataSet2023 = new BarDataSet(entries2023, "2023 Reports");
-        dataSet2023.setColor(Color.GREEN);
-
-        // 使用BarData对象组合所有数据集
-        BarData barData = new BarData(dataSet2022, dataSet2023);
-        barData.setBarWidth(0.35f); // 设置条目宽度
-
-        barChart.setData(barData);
-        barChart.getDescription().setEnabled(false);
-        barChart.getAxisLeft().setAxisMinimum(0); // 开始于0
-        barChart.getXAxis().setPosition(XAxis.XAxisPosition.BOTTOM);
-        barChart.getXAxis().setValueFormatter(new IndexAxisValueFormatter(contactModes));
-        barChart.getXAxis().setGranularity(1f);
-        barChart.getXAxis().setGranularityEnabled(true);
-        barChart.getAxisRight().setEnabled(false);
-        barChart.setFitBars(true); // 使两个条形不超过图表边界
-
-        barChart.animateY(1500);
-        barChart.invalidate(); // 刷新图表
-    }
 
     private void drawBarChart2_1(BarChart barChart) {
         // 示例数据

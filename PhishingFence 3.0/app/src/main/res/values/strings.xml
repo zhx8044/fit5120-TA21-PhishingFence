@@ -4,8 +4,8 @@
     <string name="floating_action_button_des">Home</string>
     <string name="navigation_drawer_open">navigation drawer open</string>
     <string name="navigation_drawer_close">navigation drawer close</string>
-    <string name="fragment_home_text1">Welcome to the</string>
-    <string name="fragment_home_text2">PhishingFence APP</string>
+    <string name="fragment_home_text1">Welcome to</string>
+    <string name="fragment_home_text2">PhishingFence</string>
     <string name="fragment_home_text3">Avoid Scam\nKnow the scenario of International\nStudent in Australia</string>
     <string name="fragment_home_button1">Scam Scenario</string>
     <string name="fragment_home_button2">Verify Scam</string>
@@ -172,14 +172,13 @@
         Higher bars indicate greater financial losses.  </string>
     <string name="fragment_trend_of_scam_description2">\n
         Description:
-        \n\n\n
+        \n\n
         Dive into our insightful area chart, illuminating the financial trajectory of 2022 and 2023.
         Explore monthly losses (in millions) alongside the consequential percentage change from 2022 to 2023.
 
         \n\n\n
         Key Insights:
-
-
+        \n\n
         📈 Trend Analysis: \n\n
         Navigate the ebb and flow of losses month by month, uncovering essential
         financial performance trends.
@@ -213,14 +212,13 @@
         the two years offers a serene interlude amidst the financial landscape. </string>
     <string name="fragment_trend_of_scam_description3">\n
         Description:
-        \n\n\n
+        \n\n
         Welcome to our informative grouped bar chart showcasing the interaction mode preferences
         and associated losses across two pivotal years: 2022 and 2023.
 
         \n\n\n
         Key Insights:
-
-
+        \n\n
         📊 Losses Analysis:  \n\n
         *  Compare the financial impact of different contact modes in 2022 and 2023, represented by the height of the bars.
         \n
