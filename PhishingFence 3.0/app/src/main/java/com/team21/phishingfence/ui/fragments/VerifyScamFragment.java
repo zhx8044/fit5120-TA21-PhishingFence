@@ -1,5 +1,6 @@
 package com.team21.phishingfence.ui.fragments;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -44,6 +46,10 @@ public class VerifyScamFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_verify, container, false);
+
+        // 右上按钮和右下按钮
+        Button buttonDisclaimer = view.findViewById(R.id.button_disclaimer);
+        Button buttonHelp = view.findViewById(R.id.button_help);
 
         this.editTextMessage = view.findViewById(R.id.edit_text_message);
         this.textViewResults = view.findViewById(R.id.text_view_results);
@@ -79,7 +85,36 @@ public class VerifyScamFragment extends Fragment {
 
 //        testLambdaFunction(); // 测试
 
+        buttonDisclaimer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showAlertDialog("Disclaimer", "This app provides spam detection with a 95% accuracy rate. However, accuracy may vary, and the app cannot guarantee perfect results. Users are advised to exercise caution and verify suspicious messages independently. By using this app, users accept full responsibility for their actions and understand that the app and its developers are not liable for any damages or losses incurred.");
+            }
+        });
+
+        buttonHelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showAlertDialog("Help", "Help Box: Understanding the Results\n" +
+                        "\n" +
+                        "Predicted class: Indicates whether the message is classified as \"ham\" (non-spam) or \"spam\".\n" +
+                        "\n" +
+                        "Probability of being ham: The likelihood that the message is not spam.\n" +
+                        "\n" +
+                        "Probability of being spam: The likelihood that the message is spam.");
+            }
+        });
+
+
         return view;
+    }
+
+    private void showAlertDialog(String title, String message) {
+        new AlertDialog.Builder(getContext())
+                .setTitle(title)
+                .setMessage(message)
+                .setPositiveButton("Close", null)
+                .show();
     }
 
 
@@ -115,65 +150,5 @@ public class VerifyScamFragment extends Fragment {
             }
         });
     }
-    /**
-     * 测试Lambda函数test3001
-     */
-//
-//    private final static String apiEndpoint2 = "https://x571evpon6.execute-api.ap-southeast-2.amazonaws.com/test3001";
-//    public void testLambdaFunction() {
-//        new TestLambdaAsyncTask().execute(apiEndpoint2, "hello");
-//    }
-//
-//    private static class TestLambdaAsyncTask extends AsyncTask<String, Void, String> {
-//        @Override
-//        protected String doInBackground(String... strings) {
-//            String endpoint = strings[0];
-//            String inputMessage = strings[1];
-//            try {
-//                URL url = new URL(endpoint);
-//                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-//                connection.setRequestMethod("POST");
-//                connection.setDoOutput(true);
-//                connection.setRequestProperty("Content-Type", "application/json");
-//
-//                JSONObject jsonMessage = new JSONObject();
-//                jsonMessage.put("message", inputMessage);
-//
-//                // 打印发送的数据
-////                Log.d("TestLambda", "Sending data: " + jsonMessage.toString());
-//                System.out.println("Sending data: " + jsonMessage.toString());
-//
-//                try (OutputStream os = connection.getOutputStream()) {
-//                    byte[] input = jsonMessage.toString().getBytes("utf-8");
-//                    os.write(input, 0, input.length);
-//                }
-//
-//                connection.connect();
-//
-//                int responseCode = connection.getResponseCode();
-//                if (responseCode == HttpURLConnection.HTTP_OK) {
-//                    BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-//                    StringBuilder response = new StringBuilder();
-//                    String line;
-//                    while ((line = reader.readLine()) != null) {
-//                        response.append(line);
-//                    }
-//                    reader.close();
-//                    return response.toString();
-//                } else {
-//                    return "Error: " + responseCode;
-//                }
-//            } catch (Exception e) {
-//                return "Exception: " + e.getMessage();
-//            }
-//        }
-//
-//        @Override
-//        protected void onPostExecute(String result) {
-//            // 打印接收的数据
-////            Log.d("TestLambda", "Received response: " + result);
-//            System.out.println("Received response: " + result);
-//
-//        }
-//    }
+
 }

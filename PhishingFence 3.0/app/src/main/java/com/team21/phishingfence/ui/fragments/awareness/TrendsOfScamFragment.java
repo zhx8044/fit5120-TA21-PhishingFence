@@ -37,6 +37,7 @@ import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 import com.github.mikephil.charting.formatter.LargeValueFormatter;
+import com.github.mikephil.charting.formatter.PercentFormatter;
 import com.github.mikephil.charting.formatter.ValueFormatter;
 import com.team21.phishingfence.R;
 import com.team21.phishingfence.ui.fragments.StatisticalTrendFragment;
@@ -253,7 +254,7 @@ public class TrendsOfScamFragment extends Fragment {
 
 
     //图2
-    private void drawLineChart(LineChart lineChart) {
+    private void drawLineChart1(LineChart lineChart) {
         List<Entry> entries2022 = new ArrayList<>();
         List<Entry> entries2023 = new ArrayList<>();
 
@@ -303,6 +304,59 @@ public class TrendsOfScamFragment extends Fragment {
 
         lineChart.setDrawGridBackground(false); // 不显示网格背景
 
+        lineChart.animateY(1000);
+        lineChart.invalidate();
+    }
+
+
+    private void drawLineChart(LineChart lineChart) {
+        List<Entry> entries2022 = new ArrayList<>();
+        List<Entry> entries2023 = new ArrayList<>();
+
+        float[] data2022 = {33.1f, 37.9f, 34.4f, 37.1f, 51.3f, 37.6f, 42.8f, 44.7f, 43.5f, 49.2f, 51.7f, 43.3f};
+        float[] data2023 = {53.3f, 43.2f, 45.3f, 51.5f, 53.3f, 38.1f, 42.4f, 38.6f, 29.0f, 31.3f, 25.7f, 25.1f};
+        String[] months = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+        String[] percentChanges = {"61.1%", "14.0%", "31.7%", "38.6%", "3.9%", "1.3%", "-1.0%", "-13.7%", "-33.3%", "-36.4%", "-50.3%", "-42.0%"};
+
+        for (int i = 0; i < data2022.length; i++) {
+            entries2022.add(new Entry(i, data2022[i]));
+            entries2023.add(new Entry(i, data2023[i]));
+        }
+
+        LineDataSet dataSet2022 = new LineDataSet(entries2022, "2022 Losses (million)");
+        dataSet2022.setColor(Color.BLUE);
+        dataSet2022.setCircleColor(Color.BLUE);
+        dataSet2022.setDrawValues(false);
+
+        LineDataSet dataSet2023 = new LineDataSet(entries2023, "2023 Losses (million)");
+        dataSet2023.setColor(Color.GREEN);
+        dataSet2023.setCircleColor(Color.GREEN);
+        dataSet2023.setValueTextSize(12f);
+        dataSet2023.setValueFormatter(new ValueFormatter() {
+            @Override
+            public String getPointLabel(Entry entry) {
+                int index = (int) entry.getX();
+                return percentChanges[index]; // Display percentage only for 2023
+            }
+        });
+
+        LineData lineData = new LineData(dataSet2022, dataSet2023);
+        lineChart.setData(lineData);
+        lineChart.getDescription().setEnabled(false);
+
+        XAxis xAxis = lineChart.getXAxis();
+        xAxis.setValueFormatter(new IndexAxisValueFormatter(months));
+        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+
+        YAxis leftAxis = lineChart.getAxisLeft();
+        leftAxis.setEnabled(true);
+        leftAxis.setDrawGridLines(false);
+        leftAxis.setTextColor(Color.BLACK);
+        leftAxis.setValueFormatter(new LargeValueFormatter()); // Format values in the Y-axis to show millions or thousands appropriately
+
+        lineChart.getAxisRight().setEnabled(false);
+        lineChart.getXAxis().setDrawGridLines(false);
+        lineChart.setDrawGridBackground(false);
         lineChart.animateY(1000);
         lineChart.invalidate();
     }

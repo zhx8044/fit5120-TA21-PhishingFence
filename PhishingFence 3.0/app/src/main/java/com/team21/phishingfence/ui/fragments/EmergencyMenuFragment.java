@@ -29,7 +29,7 @@ public class EmergencyMenuFragment extends Fragment {
         //初始化控件
         this.button = rootView.findViewById(R.id.button);
         this.button2 = rootView.findViewById(R.id.button2);
-        this.button3 = rootView.findViewById(R.id.button3);
+//        this.button3 = rootView.findViewById(R.id.button3);
 
         setButtonOnClickListener();
 
@@ -53,12 +53,12 @@ public class EmergencyMenuFragment extends Fragment {
             }
         });
 
-        this.button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                NavController controller = Navigation.findNavController(v);
-                controller.navigate(R.id.action_emergencyMenuFragment_to_legelSupportFragment);
-            }
-        });
+//        this.button3.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                NavController controller = Navigation.findNavController(v);
+//                controller.navigate(R.id.action_emergencyMenuFragment_to_legelSupportFragment);
+//            }
+//        });
     }
 }
