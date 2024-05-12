@@ -35,7 +35,7 @@ public class ScoreFragment extends Fragment {
         if (getArguments() != null) {
             int score = getArguments().getInt("score", 0); // 默认为 0
             // 根据获取的分数更新 UI 或进行其他操作
-            this.scoreTextView.setText(getString(R.string.fragment_score_text_) + score);
+            this.scoreTextView.setText(getString(R.string.your_score) + score);
         }
 
         this.imageButton.setOnClickListener(new View.OnClickListener() {

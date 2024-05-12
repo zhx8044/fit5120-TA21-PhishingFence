@@ -23,7 +23,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Scam Operating Channels."
+        android:text="Scam Operating Channels"
         android:textColor="@color/my_light_primary"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -55,9 +55,9 @@
                 android:layout_height="wrap_content"
                 android:padding="40dp"
                 android:text="
-Scammers approach theirtarget through differentchannels.
+Scammers approach their target through different channels.
 \n\n
-Most common channelsinclude:
+Most common channels include:
 \n
  ●  SMS   \n
  ●  Phone call  \n

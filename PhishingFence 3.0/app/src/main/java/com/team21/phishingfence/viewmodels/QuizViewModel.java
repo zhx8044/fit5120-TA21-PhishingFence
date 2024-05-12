@@ -98,6 +98,7 @@ public class QuizViewModel extends AndroidViewModel {
         for (int i = 0; i < this.quizList.length; i++) {
             // 从打乱的列表中取出前 7 个数
             this.quizList[i] = numbers.get(i);
+//            quizList[i] = 16;
         }
 
         resetScore();

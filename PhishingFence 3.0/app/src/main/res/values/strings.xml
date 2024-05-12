@@ -258,4 +258,6 @@
     <string name="fragment_score_text1">Your Results</string>
     <string name="fragment_score_text2">Our explanation of scam prevention capacity</string>
     <string name="fragment_score_text3"><![CDATA[7 Excellent\nYou beat the scammers, but don\'t forget to keep your wits about you.\n\n5-3 Well done   \nYou’re pretty good at spotting a scam. Just don\'t let your guard down.\n\n3–0 Oh dear  \nThe scammers beat you this time. Take some time to read through the advice available.]]></string>
+    <string name="menu_help">Help</string>
+    <string name="your_score">Your Score:</string>
 </resources>
