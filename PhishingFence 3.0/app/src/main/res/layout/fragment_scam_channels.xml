@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.emergency.BlockCardsFragment">
+    tools:context=".ui.fragments.awareness.ScamChannelsFragment">
 
-    <ImageView
+<ImageView
         android:id="@+id/imageView"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -20,10 +20,10 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/fragment_blockcards_text1"
+        android:text="Scam Operating Channels."
         android:textColor="@color/my_light_primary"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -34,7 +34,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="380dp"
         android:layout_marginTop="32dp"
         android:layout_marginBottom="100dp"
         android:backgroundTint="@color/background_color2"
@@ -53,8 +53,22 @@
                 android:id="@+id/textView1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="15dp"
-                android:text="@string/fragments_blockcards_text2"
+                android:padding="40dp"
+                android:text="
+Scammers approach theirtarget through differentchannels.
+\n\n
+Most common channelsinclude:
+\n
+ ●  SMS   \n
+ ●  Phone call  \n
+ ●  Email   \n
+ ●  Post  \n
+ ●  Social media  \n
+ ●  Dating sites  \n
+ ●  Online ad \n
+ ●  Online market place   \n
+
+                    "
                 android:textColor="@color/my_light_primary"
                 android:textSize="18sp" />
 

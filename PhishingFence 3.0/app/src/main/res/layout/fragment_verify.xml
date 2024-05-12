@@ -18,6 +18,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.1" />
 
+    <!-- New Button in Top Right Corner -->
+    <Button
+        android:id="@+id/button_disclaimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DISCLAIMER"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/my_light_primary2"/>
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -46,15 +58,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
+<!--        <EditText-->
+<!--            android:id="@+id/edit_text_message"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_margin="2dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:autofillHints=""-->
+<!--            android:hint="@string/fragment_verify_edittext_hint"-->
+<!--            android:inputType="text" />-->
         <EditText
             android:id="@+id/edit_text_message"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="2dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:autofillHints=""
-            android:hint="@string/fragment_verify_edittext_hint"
-            android:inputType="text" />
+            android:inputType="textMultiLine"
+            android:maxLines="10"
+            android:minHeight="48dp"
+            android:hint="@string/fragment_verify_edittext_hint" />
+
 
         <Button
             android:id="@+id/button_verify"
@@ -86,12 +108,24 @@
         android:id="@+id/text_view_results"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="..."
+        android:text="   "
         android:textColor="@color/my_light_primary"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
         tools:ignore="HardcodedText" />
+
+    <!-- New Button in Bottom Right Corner -->
+    <Button
+        android:id="@+id/button_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HELP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/my_light_primary2"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -254,7 +254,7 @@
     </fragment>
     <fragment
         android:id="@+id/scamAwarenessFragment"
-        android:name="com.team21.phishingfence.ui.fragments.ScamAwarenessFragment"
+        android:name="com.team21.phishingfence.ui.fragments.ScamAwarenessMenuFragment"
         android:label="fragment_scam_awareness"
         tools:layout="@layout/fragment_scam_awareness" >
         <action
@@ -293,6 +293,15 @@
         <action
             android:id="@+id/action_typesOfScamFragment_to_scamAwarenessFragment"
             app:destination="@id/scamAwarenessFragment" />
+        <action
+            android:id="@+id/action_typesOfScamFragment_to_scamChannelsFragment"
+            app:destination="@id/scamChannelsFragment" />
+        <action
+            android:id="@+id/action_typesOfScamFragment_to_scamScopeFragment"
+            app:destination="@id/scamScopeFragment" />
+        <action
+            android:id="@+id/action_typesOfScamFragment_to_scamCommunicationFragment"
+            app:destination="@id/scamCommunicationFragment" />
     </fragment>
     <fragment
         android:id="@+id/attemptQuizFragment"
@@ -320,5 +329,32 @@
             app:destination="@id/scamKnowledgeCheckFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/scamChannelsFragment"
+        android:name="com.team21.phishingfence.ui.fragments.awareness.ScamChannelsFragment"
+        android:label="fragment_scam_channels"
+        tools:layout="@layout/fragment_scam_channels" >
+        <action
+            android:id="@+id/action_scamChannelsFragment_to_typesOfScamFragment"
+            app:destination="@id/typesOfScamFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scamCommunicationFragment"
+        android:name="com.team21.phishingfence.ui.fragments.awareness.ScamCommunicationFragment"
+        android:label="fragment_scam_communication"
+        tools:layout="@layout/fragment_scam_communication" >
+        <action
+            android:id="@+id/action_scamCommunicationFragment_to_typesOfScamFragment"
+            app:destination="@id/typesOfScamFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scamScopeFragment"
+        android:name="com.team21.phishingfence.ui.fragments.awareness.ScamScopeFragment"
+        android:label="fragment_scam_scope"
+        tools:layout="@layout/fragment_scam_scope" >
+        <action
+            android:id="@+id/action_scamScopeFragment_to_typesOfScamFragment"
+            app:destination="@id/typesOfScamFragment" />
     </fragment>
 </navigation>

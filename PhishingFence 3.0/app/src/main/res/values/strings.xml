@@ -4,8 +4,8 @@
     <string name="floating_action_button_des">Home</string>
     <string name="navigation_drawer_open">navigation drawer open</string>
     <string name="navigation_drawer_close">navigation drawer close</string>
-    <string name="fragment_home_text1">Welcome to the</string>
-    <string name="fragment_home_text2">PhishingFence APP</string>
+    <string name="fragment_home_text1">Welcome to</string>
+    <string name="fragment_home_text2">PhishingFence</string>
     <string name="fragment_home_text3">Avoid Scam\nKnow the scenario of International\nStudent in Australia</string>
     <string name="fragment_home_button1">Scam Scenario</string>
     <string name="fragment_home_button2">Verify Scam</string>
@@ -134,10 +134,128 @@
     <string name="scambutton2">Not a Scam</string>
     <string name="right_hint">You are right – This is not a scam!</string>
     <string name="wrongHint">Oops, you’re wrong – this is not a scam!</string>
-    <string name="fragment_attempt_quiz_text">next</string>
-    <string name="fragment_score_text">Your Results</string>
+    <string name="fragment_attempt_quiz_text">next quiz</string>
+
+
+    <string name="fragment_trend_of_scam_option1">Scam Categories and Losses</string>
+    <string name="fragment_trend_of_scam_option2">Monthly Scam Losses (2022~2023)</string>
+    <string name="fragment_trend_of_scam_option3">Scam Mode Loss Reports</string>
+
+    <string name="fragment_trend_of_scam_chart1_question">
+        Awareness: By understanding the prevalent scam categories and their associated losses,
+        you can better recognize and avoid potential scams, protecting yourself from financial harm</string>
+    <string name="fragment_trend_of_scam_chart2_question">
+        Embark on an enlightening journey through our area chart, where insights await those who
+        seek a deeper understanding of financial dynamics.</string>
+    <string name="fragment_trend_of_scam_chart3_question">
+        Embark on a journey of analysis with our grouped bar chart, unraveling the intricate
+        relationship between contact modes, financial losses, and report generation.
+    </string>
+
+
+    <!-- fragment_trend_of_scam_description 用于显示的在图片(路径:scam awareness->trends of scam )下的文本内容 -->
+    <string name="fragment_trend_of_scam_description">\n
+        Understanding Scam Categories and Losses: \n
+        \n
+        This graph visualizes different types of scams and the financial losses associated with
+        each category. Each bar represents a scam category, and the height of the bar indicates the
+        financial loss in millions of dollars. The text above each bar specifies the exact amount
+        of loss. \n
+        \n
+        \n
+        Interpreting the Graph: \n
+        \n
+        *   Categories: Each category corresponds to a specific type of scam, such as investment
+        scams, phishing, or online shopping scams.  \n
+        \n
+        * Losses: The height of each bar reflects the financial impact of scams in that category.
+        Higher bars indicate greater financial losses.  </string>
+    <string name="fragment_trend_of_scam_description2">\n
+        Description:
+        \n\n
+        Dive into our insightful area chart, illuminating the financial trajectory of 2022 and 2023.
+        Explore monthly losses (in millions) alongside the consequential percentage change from 2022 to 2023.
+
+        \n\n\n
+        Key Insights:
+        \n\n
+        📈 Trend Analysis: \n\n
+        Navigate the ebb and flow of losses month by month, uncovering essential
+        financial performance trends.
+        \n\n\n
+
+        🔄 Year-on-Year Comparison: \n\n
+        Engage in a thorough examination of losses between 2022 and 2023,
+        deciphering the nuanced shifts in performance over time.
+        \n\n\n
+
+        💼 Percentage Change: \n\n
+        Delve into the quantitative realm, analyzing the substantial increases
+        or decreases in losses from one year to the next.
+        \n\n\n\n
+
+        Interpretation Guide:
+        \n\n\n
+
+        📊 Upward Sloping Area: \n\n
+        Ascend to heightened awareness as you observe months with increased
+        losses compared to the previous year, signaling areas of potential financial concern.
+        \n\n\n
+
+        📉 Downward Sloping Area: \n\n
+        Descend into analysis as you encounter months with decreased
+        losses compared to the previous year, unveiling promising signs of financial improvement.
+        \n\n\n
+
+        🛤️ Flat Area: \n\n
+        Traverse through periods of stability, where minimal change in losses between
+        the two years offers a serene interlude amidst the financial landscape. </string>
+    <string name="fragment_trend_of_scam_description3">\n
+        Description:
+        \n\n
+        Welcome to our informative grouped bar chart showcasing the interaction mode preferences
+        and associated losses across two pivotal years: 2022 and 2023.
+
+        \n\n\n
+        Key Insights:
+        \n\n
+        📊 Losses Analysis:  \n\n
+        *  Compare the financial impact of different contact modes in 2022 and 2023, represented by the height of the bars.
+        \n
+        *  Gain insights into changes in losses across various contact modes over the two years.
+        \n\n\n
+
+        📈 Reports Analysis:  \n\n
+        *  Explore the volume of reports generated through each contact mode in 2022 and 2023, depicted by the width of the bars.
+        \n
+        *  Understand the distribution of communication channels based on report generation.
+
+        \n\n\n\n
+        Interpretation Guide:
+        \n\n\n
+
+        🔍 Losses Interpretation: \n\n
+        *  Higher bars indicate greater financial losses associated with a specific contact mode.
+        \n
+        *  Compare the heights of bars within each year to assess changes in losses across different modes of contact.
+        \n\n\n
+
+        📊 Reports Interpretation: \n\n
+        *  Wider bars represent a higher volume of reports generated through a particular contact mode.
+        \n
+        *  Analyze the width of bars within each year to understand trends in report generation across contact modes.
+
+        \n\n\n\n
+        Usage Tips:
+        \n\n\n
+        🔢 Interactive Features:  \n\n
+        *  Zoom in or out to focus on specific contact modes or years for detailed analysis.
+        \n\n\n
+
+        🔄 Year Comparison: \n\n
+        *  Observe changes in losses and report volumes between 2022 and 2023 to identify evolving communication patterns.
+    </string>
+    <string name="fragment_score_text1">Your Results</string>
     <string name="fragment_score_text2">Our explanation of scam prevention capacity</string>
-    <string name="fragment_score_text3"><![CDATA[7 Excellent  You beat the scammers, but don\'t forget to keep your wits about you.\n\n5-3 Well done   You’re pretty good at spotting a scam. Just don\'t let your guard down.\n\n3–0 Oh dear  The scammers beat you this time. Take some time to read through the advice available.]]></string>
-    <string name="fragment_score_text_">"Your score: "</string>
-    <string name="menu_help">Help</string>
+    <string name="fragment_score_text3"><![CDATA[7 Excellent\nYou beat the scammers, but don\'t forget to keep your wits about you.\n\n5-3 Well done   \nYou’re pretty good at spotting a scam. Just don\'t let your guard down.\n\n3–0 Oh dear  \nThe scammers beat you this time. Take some time to read through the advice available.]]></string>
 </resources>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.emergency.BlockCardsFragment">
+    tools:context=".ui.fragments.awareness.ScamScopeFragment">
 
     <ImageView
         android:id="@+id/imageView"
@@ -20,10 +20,10 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/fragment_blockcards_text1"
+        android:text="Scam events designed to target international students"
         android:textColor="@color/my_light_primary"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -54,7 +54,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="15dp"
-                android:text="@string/fragments_blockcards_text2"
+                android:text="
+Common scam events international students may face in Australia include.\n\n
+ ●  Cheap uni fee offer \n
+ ●  Rental payment  \n
+ ●  Easy job opportunity    \n
+ ●  Quick visa processing or \n        visa expiry warning    \n
+ ●  Online shopping \n
+ ●  Online forums or virtual meet  \n
+ ●  Online romance and dating   \n
+ ●  Treats to life, arrest or other \n
+ ●  False billing   \n
+ ●  Over payment    \n
+ ●  Lottery and travel  \n
+ ●  Betting and sports investments  \n
+ ●  Tax rebate or toll not collected    \n
+
+"
                 android:textColor="@color/my_light_primary"
                 android:textSize="18sp" />
 

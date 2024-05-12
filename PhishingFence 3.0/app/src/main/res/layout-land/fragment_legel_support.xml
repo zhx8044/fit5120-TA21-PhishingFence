@@ -40,7 +40,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="100dp"
-        android:backgroundTint="@color/my_light_primary"
+        android:backgroundTint="@color/background_color2"
         app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:padding="15dp"
                 android:text="@string/fragment_legel_support_text2"
-                android:textColor="@color/my_light_primary2"
+                android:textColor="@color/my_light_primary"
                 android:textSize="18sp" />
 
         </ScrollView>

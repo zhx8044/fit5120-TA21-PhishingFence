@@ -33,4 +33,10 @@
         <item>@string/fragment_statistical_trend_option3</item>
         <item>@string/fragment_statistical_trend_option4</item>
     </string-array>
+
+    <string-array name="type_of_scam_chart_options">
+        <item>@string/fragment_trend_of_scam_option1</item>
+        <item>@string/fragment_trend_of_scam_option2</item>
+        <item>@string/fragment_trend_of_scam_option3</item>
+    </string-array>
 </resources>

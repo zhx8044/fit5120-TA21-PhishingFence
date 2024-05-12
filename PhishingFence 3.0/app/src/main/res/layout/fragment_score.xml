@@ -23,7 +23,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/fragment_score_text"
+        android:text="@string/fragment_score_text1"
         android:textColor="@color/my_light_primary"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"

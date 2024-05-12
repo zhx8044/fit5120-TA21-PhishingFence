@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.emergency.BlockCardsFragment">
+    tools:context=".ui.fragments.awareness.ScamCommunicationFragment">
 
     <ImageView
         android:id="@+id/imageView"
@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/fragment_blockcards_text1"
+        android:text="Signs of scam"
         android:textColor="@color/my_light_primary"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -34,10 +34,10 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="380dp"
         android:layout_marginTop="32dp"
         android:layout_marginBottom="100dp"
-        android:backgroundTint="@color/background_color2"
+        android:backgroundTint="#B4448ADF"
         app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,7 +54,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="15dp"
-                android:text="@string/fragments_blockcards_text2"
+                android:text="\n
+Scam communicationspossess something incommon, for example:.\n\n
+ ●  Offers are too good to be true \n
+ ●  Request or pressure for quick action  \n
+ ●  Payment upfront    \n
+ ●  Request to click on a link on call\n        a number provided    \n
+ ●  Ask for personal or financial info \n
+ ●  Poor grammar or spelling incommunication  \n
+ ●  Unusual sender address orphone numbers   \n
+ ●  Lack of clear contact info \n
+
+"
                 android:textColor="@color/my_light_primary"
                 android:textSize="18sp" />
 

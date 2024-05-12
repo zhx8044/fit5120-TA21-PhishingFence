@@ -1,11 +1,13 @@
 package com.team21.phishingfence.ui.fragments;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +22,9 @@ public class HomeFragment extends Fragment {
     private Button buttonScamScenrio,buttonVerify;
 
     private View helpOverlay;// 帮助
+
+    private SharedPreferences sharedPreferences;
+
 
     public HomeFragment() {
         // Required empty public constructor
@@ -53,25 +58,54 @@ public class HomeFragment extends Fragment {
 
     //帮助版本
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_home, container, false);
+//    @Override
+//    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+//        View rootView = inflater.inflate(R.layout.fragment_home, container, false);
+//
+//        this.buttonScamScenrio = rootView.findViewById(R.id.buttonScamScenrio);
+//        this.buttonVerify = rootView.findViewById(R.id.buttonVerify);
+//        this.helpOverlay = rootView.findViewById(R.id.helpOverlay); // 获取帮助浮层的视图
+//
+//        rootView.findViewById(R.id.closeHelpButton).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                helpOverlay.setVisibility(View.GONE); // 点击关闭按钮时隐藏帮助浮层
+//            }
+//        });
+//
+//        setButtonOnClickListener();
+//
+//        return rootView;
+//    }
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+            View rootView = inflater.inflate(R.layout.fragment_home, container, false);
 
-        this.buttonScamScenrio = rootView.findViewById(R.id.buttonScamScenrio);
-        this.buttonVerify = rootView.findViewById(R.id.buttonVerify);
-        this.helpOverlay = rootView.findViewById(R.id.helpOverlay); // 获取帮助浮层的视图
+            sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+            boolean isHelpClosed = sharedPreferences.getBoolean("help_closed", false);
 
-        rootView.findViewById(R.id.closeHelpButton).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                helpOverlay.setVisibility(View.GONE); // 点击关闭按钮时隐藏帮助浮层
+            this.buttonScamScenrio = rootView.findViewById(R.id.buttonScamScenrio);
+            this.buttonVerify = rootView.findViewById(R.id.buttonVerify);
+            this.helpOverlay = rootView.findViewById(R.id.helpOverlay);
+
+            if (isHelpClosed) {
+                helpOverlay.setVisibility(View.GONE);
             }
-        });
 
-        setButtonOnClickListener();
+            rootView.findViewById(R.id.closeHelpButton).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    helpOverlay.setVisibility(View.GONE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putBoolean("help_closed", true);
+                    editor.apply();
+                }
+            });
 
-        return rootView;
-    }
+            setButtonOnClickListener();
+
+            return rootView;
+        }
 
 
     // 帮助--
