@@ -47,11 +47,6 @@ public class MainActivity extends AppCompatActivity {
         boolean isFirstTime = settings.getBoolean(FIRST_TIME_KEY, true);
 
         if (isFirstTime) {
-            // 修改 firstTime 为 false
-            SharedPreferences.Editor editor = settings.edit();
-            editor.putBoolean(FIRST_TIME_KEY, false);
-            editor.apply();
-
             // 跳转到 WelcomeActivity
             Intent intent = new Intent(this, WelcomeActivity.class);
             startActivity(intent);

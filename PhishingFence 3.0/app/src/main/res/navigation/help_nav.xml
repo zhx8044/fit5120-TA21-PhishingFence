@@ -20,5 +20,16 @@
         android:id="@+id/secondHelpFragment"
         android:name="com.team21.phishingfence.ui.helpFragments.SecondHelpFragment"
         android:label="fragment_second_help"
-        tools:layout="@layout/fragment_second_help" />
+        tools:layout="@layout/fragment_second_help" >
+        <action
+            android:id="@+id/action_secondHelpFragment_to_thirdHelpFragment"
+            app:destination="@id/thirdHelpFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdHelpFragment"
+        android:name="com.team21.phishingfence.ui.helpFragments.ThirdHelpFragment"
+        android:label="fragment_third_help"
+        tools:layout="@layout/fragment_third_help" />
 </navigation>

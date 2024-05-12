@@ -1,5 +1,6 @@
 package com.team21.phishingfence.ui.activities;
 
+import static com.team21.phishingfence.ui.activities.MainActivity.FIRST_TIME_KEY;
 import static com.team21.phishingfence.viewmodels.QuizViewModel.BASIC_QUIZ;
 import static com.team21.phishingfence.viewmodels.QuizViewModel.EMAIL_QUIZ;
 import static com.team21.phishingfence.viewmodels.QuizViewModel.MESSAGE_QUIZ;
@@ -33,9 +34,14 @@ public class WelcomeActivity extends AppCompatActivity {
         quizRepository = new QuizRepository(this);
 
         SharedPreferences settings = getSharedPreferences(MainActivity.PREFS_NAME, 0);
-        boolean isFirstTime = settings.getBoolean(MainActivity.FIRST_TIME_KEY, true);
+        boolean isFirstTime = settings.getBoolean(FIRST_TIME_KEY, true);
         if (isFirstTime) {
             updateQuiz();
+
+            // 修改 firstTime 为 false
+            SharedPreferences.Editor editor = settings.edit();
+            editor.putBoolean(FIRST_TIME_KEY, false);
+            editor.apply();
         }
 
         cancel.setOnClickListener(new View.OnClickListener() {
@@ -44,8 +50,6 @@ public class WelcomeActivity extends AppCompatActivity {
                 finish();
             }
         });
-
-        finish();
     }
 
     private void updateQuiz() {
