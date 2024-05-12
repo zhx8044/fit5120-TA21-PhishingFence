@@ -73,6 +73,18 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!-- 在ScrollView上方添加一个向下滚动的提示 -->
+<!--    <TextView-->
+<!--        android:id="@+id/scrollDownIndicator"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="向下滚动查看更多"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:gravity="center"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/scrollView"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent" />-->
+
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="0dp"
@@ -80,6 +92,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="100dp"
+        android:layout_marginTop="-10dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -125,6 +139,20 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <!-- 在ScrollView下方添加一个向上滚动的提示 -->
+    <TextView
+        android:id="@+id/scrollUpIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Read Below ↓"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/scrollView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
         android:id="@+id/imageViewHelp"

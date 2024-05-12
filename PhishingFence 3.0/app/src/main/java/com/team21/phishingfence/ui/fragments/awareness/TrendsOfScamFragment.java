@@ -18,6 +18,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -94,6 +95,23 @@ public class TrendsOfScamFragment extends Fragment {
         this.description.setTextIsSelectable(true);
 
         this.viewModel = new ViewModelProvider(requireActivity()).get(TrendsOfScamViewModel.class);//获取ViewModel
+
+
+        // 向下滚动提示
+        ScrollView scrollView = rootView.findViewById(R.id.scrollView);
+        TextView scrollUpIndicator = rootView.findViewById(R.id.scrollUpIndicator);
+//        TextView scrollDownIndicator = rootView.findViewById(R.id.scrollDownIndicator);
+
+        scrollView.getViewTreeObserver().addOnScrollChangedListener(() -> {
+            if (!scrollView.canScrollVertically(1)) {
+                // 如果滚动到顶部，则隐藏向上滚动提示
+                scrollUpIndicator.setVisibility(View.GONE);
+            } else {
+                scrollUpIndicator.setVisibility(View.VISIBLE);
+            }
+        });
+
+
         setChooseOptionObserver();//设置chooseOption监视器
         setSpinnerOption();//设置spinner选项
         setSpinnerListener();//设置spinner监听器
@@ -362,7 +380,7 @@ public class TrendsOfScamFragment extends Fragment {
     }
 
 
-    private void drawBarChart2_1(BarChart barChart) {
+    private void drawBarChart2_11(BarChart barChart) {
         // 示例数据
         String[] contactModes = {"Phone Call", "Social Media", "Email", "Internet", "Mobile apps", "In Person", "Text Message"};
         float[] reports2022 = {63816, 13427, 52159, 13692, 10057, 2186, 79835};
@@ -406,6 +424,62 @@ public class TrendsOfScamFragment extends Fragment {
         // Remove grid lines
         xAxis.setDrawGridLines(false);
         barChart.getAxisLeft().setDrawGridLines(false);
+        barChart.getAxisRight().setDrawGridLines(false);
+
+        barChart.setFitBars(true); // 使两个条形不超过图表边界
+        barChart.animateY(1500);
+        barChart.invalidate(); // 刷新图表
+    }
+
+    private void drawBarChart2_1(BarChart barChart) {
+        // 示例数据
+        String[] contactModes = {"Phone Call", "Social Media", "Email", "Internet", "Mobile apps", "In Person", "Text Message"};
+        float[] reports2022 = {63816, 13427, 52159, 13692, 10057, 2186, 79835};
+        float[] reports2023 = {55418, 17542, 85941, 17568, 8101, 3614, 109621};
+
+        List<BarEntry> entries2022 = new ArrayList<>();
+        List<BarEntry> entries2023 = new ArrayList<>();
+
+        for (int i = 0; i < contactModes.length; i++) {
+            // 注意i的使用，它将每个条目正确地放在X轴的位置上
+            entries2022.add(new BarEntry(i, reports2022[i]));
+            entries2023.add(new BarEntry(i + 0.4f, reports2023[i])); // 添加0.4的偏移创建分组效果
+        }
+
+        // 创建2022年数据的集合
+        BarDataSet dataSet2022 = new BarDataSet(entries2022, "2022 Reports");
+        dataSet2022.setColor(Color.BLUE);
+
+        // 创建2023年数据的集合
+        BarDataSet dataSet2023 = new BarDataSet(entries2023, "2023 Reports");
+        dataSet2023.setColor(Color.GREEN);
+
+        // 使用BarData对象组合所有数据集
+        BarData barData = new BarData(dataSet2022, dataSet2023);
+        barData.setBarWidth(0.35f); // 设置条目宽度
+
+        barChart.setData(barData);
+        barChart.getDescription().setEnabled(false);
+
+        // 开始于0的左侧Y轴
+        YAxis leftAxis = barChart.getAxisLeft();
+        leftAxis.setAxisMinimum(0); // 从0开始
+        leftAxis.setEnabled(true); // 启用左侧Y轴显示
+
+        // 禁用右侧Y轴显示
+        barChart.getAxisRight().setEnabled(false);
+
+        XAxis xAxis = barChart.getXAxis();
+        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+        xAxis.setValueFormatter(new IndexAxisValueFormatter(contactModes));
+        xAxis.setGranularity(1f);
+        xAxis.setGranularityEnabled(true);
+        xAxis.setLabelRotationAngle(-45); // 将标签旋转以防止重叠
+        xAxis.setLabelCount(contactModes.length); // Set explicit label count to match number of entries
+
+        // Remove grid lines
+        xAxis.setDrawGridLines(false);
+        leftAxis.setDrawGridLines(false);
         barChart.getAxisRight().setDrawGridLines(false);
 
         barChart.setFitBars(true); // 使两个条形不超过图表边界
