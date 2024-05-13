@@ -134,6 +134,8 @@
     <string name="scambutton2">Not a Scam</string>
     <string name="right_hint">You are right – This is not a scam!</string>
     <string name="wrongHint">Oops, you’re wrong – this is not a scam!</string>
+    <string name="right_hint2">You are right – This is a scam!</string>
+    <string name="wrongHint2">Oops, you’re wrong – this is a scam!</string>
     <string name="fragment_attempt_quiz_text">next quiz</string>
 
 

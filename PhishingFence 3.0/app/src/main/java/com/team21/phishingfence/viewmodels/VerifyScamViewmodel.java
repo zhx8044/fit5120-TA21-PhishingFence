@@ -1,5 +1,6 @@
 package com.team21.phishingfence.viewmodels;
 
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.lifecycle.ViewModel;
@@ -31,8 +32,8 @@ public class VerifyScamViewmodel extends ViewModel {
         this.result = result;
     }
 
-    public void verify(TextView textView) {
-        this.verifyScamRepository.verify(this.message,textView);
+    public void verify(TextView textView, ProgressBar progressBar) {
+        this.verifyScamRepository.verify(this.message,textView,progressBar);
         this.result = textView.getText().toString();
     }
 }

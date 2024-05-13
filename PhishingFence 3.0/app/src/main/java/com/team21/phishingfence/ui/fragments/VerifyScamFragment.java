@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,6 +38,7 @@ public class VerifyScamFragment extends Fragment {
     private EditText editTextMessage;
     private TextView textViewResults;
     private VerifyScamViewmodel viewmodel;
+    private ProgressBar progressBar;
 
     public VerifyScamFragment() {
 
@@ -55,6 +57,7 @@ public class VerifyScamFragment extends Fragment {
         this.textViewResults = view.findViewById(R.id.text_view_results);
         this.textViewResults.setTextIsSelectable(true);
         this.viewmodel = new ViewModelProvider(requireActivity()).get(VerifyScamViewmodel.class);//获取ViewModel
+        this.progressBar = view.findViewById(R.id.progressBar);
 
         if(this.viewmodel.getResult() != null) {
             this.textViewResults.setText(this.viewmodel.getResult());
@@ -68,8 +71,8 @@ public class VerifyScamFragment extends Fragment {
                 String apiEndpoint = "https://nbhq8mbflg.execute-api.ap-southeast-2.amazonaws.com/default/testnow";
                 new InvokeAPIAsyncTask(textViewResults).execute(apiEndpoint, editTextMessage.getText().toString());
                  */
-
-                VerifyScamFragment.this.viewmodel.verify(VerifyScamFragment.this.textViewResults);
+                VerifyScamFragment.this.progressBar.setVisibility(View.VISIBLE);
+                VerifyScamFragment.this.viewmodel.verify(VerifyScamFragment.this.textViewResults,VerifyScamFragment.this.progressBar);
                 Toast.makeText(requireActivity(), "verifying", Toast.LENGTH_LONG).show();
             }
         });

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="question1">Dear Taxpayer, You are eligible for a tax refund! Click here to claim your refund now. Act fast, limited time offer! </string>
-    <string name="warning1">Warning signs:  \n ●   ●   Urgency in claiming the tax refund.  \n ●   ●   Request to click on a link without proper verification.  \n ●   ●  Lack of personalized information.  \n ●   ●   Suspicious sender email address.</string>
-    <string name="tips1">"Tips:  \n ●   ●   Verify the sender's email address for authenticity.  \n ●   ●   Government agencies usually communicate through official channels, not email.  \n ●   ●  Be cautious of urgent requests for personal information or clicking on links without proper verification.  \n ●   ●  Official communication regarding tax refunds often includes personalized information and does not pressure recipients to act quickly. \nHow it's a scam:   \n ●  Scammers often use urgent language and fake tax refund notifications to trick recipients into clicking malicious links or providing personal information. "</string>
+    <string name="warning1">Warning signs:  \n ●   Urgency in claiming the tax refund.  \n ●   Request to click on a link without proper verification.  \n ●   ●  Lack of personalized information.  \n ●   ●   Suspicious sender email address.</string>
+    <string name="tips1">"Tips:  \n ●   Verify the sender's email address for authenticity.  \n ●   Government agencies usually communicate through official channels, not email.  \n ●   ●  Be cautious of urgent requests for personal information or clicking on links without proper verification.  \n ●   ●  Official communication regarding tax refunds often includes personalized information and does not pressure recipients to act quickly. \nHow it's a scam:   \n ●  Scammers often use urgent language and fake tax refund notifications to trick recipients into clicking malicious links or providing personal information. "</string>
     <string name="question2">Subject: Important Government Announcement - Verify Your Details!\nMessage: Dear Citizen, Your government benefits require verification. Please provide your personal details by clicking the link government details.verify. Failure to comply may result in benefits suspension. </string>
     <string name="warning2">Warning signs: \n
  ●  Threat of benefits suspension for non-compliance. \n
@@ -27,13 +27,13 @@ Message: Dear Customer, Your banking account has been compromised. Click the lin
      ●   Be cautious of urgent requests to click on links to secure your account without proper verification.\n
      ●  Contact your bank directly using official contact information to verify the authenticity of the message. ></string>
     <string name="question4">Subject: Exclusive Job Opportunity - Apply Now!\n
-Message: Dear Job Seeker, A prestigious company is offering you a job opportunity! Click the link job opportunity.apply/limited to apply now and secure your dream job. Limited positions available! </string>
+\tMessage: Dear Job Seeker, A prestigious company is offering you a job opportunity! Click the link job opportunity.apply/limited to apply now and secure your dream job. Limited positions available! </string>
     <string name="warning4">Warning signs: \n
  ●  Unsolicited job offer. \n
  ●  Request to click on a link for job application. \n
  ●  Lack of company details or job description. \n
  ●  Pressure to apply quickly due to limited positions. </string>
-    <string name="tips4">Tips:
+    <string name="tips4">Tips:\n
  ●  Legitimate job offers provide detailed information about the company and the job role.\n
  ●  Be cautious of unsolicited job offers that pressure you to apply quickly.\n
  ●  Research the company independently to verify the job offer\'s legitimacy.\n

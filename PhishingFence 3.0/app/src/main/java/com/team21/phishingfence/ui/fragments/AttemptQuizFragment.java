@@ -91,6 +91,13 @@ public class AttemptQuizFragment extends Fragment {
                         AttemptQuizFragment.this.textViewQuestion.setText(requireActivity().getString(quiz.getQuestion()));
                         AttemptQuizFragment.this.textViewEmailQuestion.setText(requireActivity().getString(quiz.getPhoneMessage()));
                     }
+                    if(quiz.getAnswer()) {
+                        AttemptQuizFragment.this.rightHint.setText(requireActivity().getString(R.string.right_hint2));
+                        AttemptQuizFragment.this.wrongHint.setText(requireActivity().getString(R.string.wrongHint2));
+                    } else {
+                        AttemptQuizFragment.this.rightHint.setText(requireActivity().getString(R.string.right_hint));
+                        AttemptQuizFragment.this.wrongHint.setText(requireActivity().getString(R.string.wrongHint));
+                    }
                     AttemptQuizFragment.this.imgWrong.setVisibility(View.GONE);
                     AttemptQuizFragment.this.imgRight.setVisibility(View.GONE);
                     AttemptQuizFragment.this.rightHint.setVisibility(View.GONE);

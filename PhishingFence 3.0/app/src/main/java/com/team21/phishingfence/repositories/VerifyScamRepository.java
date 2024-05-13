@@ -2,6 +2,8 @@ package com.team21.phishingfence.repositories;
 
 import android.os.AsyncTask;
 import android.util.Log;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.team21.phishingfence.ui.fragments.VerifyScamFragment;
@@ -26,15 +28,17 @@ public class VerifyScamRepository {
     /**
      * 使用该方法进行验证逻辑
      */
-    public void verify(String message,TextView textView) {
-        new InvokeAPIAsyncTask(textView).execute(apiEndpoint, message);
+    public void verify(String message, TextView textView, ProgressBar progressBar) {
+        new InvokeAPIAsyncTask(textView,progressBar).execute(apiEndpoint, message);
     }
 
     private static class InvokeAPIAsyncTask extends AsyncTask<String, Void, String> {
         private TextView resultView;
+        private ProgressBar progressBar;
 
-        InvokeAPIAsyncTask(TextView resultView) {
+        InvokeAPIAsyncTask(TextView resultView,ProgressBar progressBar) {
             this.resultView = resultView;
+            this.progressBar = progressBar;
         }
 
         @Override
@@ -150,6 +154,10 @@ public class VerifyScamRepository {
 
                 if (resultView != null) {
                     resultView.setText(formattedResult);
+                }
+
+                if (this.progressBar != null) {
+                    this.progressBar.setVisibility(View.GONE);
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
