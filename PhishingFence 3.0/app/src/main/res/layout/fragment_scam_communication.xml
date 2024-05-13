@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Signs of scam"
+        android:text="@string/signs_of_scam"
         android:textColor="@color/my_light_primary"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -37,7 +37,7 @@
         android:layout_height="380dp"
         android:layout_marginTop="32dp"
         android:layout_marginBottom="100dp"
-        android:backgroundTint="#B4448ADF"
+        android:backgroundTint="@color/my_light_primary"
         app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,19 +54,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="15dp"
-                android:text="\n
-Scam communications possess something in common, for example:.\n\n
- ●  Offers are too good to be true \n
- ●  Request or pressure for quick action  \n
- ●  Payment upfront    \n
- ●  Request to click on a link on call\n        a number provided    \n
- ●  Ask for personal or financial info \n
- ●  Poor grammar or spelling in communication   \n
- ●  Unusual sender address or phone numbers   \n
- ●  Lack of clear contact info \n
-
-"
-                android:textColor="@color/my_light_primary"
+                android:text="@string/fragment_scam_communication_text10086"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
 
         </ScrollView>

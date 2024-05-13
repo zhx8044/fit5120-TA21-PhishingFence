@@ -21,14 +21,14 @@
     <!-- New Button in Top Right Corner -->
     <Button
         android:id="@+id/button_disclaimer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="DISCLAIMER"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:textColor="@color/my_light_primary2"/>
+        android:background="@drawable/mianzeshengming"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
@@ -58,43 +58,41 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
-<!--        android:layout_height="70dp"-->
-<!--        android:orientation="horizontal"-->
+        <!--        android:layout_height="70dp"-->
+        <!--        android:orientation="horizontal"-->
 
 
-
-<!--        <EditText-->
-<!--            android:id="@+id/edit_text_message"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:inputType="textMultiLine"-->
-<!--            android:maxLines="10"-->
-<!--            android:minHeight="48dp"-->
-<!--            android:hint="@string/fragment_verify_edittext_hint" />-->
-
+        <!--        <EditText-->
+        <!--            android:id="@+id/edit_text_message"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:inputType="textMultiLine"-->
+        <!--            android:maxLines="10"-->
+        <!--            android:minHeight="48dp"-->
+        <!--            android:hint="@string/fragment_verify_edittext_hint" />-->
 
 
-
-<!--        <Button-->
-<!--            android:id="@+id/button_verify"-->
-<!--            style="@style/Widget.AppCompat.Button"-->
-<!--            android:layout_width="120dp"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:layout_marginTop="5dp"-->
-<!--            android:layout_marginEnd="5dp"-->
-<!--            android:layout_marginBottom="5dp"-->
-<!--            android:gravity="center"-->
-<!--            android:text="@string/fragment_verify_button"-->
-<!--            android:textColor="@color/my_light_primary2" />-->
+        <!--        <Button-->
+        <!--            android:id="@+id/button_verify"-->
+        <!--            style="@style/Widget.AppCompat.Button"-->
+        <!--            android:layout_width="120dp"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:layout_marginTop="5dp"-->
+        <!--            android:layout_marginEnd="5dp"-->
+        <!--            android:layout_marginBottom="5dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:text="@string/fragment_verify_button"-->
+        <!--            android:textColor="@color/my_light_primary2" />-->
         <EditText
             android:id="@+id/edit_text_message"
             android:layout_width="match_parent"
             android:layout_height="150dp"
+            android:autofillHints=""
+            android:hint="@string/fragment_verify_edittext_hint"
             android:inputType="textMultiLine"
             android:maxLines="10"
-            android:minHeight="48dp"
-            android:hint="@string/fragment_verify_edittext_hint" />
+            android:minHeight="48dp" />
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -143,13 +141,24 @@
     <!-- New Button in Bottom Right Corner -->
     <Button
         android:id="@+id/button_help"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="HELP"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="16dp"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginEnd="16dp"
-        android:textColor="@color/my_light_primary2"/>
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/baseline_help_outline_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:text="@string/disclaimer"
+        android:textColor="@color/my_light_primary"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/button_disclaimer"
+        app:layout_constraintEnd_toStartOf="@+id/button_disclaimer"
+        app:layout_constraintTop_toTopOf="@+id/button_disclaimer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

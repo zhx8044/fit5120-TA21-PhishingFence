@@ -257,7 +257,16 @@
     </string>
     <string name="fragment_score_text1">Your Results</string>
     <string name="fragment_score_text2">Our explanation of scam prevention capacity</string>
-    <string name="fragment_score_text3"><![CDATA[7 Excellent\nYou beat the scammers, but don\'t forget to keep your wits about you.\n\n5-3 Well done   \nYou’re pretty good at spotting a scam. Just don\'t let your guard down.\n\n3–0 Oh dear  \nThe scammers beat you this time. Take some time to read through the advice available.]]></string>
+    <string name="fragment_score_text3"><![CDATA[7 Excellent\nYou beat the scammers, but don\'t forget to keep your wits about you.\n\n4-6 Well done   \nYou’re pretty good at spotting a scam. Just don\'t let your guard down.\n\n0-3 Oh dear  \nThe scammers beat you this time. Take some time to read through the advice available.]]></string>
     <string name="menu_help">Help</string>
     <string name="your_score">Your Score:</string>
+    <string name="disclaimer">DISCLAIMER</string>
+    <string name="verify_help">HELP</string>
+    <string name="fragment_scam_channels_text10086">Scammers approach their target through different channels. \n\n Most common channels include: \n ● SMS \n ● Phone call \n ● Email \n ● Post \n ● Social media \n ● Dating sites \n ● Online ad \n ● Online market place \n</string>
+    <string name="fragment_scam_communication_text10086">\n Scam communications possess something in common, for example:.\n\n ● Offers are too good to be true \n ● Request or pressure for quick action \n ● Payment upfront \n ● Request to click on a link on call\n a number provided \n ● Ask for personal or financial info \n ● Poor grammar or spelling in communication \n ● Unusual sender address or phone numbers \n ● Lack of clear contact info \n</string>
+    <string name="signs_of_scam">Signs of scam</string>
+    <string name="text10086">Common scam events international students may face in Australia include.\n\n ● Cheap uni fee offer \n ● Rental payment \n ● Easy job opportunity \n ● Quick visa processing or \n visa expiry warning \n ● Online shopping \n ● Online forums or virtual meet \n ● Online romance and dating \n ● Threats to life, arrest or other \n ● False billing \n ● Over payment \n ● Lottery and travel \n ● Betting and sports investments \n ● Tax rebate or toll not collected \n</string>
+    <string name="text_10087">Discover scam channels: Learn how scammers reach their target</string>
+    <string name="text10088">Explore the scope of falling victim of scam by international students in Australia.</string>
+    <string name="text10089">How does scam communication look like? Learn warning signs here.</string>
 </resources>

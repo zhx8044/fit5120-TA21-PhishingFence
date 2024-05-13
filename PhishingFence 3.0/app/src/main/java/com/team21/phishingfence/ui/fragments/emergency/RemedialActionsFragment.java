@@ -82,8 +82,10 @@ public class RemedialActionsFragment extends Fragment {
         this.report.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Bundle bundle = new Bundle();
+                bundle.putString("aaa","AAA");
                 NavController controller = Navigation.findNavController(v);
-                controller.navigate(R.id.action_remedialActionsFragment_to_reportScamFragment);
+                controller.navigate(R.id.action_remedialActionsFragment_to_reportScamFragment,bundle);
             }
         });
 

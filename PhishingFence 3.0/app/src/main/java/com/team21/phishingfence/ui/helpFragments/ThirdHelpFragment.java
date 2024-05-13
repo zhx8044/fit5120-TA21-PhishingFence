@@ -26,7 +26,8 @@ public class ThirdHelpFragment extends Fragment {
         constraintLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                requireActivity().finish();
+                NavController controller = Navigation.findNavController(v);
+                controller.navigate(R.id.action_thirdHelpFragment_to_fourthHelpFragment);
             }
         });
 

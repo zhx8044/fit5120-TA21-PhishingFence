@@ -117,6 +117,11 @@
             app:destination="@id/emergencyMenuFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_reportScamFragment_to_remedialActionsFragment"
+            app:destination="@id/remedialActionsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/remedialActionsFragment"

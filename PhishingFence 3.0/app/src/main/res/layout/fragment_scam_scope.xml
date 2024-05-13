@@ -37,7 +37,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="32dp"
         android:layout_marginBottom="100dp"
-        android:backgroundTint="@color/background_color2"
+        android:backgroundTint="@color/my_light_primary"
         app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,24 +54,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="15dp"
-                android:text="
-Common scam events international students may face in Australia include.\n\n
- ●  Cheap uni fee offer \n
- ●  Rental payment  \n
- ●  Easy job opportunity    \n
- ●  Quick visa processing or \n        visa expiry warning    \n
- ●  Online shopping \n
- ●  Online forums or virtual meet  \n
- ●  Online romance and dating   \n
- ●  Threats to life, arrest or other \n
- ●  False billing   \n
- ●  Over payment    \n
- ●  Lottery and travel  \n
- ●  Betting and sports investments  \n
- ●  Tax rebate or toll not collected    \n
-
-"
-                android:textColor="@color/my_light_primary"
+                android:text="@string/text10086"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
 
         </ScrollView>

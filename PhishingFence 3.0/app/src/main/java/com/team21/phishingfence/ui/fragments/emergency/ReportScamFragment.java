@@ -17,6 +17,8 @@ import android.widget.TextView;
 
 import com.team21.phishingfence.R;
 
+import java.util.Objects;
+
 public class ReportScamFragment extends Fragment {
     private ImageButton imageButton;
     private TextView textView1;
@@ -35,13 +37,25 @@ public class ReportScamFragment extends Fragment {
         this.textView1 = rootView.findViewById(R.id.textView1);
         this.textView1.setTextIsSelectable(true);
 
-        this.imageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                NavController controller = Navigation.findNavController(v);
-                controller.navigate(R.id.action_reportScamFragment_to_emergencyMenuFragment);
-            }
-        });
+        String s = getArguments().getString("aaa");
+
+        if(Objects.equals(s, "AAA")) {
+            this.imageButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    NavController controller = Navigation.findNavController(v);
+                    controller.navigate(R.id.action_reportScamFragment_to_remedialActionsFragment);
+                }
+            });
+        } else {
+            this.imageButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    NavController controller = Navigation.findNavController(v);
+                    controller.navigate(R.id.action_reportScamFragment_to_emergencyMenuFragment);
+                }
+            });
+        }
 
         return rootView;
     }

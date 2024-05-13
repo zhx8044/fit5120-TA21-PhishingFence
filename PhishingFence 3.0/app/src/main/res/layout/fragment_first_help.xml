@@ -143,11 +143,11 @@
         android:id="@+id/imageView16"
         android:layout_width="154dp"
         android:layout_height="69dp"
-        android:src="@drawable/first_help_img2"
+        android:src="@drawable/first_help_img4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.82"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.65" />
+        app:layout_constraintVertical_bias="0.67" />
 </androidx.constraintlayout.widget.ConstraintLayout>
