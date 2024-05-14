@@ -107,6 +107,9 @@ public class AttemptQuizFragment extends Fragment {
                     AttemptQuizFragment.this.tips.setText(requireActivity().getString(quiz.getTips()));
                     AttemptQuizFragment.this.warning.setVisibility(View.GONE);
                     AttemptQuizFragment.this.tips.setVisibility(View.GONE);
+                    for (int i = 0; i < AttemptQuizFragment.this.chooseButton.getChildCount(); i++) {
+                        AttemptQuizFragment.this.chooseButton.getChildAt(i).setEnabled(true);
+                    }
                 }
             }
         });
@@ -183,6 +186,10 @@ public class AttemptQuizFragment extends Fragment {
                     }
                     AttemptQuizFragment.this.warning.setVisibility(View.VISIBLE);
                     AttemptQuizFragment.this.tips.setVisibility(View.VISIBLE);
+                }
+
+                for (int i = 0; i < group.getChildCount(); i++) {
+                    group.getChildAt(i).setEnabled(false);
                 }
             }
         });

@@ -6,7 +6,7 @@
     <string name="navigation_drawer_close">navigation drawer close</string>
     <string name="fragment_home_text1">Welcome to</string>
     <string name="fragment_home_text2">PhishingFence</string>
-    <string name="fragment_home_text3">Avoid Scam\nKnow the scenario of International\nStudent in Australia</string>
+    <string name="fragment_home_text3">Avoid Scams\nKnow how international\nstudents are falling\nvictim of scams\nin Australia</string>
     <string name="fragment_home_button1">Scam Scenario</string>
     <string name="fragment_home_button2">Verify Scam</string>
     <string name="menu_translate">Translate</string>
@@ -116,7 +116,7 @@
     <string name="fragment_legel_support_text2">*It is suggested that civil remedy is better than police or anti-scam agencies’ intervention for a scam.\n\n*So act quickly and follow the remedial actions to prevent scam\n</string>
     <string name="fragment_scam_scenairo_button1">News Feed</string>
     <string name="fragment_scam_scenairo_button2">View Statistics</string>
-    <string name="fragment_scam_scenairo_text1">Scam Scenairo</string>
+    <string name="fragment_scam_scenairo_text1">Scams faced by\ninternational students</string>
     <string name="fragment_scam_scenairo_text2">Read the latest scam news</string>
     <string name="fragment_scam_scenairo_text3">Australian Interational Students Statistics</string>
     <string name="fragment_statical_trend_des">description</string>
@@ -271,4 +271,9 @@
     <string name="text_10087">Discover scam channels: Learn how scammers reach their target</string>
     <string name="text10088">Explore the scope of falling victim of scam by international students in Australia.</string>
     <string name="text10089">How does scam communication look like? Learn warning signs here.</string>
+    <string name="fragment_scam_know_text1">Welcome to the Scam Knowledge\nCheck feature!\nGet Scam-Savvy and Stay Safe Online!</string>
+    <string name="fragment_scam_know_text2">Prepare to tackle real-life scenarios, identify scam tactics, and receive valuable tips to safeguard yourself against online threats. \n\nOur interactive quiz is your ticket to becoming a scam detection expert. Ready to test your knowledge and outsmart scammers? Click \'Attempt Quiz\' now!</string>
+    <string name="fragment_scam_know_button">Attempt Quiz</string>
+    <string name="re_attempt">Re-Attempt\nthe quiz</string>
+    <string name="learning_more">Learning more\nabout scam</string>
 </resources>
