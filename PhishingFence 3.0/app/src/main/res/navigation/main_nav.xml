@@ -106,6 +106,9 @@
             app:destination="@id/legelSupportFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_emergencyMenuFragment_to_scamAwarenessFragment"
+            app:destination="@id/scamAwarenessFragment" />
     </fragment>
     <fragment
         android:id="@+id/reportScamFragment"
@@ -256,6 +259,9 @@
             app:destination="@id/translateFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_verifyScamFragment_to_emergencyMenuFragment"
+            app:destination="@id/emergencyMenuFragment" />
     </fragment>
     <fragment
         android:id="@+id/scamAwarenessFragment"

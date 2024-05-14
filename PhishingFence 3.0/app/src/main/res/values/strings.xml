@@ -80,6 +80,7 @@
     <string name="fragment_emergencyMenu_button1">Report scam</string>
     <string name="fragment_emergencyMenu_button2">Remedial actions</string>
     <string name="fragment_emergencyMenu_button">Legal support</string>
+    <string name="fragment_emergencyMenu_button3">Learn More About Scams</string>
     <string name="fragment_report_scam_text1">Reporting scams aids the victims and\nenables anti scam agencies to track\nscams and warn others</string>
     <string name="fragment_report_scam_text2">So, report scam immediately if you\nfeel you have been scammed</string>
     <string name="fragment_report_scam_text3">* Call 000 if your life is in danger and report your\nlocal or territory police on 13 11 14\n

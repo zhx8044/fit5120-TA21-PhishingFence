@@ -14,7 +14,7 @@ import android.widget.Button;
 import com.team21.phishingfence.R;
 
 public class EmergencyMenuFragment extends Fragment {
-    private Button button,button2,button3;
+    private Button button,button2,button3,button4;
 
     public EmergencyMenuFragment() {
         // Required empty public constructor
@@ -30,6 +30,7 @@ public class EmergencyMenuFragment extends Fragment {
         this.button = rootView.findViewById(R.id.button);
         this.button2 = rootView.findViewById(R.id.button2);
 //        this.button3 = rootView.findViewById(R.id.button3);
+        this.button4 = rootView.findViewById(R.id.button4);
 
         setButtonOnClickListener();
 
@@ -62,5 +63,12 @@ public class EmergencyMenuFragment extends Fragment {
 //                controller.navigate(R.id.action_emergencyMenuFragment_to_legelSupportFragment);
 //            }
 //        });
+        this.button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavController controller = Navigation.findNavController(v);
+                controller.navigate(R.id.action_emergencyMenuFragment_to_scamAwarenessFragment);
+            }
+        });
     }
 }

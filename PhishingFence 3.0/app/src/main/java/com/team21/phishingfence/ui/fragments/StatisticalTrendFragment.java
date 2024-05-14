@@ -116,6 +116,40 @@ public class StatisticalTrendFragment extends Fragment {
         });
     }
 
+    private void setButtonOnClickListener11() {//设置返回按钮和next chart按钮监听器
+        this.imageButtonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavController controller = Navigation.findNavController(v);
+                controller.navigate(R.id.action_statisticalTrendFragment_to_scamScenairoFragment);
+            }
+        });
+
+        this.imageButtonNext.setOnClickListener(new View.OnClickListener() {//改变choosenOption参数
+            @Override
+            public void onClick(View v) {
+                StatisticalTrendFragment.this.viewModel.nextChart();
+            }
+        });
+
+        this.imageViewHelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String helpInfo = "";
+                switch (StatisticalTrendFragment.this.viewModel.getChoosenOption().getValue()) {
+                    case StatisticalTrendViewModel.PIECHART1 -> helpInfo = requireActivity().getString(R.string.fragment_statistical_trend_chart1_question);
+                    case StatisticalTrendViewModel.LINECHART2 -> helpInfo = requireActivity().getString(R.string.fragment_statistical_trend_chart2_question);
+                    case StatisticalTrendViewModel.BARCHART3 -> helpInfo = requireActivity().getString(R.string.fragment_statistical_trend_chart3_question);
+                    case StatisticalTrendViewModel.BARCHART4 -> helpInfo = requireActivity().getString(R.string.fragment_statistical_trend_chart4_question);
+                }
+                new AlertDialog.Builder(requireActivity())
+                        .setMessage(helpInfo)
+                        .setPositiveButton(R.string.close,null)
+                        .create()
+                        .show();
+            }
+        });
+    }
     private void setButtonOnClickListener() {//设置返回按钮和next chart按钮监听器
         this.imageButtonBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -129,6 +163,8 @@ public class StatisticalTrendFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 StatisticalTrendFragment.this.viewModel.nextChart();
+                int nextOption = StatisticalTrendFragment.this.viewModel.getChoosenOption().getValue() - 1; // 更新选择项
+                StatisticalTrendFragment.this.spinner.setSelection(nextOption);
             }
         });
 

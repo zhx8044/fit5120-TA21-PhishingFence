@@ -21,6 +21,8 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import com.team21.phishingfence.R;
 import com.team21.phishingfence.viewmodels.VerifyScamViewmodel;
@@ -52,6 +54,8 @@ public class VerifyScamFragment extends Fragment {
         // 右上按钮和右下按钮
         Button buttonDisclaimer = view.findViewById(R.id.button_disclaimer);
         Button buttonHelp = view.findViewById(R.id.button_help);
+        Button buttonToEmergencyResponse = view.findViewById(R.id.button_to_emergency_response);
+
 
         this.editTextMessage = view.findViewById(R.id.edit_text_message);
         this.textViewResults = view.findViewById(R.id.text_view_results);
@@ -106,6 +110,14 @@ public class VerifyScamFragment extends Fragment {
                         "Probability of being ham: The likelihood that the message is not spam.\n" +
                         "\n" +
                         "Probability of being spam: The likelihood that the message is spam.");
+            }
+        });
+
+        buttonToEmergencyResponse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavController controller = Navigation.findNavController(v);
+                controller.navigate(R.id.action_verifyScamFragment_to_emergencyMenuFragment);
             }
         });
 
