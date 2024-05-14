@@ -6,7 +6,7 @@
     <string name="navigation_drawer_close">navigation drawer close</string>
     <string name="fragment_home_text1">Welcome to</string>
     <string name="fragment_home_text2">PhishingFence</string>
-    <string name="fragment_home_text3">Avoid Scams\nKnow how international\nstudents are falling\nvictim of scams\nin Australia</string>
+    <string name="fragment_home_text3">Spot Scams\nKnow how international\nstudents are falling\nvictim of scams\nin Australia</string>
     <string name="fragment_home_button1">Scam Scenario</string>
     <string name="fragment_home_button2">Verify Scam</string>
     <string name="menu_translate">Translate</string>
