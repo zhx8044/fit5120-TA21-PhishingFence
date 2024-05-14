@@ -66,14 +66,15 @@ public class VerifyScamFragment extends Fragment {
         view.findViewById(R.id.button_verify).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                hideKeyboard();//隐藏键盘
-                /*
-                String apiEndpoint = "https://nbhq8mbflg.execute-api.ap-southeast-2.amazonaws.com/default/testnow";
-                new InvokeAPIAsyncTask(textViewResults).execute(apiEndpoint, editTextMessage.getText().toString());
-                 */
-                VerifyScamFragment.this.progressBar.setVisibility(View.VISIBLE);
-                VerifyScamFragment.this.viewmodel.verify(VerifyScamFragment.this.textViewResults,VerifyScamFragment.this.progressBar);
-                Toast.makeText(requireActivity(), "verifying", Toast.LENGTH_LONG).show();
+                hideKeyboard(); // 隐藏键盘
+                String inputText = editTextMessage.getText().toString().trim();
+                if (inputText.isEmpty()) {
+                    Toast.makeText(requireActivity(), "You need to enter text to verify!", Toast.LENGTH_SHORT).show();
+                } else {
+                    progressBar.setVisibility(View.VISIBLE);
+                    viewmodel.verify(textViewResults, progressBar);
+                    Toast.makeText(requireActivity(), "verifying", Toast.LENGTH_LONG).show();
+                }
             }
         });
 
