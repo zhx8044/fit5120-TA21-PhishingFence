@@ -25,23 +25,23 @@ public class NewsRepository {
                 "https://www.9news.com.au/national/university-students-targeted-in-recruitment-scam/0aefdbd3-eb85-40e6-bfdf-b5699b13d22b",
                 "https://imageresizer.static9.net.au/asyRzqOCD-60lTijKo5MUmbZ9jY=/1600x0/https%3A%2F%2Fprod.static9.net.au%2Ffs%2F017599d5-bbe1-4674-82b7-ae4343a5f170"));
         newsList.add(new NewsInfo(1013,
-                "'Ghosted' by a fake rental agent these students have lost thousands to a property scam",
-                "Yimin Qiang",
-                "October 31, 2023",
-                "https://www.sbs.com.au/language/chinese/en/article/fake-rental-properties-students-lose-thousands-of-dollars-to-fraudster/blzeap1w8",
-                "https://images.sbs.com.au/34/5e/4134a74349f780d78ab7b68a56db/contract.jpg?imwidth=1280"));
-        newsList.add(new NewsInfo(1014,
-                "Alarm raised over ‘virtual kidnapping’ scams targeting international students",
-                "Jack Evans",
-                "October 18, 2023",
-                "https://www.news.com.au/national/crime/alarm-raised-over-virtual-kidnapping-scams-targeting-international-students/news-story/da63fdf52c34b58ccd54e010cbc6d2c4",
-                "https://content.api.news/v3/images/bin/3cc9cfe01c346e69e27a0f34460d9c8c?width=1024"));
-        newsList.add(new NewsInfo(1015,
                 "Family loses $288k to kidnapping scam targeting international students in NSW",
                 "Mikala Theocharous",
                 "October 18, 2023",
                 "https://www.9news.com.au/national/kidnapping-scam-family-loses-288k-to-kidnapping-scam-targetting-international-students-in-nsw/a6c035ee-7d09-4f50-bbc1-c9010754997b",
                 "https://imageresizer.static9.net.au/QnhWvwL7WE7p5x4pvDeWMWNcAxs=/0x2:2121x1195/1600x0/https%3A%2F%2Fprod.static9.net.au%2Ffs%2F59f83261-6c62-4af1-b32a-25f1c706fb80"));
+        newsList.add(new NewsInfo(1014,
+                "Sophisticated scams targeting Chinese international students ramping up ACCC warns",
+                "Gareth Boreham & Ruth McHugh-Dillon",
+                "September 22, 2023",
+                "https://www.sbs.com.au/news/article/sophisticated-scams-targeting-chinese-international-students-ramping-up-accc-warns/odx22265d",
+                "https://images.sbs.com.au/7f/de/85889033414dacfe155cd9693215/gettyimages-1414174437.jpg?imwidth=1280"));
+        newsList.add(new NewsInfo(1015,
+                "'Ghosted' by a fake rental agent these students have lost thousands to a property scam",
+                "Yimin Qiang",
+                "October 31, 2023",
+                "https://www.sbs.com.au/language/chinese/en/article/fake-rental-properties-students-lose-thousands-of-dollars-to-fraudster/blzeap1w8",
+                "https://images.sbs.com.au/34/5e/4134a74349f780d78ab7b68a56db/contract.jpg?imwidth=1280"));
         newsList.add(new NewsInfo(1016,
                 "International students are bombarded by scams asking for money and personal information. Authorities say the scam uses increasingly sophisticated techniques to impersonate authorities",
                 "Gareth Boreham",
@@ -49,12 +49,12 @@ public class NewsRepository {
                 "https://www.sbs.com.au/language/indonesian/en/podcast-episode/peringatan-atas-taktik-penipuan-yang-canggih-terhadap-pelajar-dari-tiongkok-di-australia/l5zrv2eks",
                 "https://images.sbs.com.au/dims4/default/08465a7/2147483647/strip/true/resize/1280x720!/quality/90/?url=http%3A%2F%2Fsbs-au-brightspot.s3.amazonaws.com%2Fdrupal%2Fyourlanguage%2Fpublic%2Fchinese_students.jpg&imwidth=1280"));
         newsList.add(new NewsInfo(1017,
-                "Sophisticated scams targeting Chinese international students ramping up ACCC warns",
-                "Gareth Boreham & Ruth McHugh-Dillon",
-                "September 22, 2023",
-                "https://www.sbs.com.au/news/article/sophisticated-scams-targeting-chinese-international-students-ramping-up-accc-warns/odx22265d",
-                "https://images.sbs.com.au/7f/de/85889033414dacfe155cd9693215/gettyimages-1414174437.jpg?imwidth=1280"));
-        newsList.add(new NewsInfo(1018,
+                "Alarm raised over ‘virtual kidnapping’ scams targeting international students",
+                "Jack Evans",
+                "October 18, 2023",
+                "https://www.news.com.au/national/crime/alarm-raised-over-virtual-kidnapping-scams-targeting-international-students/news-story/da63fdf52c34b58ccd54e010cbc6d2c4",
+                "https://content.api.news/v3/images/bin/3cc9cfe01c346e69e27a0f34460d9c8c?width=1024"));
+       newsList.add(new NewsInfo(1018,
                 "Scammers are increasingly targeting Chinese international students with the scams using increasingly sophisticated techniques to imitate authorities",
                 "Gareth Boreham",
                 "September 21, 2023",
