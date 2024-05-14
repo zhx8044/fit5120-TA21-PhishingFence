@@ -303,7 +303,9 @@
             app:destination="@id/scamChannelsFragment" />
         <action
             android:id="@+id/action_typesOfScamFragment_to_scamScopeFragment"
-            app:destination="@id/scamScopeFragment" />
+            app:destination="@id/scamScopeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
         <action
             android:id="@+id/action_typesOfScamFragment_to_scamCommunicationFragment"
             app:destination="@id/scamCommunicationFragment" />

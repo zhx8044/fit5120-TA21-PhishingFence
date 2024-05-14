@@ -116,9 +116,12 @@
     <string name="fragment_legel_support_text2">*It is suggested that civil remedy is better than police or anti-scam agencies’ intervention for a scam.\n\n*So act quickly and follow the remedial actions to prevent scam\n</string>
     <string name="fragment_scam_scenairo_button1">News Feed</string>
     <string name="fragment_scam_scenairo_button2">View Statistics</string>
-    <string name="fragment_scam_scenairo_text1">Scams faced by\ninternational students</string>
-    <string name="fragment_scam_scenairo_text2">Read the latest scam news</string>
-    <string name="fragment_scam_scenairo_text3">Australian Interational Students Statistics</string>
+    <string name="fragment_scam_scenairo_text1">Welcome to the Scam Scenario and \nInternational Student Information section!\n
+\n
+Stay Informed, Stay Protected!
+</string>
+    <string name="fragment_scam_scenairo_text2">Get the latest updates on scam news</string>
+    <string name="fragment_scam_scenairo_text3">General information for International Students</string>
     <string name="fragment_statical_trend_des">description</string>
     <string name="help">help</string>
     <string name="close">close</string>
