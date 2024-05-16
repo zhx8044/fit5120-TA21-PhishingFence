@@ -90,11 +90,54 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.github.mikephil.charting.charts.BarChart
-                android:id="@+id/barChart1"
+<!--            <com.github.mikephil.charting.charts.BarChart-->
+<!--                android:id="@+id/barChart1"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="300dp"-->
+<!--                android:visibility="visible" />-->
+
+            <!-- Container for barChart1 and its labels -->
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:visibility="visible" />
+                android:layout_height="wrap_content">
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barChart1"
+                    android:layout_width="0dp"
+                    android:layout_height="300dp"
+                    android:visibility="visible"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5" />
+
+                <TextView
+                    android:id="@+id/xAxisLabel1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Type"
+                    android:textColor="@color/my_light_primary"
+                    app:layout_constraintTop_toBottomOf="@+id/barChart1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:id="@+id/yAxisLabel1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Scams exposure rate"
+                    android:textColor="@color/my_light_primary"
+                    android:rotation="-90"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="-50dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <com.github.mikephil.charting.charts.PieChart
                 android:id="@+id/pieChart"
@@ -102,17 +145,103 @@
                 android:layout_height="300dp"
                 android:visibility="gone" />
 
-            <com.github.mikephil.charting.charts.LineChart
-                android:id="@+id/lineChart"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:visibility="gone" />
+<!--            <com.github.mikephil.charting.charts.LineChart-->
+<!--                android:id="@+id/lineChart"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="300dp"-->
+<!--                android:visibility="gone" />-->
 
-            <com.github.mikephil.charting.charts.BarChart
-                android:id="@+id/barChart2"
+            <!-- Container for lineChart and its labels -->
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:visibility="gone" />
+                android:layout_height="wrap_content">
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/lineChart"
+                    android:layout_width="0dp"
+                    android:layout_height="300dp"
+                    android:visibility="gone"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5" />
+
+                <TextView
+                    android:id="@+id/xAxisLabel2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Month"
+                    android:textColor="@color/my_light_primary"
+                    app:layout_constraintTop_toBottomOf="@+id/lineChart"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:id="@+id/yAxisLabel2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Data         (times)"
+                    android:textColor="@color/my_light_primary"
+                    android:rotation="-90"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="-50dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--            <com.github.mikephil.charting.charts.BarChart-->
+<!--                android:id="@+id/barChart2"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="300dp"-->
+<!--                android:visibility="gone" />-->
+
+            <!-- Container for barChart2 and its labels -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barChart2"
+                    android:layout_width="0dp"
+                    android:layout_height="300dp"
+                    android:visibility="gone"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5" />
+
+                <TextView
+                    android:id="@+id/xAxisLabel3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Type"
+                    android:textColor="@color/my_light_primary"
+                    app:layout_constraintTop_toBottomOf="@+id/barChart2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:id="@+id/yAxisLabel3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Scams exposure rate"
+                    android:textColor="@color/my_light_primary"
+                    android:rotation="-90"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="-50dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
                 android:id="@+id/description"

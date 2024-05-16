@@ -56,6 +56,8 @@ public class StatisticalTrendFragment extends Fragment {
     private ImageButton imageButtonBack, imageButtonNext;
     private ImageView imageViewHelp;
 
+    private TextView xAxisLabel1, yAxisLabel1, xAxisLabel2, yAxisLabel2, xAxisLabel3, yAxisLabel3;
+
     public StatisticalTrendFragment() {
         // Required empty public constructor
     }
@@ -76,6 +78,12 @@ public class StatisticalTrendFragment extends Fragment {
         this.imageButtonBack = rootView.findViewById(R.id.imageButton);
         this.imageButtonNext = rootView.findViewById(R.id.imageButton2);
         this.imageViewHelp = rootView.findViewById(R.id.imageViewHelp);
+        this.xAxisLabel1 = rootView.findViewById(R.id.xAxisLabel1);
+        this.yAxisLabel1 = rootView.findViewById(R.id.yAxisLabel1);
+        this.xAxisLabel2 = rootView.findViewById(R.id.xAxisLabel2);
+        this.yAxisLabel2 = rootView.findViewById(R.id.yAxisLabel2);
+        this.xAxisLabel3 = rootView.findViewById(R.id.xAxisLabel3);
+        this.yAxisLabel3 = rootView.findViewById(R.id.yAxisLabel3);
         this.description.setTextIsSelectable(true);
 
         this.viewModel = new ViewModelProvider(requireActivity()).get(StatisticalTrendViewModel.class);//获取ViewModel
@@ -187,7 +195,7 @@ public class StatisticalTrendFragment extends Fragment {
         });
     }
 
-    private void setChooseOptionObserver() {//切换视图
+    private void setChooseOptionObserver11() {//切换视图
         this.viewModel.getChoosenOption().observe(requireActivity(), new Observer<Integer>() {
             @Override
             public void onChanged(Integer integer) {
@@ -224,6 +232,51 @@ public class StatisticalTrendFragment extends Fragment {
             }
         });
     }
+
+    private void setChooseOptionObserver() {
+        this.viewModel.getChoosenOption().observe(requireActivity(), new Observer<Integer>() {
+            @Override
+            public void onChanged(Integer integer) {
+                switch (integer) {
+                    case StatisticalTrendViewModel.PIECHART1 -> {
+                        setChartVisibility(pieChart, null, null, View.VISIBLE);
+                        setChartVisibility(lineChart, xAxisLabel2, yAxisLabel2, View.GONE);
+                        setChartVisibility(barChart1, xAxisLabel1, yAxisLabel1, View.GONE);
+                        setChartVisibility(barChart2, xAxisLabel3, yAxisLabel3, View.GONE);
+                        description.setText(R.string.fragment_statistical_trend_chart1_description);
+                    }
+                    case StatisticalTrendViewModel.LINECHART2 -> {
+                        setChartVisibility(lineChart, xAxisLabel2, yAxisLabel2, View.VISIBLE);
+                        setChartVisibility(pieChart, null, null, View.GONE);
+                        setChartVisibility(barChart1, xAxisLabel1, yAxisLabel1, View.GONE);
+                        setChartVisibility(barChart2, xAxisLabel3, yAxisLabel3, View.GONE);
+                        description.setText(R.string.fragment_statistical_trend_chart2_description);
+                    }
+                    case StatisticalTrendViewModel.BARCHART3 -> {
+                        setChartVisibility(barChart1, xAxisLabel1, yAxisLabel1, View.VISIBLE);
+                        setChartVisibility(pieChart, null, null, View.GONE);
+                        setChartVisibility(lineChart, xAxisLabel2, yAxisLabel2, View.GONE);
+                        setChartVisibility(barChart2, xAxisLabel3, yAxisLabel3, View.GONE);
+                        description.setText(R.string.fragment_statistical_trend_chart3_description);
+                    }
+                    case StatisticalTrendViewModel.BARCHART4 -> {
+                        setChartVisibility(barChart2, xAxisLabel3, yAxisLabel3, View.VISIBLE);
+                        setChartVisibility(pieChart, null, null, View.GONE);
+                        setChartVisibility(lineChart, xAxisLabel2, yAxisLabel2, View.GONE);
+                        setChartVisibility(barChart1, xAxisLabel1, yAxisLabel1, View.GONE);
+                        description.setText(R.string.fragment_statistical_trend_chart4_description);
+                    }
+                }
+            }
+        });
+    }
+
+    private void setChartVisibility(View chart, TextView xAxisLabel, TextView yAxisLabel, int visibility) {
+        chart.setVisibility(visibility);
+        if (xAxisLabel != null) xAxisLabel.setVisibility(visibility);
+        if (yAxisLabel != null) yAxisLabel.setVisibility(visibility);
+    }
+
 
     private void setSpinnerOption() {
         // 设置spinner选项
