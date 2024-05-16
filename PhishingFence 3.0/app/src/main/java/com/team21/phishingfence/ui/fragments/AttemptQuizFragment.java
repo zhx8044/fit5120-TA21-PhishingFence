@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,6 +32,7 @@ public class AttemptQuizFragment extends Fragment {
     private ImageView imgRight,imgWrong;
     private Boolean answer = true;
     private Boolean whetherChoosed = false;
+    private ProgressBar progressBar;
 
 
     public AttemptQuizFragment() {
@@ -55,6 +57,7 @@ public class AttemptQuizFragment extends Fragment {
         this.warning = rootView.findViewById(R.id.warning);
         this.tips = rootView.findViewById(R.id.tips);
         this.viewModel = new ViewModelProvider(requireActivity()).get(QuizViewModel.class);
+        this.progressBar = rootView.findViewById(R.id.progressBar2);
 
         setButtonOnClickListener();
         setQuizNumObserver();
@@ -75,6 +78,7 @@ public class AttemptQuizFragment extends Fragment {
             @Override
             public void onChanged(Integer integer) {
                 if (integer >= 1 && integer <= 7) {
+                    AttemptQuizFragment.this.progressBar.setProgress((integer - 1) * (100 / 7));
                     int id = AttemptQuizFragment.this.viewModel.getQuizList()[integer - 1];
                     Quiz quiz = AttemptQuizFragment.this.viewModel.getQuizById(id);
                     if(quiz.getType() == QuizViewModel.BASIC_QUIZ) {

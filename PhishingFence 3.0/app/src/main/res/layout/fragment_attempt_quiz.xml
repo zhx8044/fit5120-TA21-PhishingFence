@@ -71,7 +71,7 @@
     <ScrollView
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:layout_height="150dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -104,11 +104,11 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
-                android:background="@drawable/dialogbox"
                 android:padding="10dp"
                 android:textAlignment="textStart"
                 android:textColor="@color/my_light_primary"
                 android:textSize="16sp"
+                android:textStyle="bold"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -120,7 +120,6 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
-
 
 
     <ScrollView
@@ -149,14 +148,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:text="@string/scambutton1"
-                    android:textColor="@color/my_light_primary"/>
+                    android:textColor="@color/my_light_primary" />
 
                 <RadioButton
                     android:id="@+id/radioButtonNotScam"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:text="@string/scambutton2"
-                    android:textColor="@color/my_light_primary"/>
+                    android:textColor="@color/my_light_primary" />
             </RadioGroup>
 
             <androidx.appcompat.widget.LinearLayoutCompat
@@ -222,8 +221,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
                     android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
                     android:textColor="@color/my_light_primary"
                     android:textSize="16sp"
                     android:visibility="gone"
@@ -231,6 +230,19 @@
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.appcompat.widget.LinearLayoutCompat>
     </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:progressTint="@color/my_light_primary2"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
