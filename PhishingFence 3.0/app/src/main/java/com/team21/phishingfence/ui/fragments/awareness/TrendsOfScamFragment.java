@@ -69,6 +69,7 @@ public class TrendsOfScamFragment extends Fragment {
     private TrendsOfScamViewModel viewModel;
     private ImageButton imageButtonNext;
     private ImageView imageViewHelp;
+    private TextView xAxisLabel1, yAxisLabel1, xAxisLabel2, yAxisLabel2, xAxisLabel3, yAxisLabel3, xAxisLabel4, yAxisLabel4;
 
     public TrendsOfScamFragment() {
     }
@@ -92,6 +93,14 @@ public class TrendsOfScamFragment extends Fragment {
         this.description = rootView.findViewById(R.id.description);
         this.imageButtonNext = rootView.findViewById(R.id.imageButton2);
         this.imageViewHelp = rootView.findViewById(R.id.imageViewHelp);
+        this.xAxisLabel1 = rootView.findViewById(R.id.xAxisLabel1);
+        this.yAxisLabel1 = rootView.findViewById(R.id.yAxisLabel1);
+        this.xAxisLabel2 = rootView.findViewById(R.id.xAxisLabel2);
+        this.yAxisLabel2 = rootView.findViewById(R.id.yAxisLabel2);
+        this.xAxisLabel3 = rootView.findViewById(R.id.xAxisLabel3);
+        this.yAxisLabel3 = rootView.findViewById(R.id.yAxisLabel3);
+        this.xAxisLabel4 = rootView.findViewById(R.id.xAxisLabel4);
+        this.yAxisLabel4 = rootView.findViewById(R.id.yAxisLabel4);
         this.description.setTextIsSelectable(true);
 
         this.viewModel = new ViewModelProvider(requireActivity()).get(TrendsOfScamViewModel.class);//获取ViewModel
@@ -210,7 +219,7 @@ public class TrendsOfScamFragment extends Fragment {
 
 
 
-    private void setChooseOptionObserver() {//切换视图
+    private void setChooseOptionObserver1() {//切换视图
         this.viewModel.getChooseOption().observe(requireActivity(), new Observer<Integer>() {
             @Override
             public void onChanged(Integer integer) {
@@ -239,6 +248,43 @@ public class TrendsOfScamFragment extends Fragment {
                 }
             }
         });
+    }
+
+    private void setChooseOptionObserver() {
+        this.viewModel.getChooseOption().observe(requireActivity(), new Observer<Integer>() {
+            @Override
+            public void onChanged(Integer integer) {
+                switch (integer) {
+                    case TrendsOfScamViewModel.BARCHART1 -> {
+                        setChartVisibility(barChart1, xAxisLabel1, yAxisLabel1, View.VISIBLE);
+                        setChartVisibility(lineChart, xAxisLabel2, yAxisLabel2, View.GONE);
+                        setChartVisibility(barChart2, xAxisLabel3, yAxisLabel3, View.GONE);
+                        setChartVisibility(barChart3, xAxisLabel4, yAxisLabel4, View.GONE);
+                        description.setText(R.string.fragment_trend_of_scam_description);
+                    }
+                    case TrendsOfScamViewModel.LINECHART2 -> {
+                        setChartVisibility(barChart1, xAxisLabel1, yAxisLabel1, View.GONE);
+                        setChartVisibility(lineChart, xAxisLabel2, yAxisLabel2, View.VISIBLE);
+                        setChartVisibility(barChart2, xAxisLabel3, yAxisLabel3, View.GONE);
+                        setChartVisibility(barChart3, xAxisLabel4, yAxisLabel4, View.GONE);
+                        description.setText(R.string.fragment_trend_of_scam_description2);
+                    }
+                    case TrendsOfScamViewModel.BARCHART3 -> {
+                        setChartVisibility(barChart1, xAxisLabel1, yAxisLabel1, View.GONE);
+                        setChartVisibility(lineChart, xAxisLabel2, yAxisLabel2, View.GONE);
+                        setChartVisibility(barChart2, xAxisLabel3, yAxisLabel3, View.VISIBLE);
+                        setChartVisibility(barChart3, xAxisLabel4, yAxisLabel4, View.VISIBLE);
+                        description.setText(R.string.fragment_trend_of_scam_description3);
+                    }
+                }
+            }
+        });
+    }
+
+    private void setChartVisibility(View chart, TextView xAxisLabel, TextView yAxisLabel, int visibility) {
+        chart.setVisibility(visibility);
+        if (xAxisLabel != null) xAxisLabel.setVisibility(visibility);
+        if (yAxisLabel != null) yAxisLabel.setVisibility(visibility);
     }
 
     private void setSpinnerOption() {
