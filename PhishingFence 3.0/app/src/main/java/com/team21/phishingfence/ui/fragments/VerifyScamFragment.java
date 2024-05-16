@@ -87,6 +87,9 @@ public class VerifyScamFragment extends Fragment {
         if (bundle != null) {
             String value = bundle.getString("message to verify");
             this.editTextMessage.setText(value);
+            progressBar.setVisibility(View.VISIBLE);
+            viewmodel.verify(textViewResults, progressBar);
+            Toast.makeText(requireActivity(), "verifying", Toast.LENGTH_LONG).show();
         }
 
         setEditTextMessageListener();
