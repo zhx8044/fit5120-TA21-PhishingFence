@@ -30,4 +30,14 @@ public class StatisticalTrendViewModel extends ViewModel {
             case BARCHART4 -> this.choosenOption.setValue(PIECHART1);
         }
     }
+
+    public void previousChart() {
+        Integer currentOption = this.choosenOption.getValue();
+        if (currentOption != null) {
+            if (currentOption > PIECHART1) {
+                this.choosenOption.setValue(currentOption - 1);
+            }
+        }
+    }
+
 }

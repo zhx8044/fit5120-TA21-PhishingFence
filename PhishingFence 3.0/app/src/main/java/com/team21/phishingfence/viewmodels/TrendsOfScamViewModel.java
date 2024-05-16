@@ -30,5 +30,15 @@ public class TrendsOfScamViewModel extends ViewModel {
         }
     }
 
+    public void previousChart() {
+        Integer currentOption = this.chooseOption.getValue();
+        if (currentOption != null) {
+            if (currentOption > BARCHART1) {
+                this.chooseOption.setValue(currentOption - 1);
+            }
+        }
+    }
+
+
 
 }

@@ -187,7 +187,7 @@ public class TrendsOfScamFragment extends Fragment {
 
     }
 
-    private void setButtonOnClickListener() {
+    private void setButtonOnClickListener111() {
         setBackButtonListener();
 
         this.imageButtonNext.setOnClickListener(new View.OnClickListener() {//改变chooseOption参数
@@ -216,6 +216,54 @@ public class TrendsOfScamFragment extends Fragment {
             }
         });
     }
+
+    private void setButtonOnClickListener() {
+        setBackButtonListener();
+
+        this.imageButtonNext.setOnClickListener(new View.OnClickListener() {//改变chooseOption参数
+            @Override
+            public void onClick(View v) {
+                TrendsOfScamFragment.this.viewModel.nextChart();
+                int nextOption = TrendsOfScamFragment.this.viewModel.getChooseOption().getValue() - 1; // 更新选择项
+                TrendsOfScamFragment.this.spinner.setSelection(nextOption);
+            }
+        });
+
+        this.imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int currentOption = TrendsOfScamFragment.this.viewModel.getChooseOption().getValue();
+                if (currentOption == TrendsOfScamViewModel.BARCHART1) {
+                    // 如果当前是第一张图表，返回上一级
+                    NavController controller = Navigation.findNavController(v);
+                    controller.navigate(R.id.action_trendsOfScamFragment_to_scamAwarenessFragment);
+                } else {
+                    // 否则显示上一张图表
+                    TrendsOfScamFragment.this.viewModel.previousChart();
+                    int previousOption = TrendsOfScamFragment.this.viewModel.getChooseOption().getValue() - 1; // 更新选择项
+                    TrendsOfScamFragment.this.spinner.setSelection(previousOption);
+                }
+            }
+        });
+
+        this.imageViewHelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String helpInfo = "";
+                switch (TrendsOfScamFragment.this.viewModel.getChooseOption().getValue()) {
+                    case TrendsOfScamViewModel.BARCHART1 -> helpInfo = requireActivity().getString(R.string.fragment_trend_of_scam_chart1_question);
+                    case TrendsOfScamViewModel.LINECHART2 -> helpInfo = requireActivity().getString(R.string.fragment_trend_of_scam_chart2_question);
+                    case TrendsOfScamViewModel.BARCHART3 -> helpInfo = requireActivity().getString(R.string.fragment_trend_of_scam_chart3_question);
+                }
+                new AlertDialog.Builder(requireActivity())
+                        .setMessage(helpInfo)
+                        .setPositiveButton(R.string.close, null)
+                        .create()
+                        .show();
+            }
+        });
+    }
+
 
 
 
