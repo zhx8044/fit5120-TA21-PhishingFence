@@ -83,15 +83,15 @@
     <string name="fragment_emergencyMenu_button3">Learn More About Scams</string>
     <string name="fragment_report_scam_text1">Reporting scams aids the victims and\nenables anti scam agencies to track\nscams and warn others</string>
     <string name="fragment_report_scam_text2">So, report scam immediately if you\nfeel you have been scammed</string>
-    <string name="fragment_report_scam_text3">* Call 000 if your life is in danger and report your\nlocal or territory police on 13 11 14\n
+    <string name="fragment_report_scam_text3">* Call 000 if your life is in danger and report your local or territory police on 13 11 14\n
         \n
-        * In case of an email, online or telephone scam\nreport to Scamwatch through the following link:\nhttps://portal.scamwatch.gov.au/report-a-scam/\n
+        * In case of an email, online or telephone scam report to Scamwatch through the following link:\nhttps://portal.scamwatch.gov.au/report-a-scam/\n
         \n
-        * In case of financial scam report to Australian\nSecurities and Investment Commission on the\nfollowing link:\n
+        * In case of financial scam report to Australian Securities and Investment Commission on the\nfollowing link:\n
         https://moneysmart.gov.au/check-and-report-\n
         scams/report-an-investment-scam\n
         \n
-        * For anonymous reporting call Crime Stoppers\nover 1800 333 000</string>
+        * For anonymous reporting call Crime Stoppers over 1800 333 000</string>
     <string name="fragment_remedial_text1">A victim of scam should consider\nthe following measures</string>
     <string name="fragment_remedial_button">goto</string>
     <string name="fragment_remedial_text2">Block all contacts from the scammer</string>
@@ -104,7 +104,7 @@
     <string name="fragments_blocking_contacts_text1">"Blocking contact will prevent \nscammers from further \ncommunication and reduce \nrisks  "</string>
     <string name="fragment_blocking_contacts_text2">How to block\n\n\t*Use your phone’s built-in Call blocking features\n\t*Add numbers to block list\n\t*You can also use third-party call blocking Apps\n\t*Use carrier call blocking services\n\t*Report scam numbers\n\t*Be cautious with unknown numbers\n\nRegister your numbers with “do not call”   service of Australian government to stop unsolicited calls.\n\n\thttps://www.donotcall.gov.au/consumers/register-your-numbers/</string>
     <string name="fragment_blockcards_text1">Block debit and credit cards\nimmediately for safeguarding\nyour financial accounts</string>
-    <string name="fragments_blockcards_text2">*If you suspect your debit or credit card/s has been compromised, temporarily block them using the bank’s App.\n\n*Contact with your bank through its scam reporting hotline 24/7. \n\n*Here are some of the major Australian banks’ scam reporting hot-lines (24/7):\n     \n         NAB: 132265\n          ANZ Bank: 132273\n          CommBank: 132221\n\n*Apply for new cards online via the App or in person at a nearby outlet.</string>
+    <string name="fragments_blockcards_text2">*If you suspect your debit or credit card has been compromised, temporarily block them using the bank’s App.\n\n*Contact with your bank through its scam reporting hotline 24/7. \n\n*Here are some of the major Australian banks’ scam reporting hot-lines (24/7):\n     \n         NAB: 132265\n          ANZ Bank: 132273\n          CommBank: 132221\n\n*Apply for new cards online via the App or in person at a nearby outlet.</string>
     <string name="fragment_strong_password_text1">Changing passwords of all\naccounts after a suspicious\nscam attack is crucial</string>
     <string name="fragment_strong_password_text2">Create strong and unique password based on the following guidelines:\n\n\n\t*Blending uppercase and lowercase letters, numbers, and special characters.\n\t*Making passwords 8–16 characters long.\n\t*Avoiding easy-to-guess patterns.\n\t*Using different passwords for each account.\n\t*Ensuring multi-factor authentication.\n\t*Regularly update passwords.</string>
     <string name="fragment_warn_text1">Alert family and friends to\nprevent them from falling\nvictim of the same scammers</string>
